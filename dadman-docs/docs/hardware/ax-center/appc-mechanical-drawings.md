@@ -1,5 +1,4 @@
 ---
-id: ax-center/appc-mechanical-drawings
 title: "Appendix C — Mechanical Drawings"
 sidebar_label: "App. C — Mechanical Drawings"
 sidebar_position: 14

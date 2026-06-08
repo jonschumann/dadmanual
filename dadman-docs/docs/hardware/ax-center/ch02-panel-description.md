@@ -1,5 +1,4 @@
 ---
-id: ax-center/ch02-panel-description
 title: "Chapter 2 — Panel Description"
 sidebar_label: "Ch. 2 — Panel Description"
 sidebar_position: 3

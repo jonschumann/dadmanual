@@ -1,5 +1,4 @@
 ---
-id: ax64/ch08-maintenance
 title: "Chapter 8 — Maintenance & Firmware"
 sidebar_label: "Ch. 8 — Maintenance"
 sidebar_position: 9

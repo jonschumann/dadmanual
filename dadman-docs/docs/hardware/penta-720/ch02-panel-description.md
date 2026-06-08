@@ -1,5 +1,4 @@
 ---
-id: penta-720/ch02-panel-description
 title: "Chapter 2 — Panel Description"
 sidebar_label: "Ch. 2 — Panel Description"
 sidebar_position: 3

@@ -1,5 +1,4 @@
 ---
-id: core-256/ch05-clocking
 title: "Chapter 5 — Clocking & Synchronisation"
 sidebar_label: "Ch. 5 — Clocking"
 sidebar_position: 6

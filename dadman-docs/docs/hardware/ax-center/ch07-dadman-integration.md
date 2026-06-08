@@ -1,5 +1,4 @@
 ---
-id: ax-center/ch07-dadman-integration
 title: "Chapter 7 — DADman Software Integration"
 sidebar_label: "Ch. 7 — DADman Integration"
 sidebar_position: 8

@@ -1,5 +1,4 @@
 ---
-id: penta-720/ch04-connections
 title: "Chapter 4 — Signal Connections"
 sidebar_label: "Ch. 4 — Signal Connections"
 sidebar_position: 5

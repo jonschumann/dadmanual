@@ -1,5 +1,4 @@
 ---
-id: ax64/appb-block-diagram
 title: "Appendix B — Block Diagram"
 sidebar_label: "App. B — Block Diagram"
 sidebar_position: 13
@@ -11,7 +10,6 @@ sidebar_position: 13
 
 *[Placeholder — insert signal flow block diagram. Source from DAD engineering. Provide both raster (PNG) and vector (SVG) formats.]*
 
-![AX64 block diagram — placeholder](/img/placeholder-block-diagram.png)
 
 *Figure B.1 — AX64 signal flow block diagram*
 

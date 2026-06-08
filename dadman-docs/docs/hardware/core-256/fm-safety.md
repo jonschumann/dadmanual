@@ -1,5 +1,4 @@
 ---
-id: core-256/fm-safety
 title: "Front Matter — Safety & Conventions"
 sidebar_label: "Front Matter & Safety"
 sidebar_position: 1

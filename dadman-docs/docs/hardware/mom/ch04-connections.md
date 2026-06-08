@@ -1,5 +1,4 @@
 ---
-id: mom/ch04-connections
 title: "Chapter 4 — Connections"
 sidebar_label: "Ch. 4 — Connections"
 sidebar_position: 5

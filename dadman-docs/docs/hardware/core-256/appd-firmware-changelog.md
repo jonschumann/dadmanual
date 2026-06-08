@@ -1,5 +1,4 @@
 ---
-id: core-256/appd-firmware-changelog
 title: "Appendix D — Firmware Changelog"
 sidebar_label: "App. D — Firmware Changelog"
 sidebar_position: 15

@@ -1,5 +1,4 @@
 ---
-id: ax64/ch06-operation
 title: "Chapter 6 — Operation"
 sidebar_label: "Ch. 6 — Operation"
 sidebar_position: 7

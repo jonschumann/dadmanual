@@ -1,5 +1,4 @@
 ---
-id: mom/ch03-installation
 title: "Chapter 3 — Installation"
 sidebar_label: "Ch. 3 — Installation"
 sidebar_position: 4

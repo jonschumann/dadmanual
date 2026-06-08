@@ -1,5 +1,4 @@
 ---
-id: penta-720/ch01-introduction
 title: "Chapter 1 — Introduction"
 sidebar_label: "Ch. 1 — Introduction"
 sidebar_position: 2

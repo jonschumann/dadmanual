@@ -1,5 +1,4 @@
 ---
-id: mom/ch10-specifications
 title: "Chapter 10 — Technical Specifications"
 sidebar_label: "Ch. 10 — Specifications"
 sidebar_position: 11

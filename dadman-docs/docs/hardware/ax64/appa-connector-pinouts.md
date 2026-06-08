@@ -1,5 +1,4 @@
 ---
-id: ax64/appa-connector-pinouts
 title: "Appendix A — Connector Pinouts"
 sidebar_label: "App. A — Connector Pinouts"
 sidebar_position: 12
