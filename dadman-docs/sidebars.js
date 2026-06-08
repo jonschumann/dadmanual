@@ -1,0 +1,76 @@
+// @ts-check
+
+/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
+  manualSidebar: [
+    {
+      type: 'doc',
+      id: 'intro',
+      label: 'About This Manual',
+    },
+    {
+      type: 'category',
+      label: 'Front Matter & Safety',
+      collapsed: false,
+      items: ['front-matter-safety'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 1 — Introduction',
+      items: ['ch01-introduction'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 2 — System Requirements',
+      items: ['ch02-system-requirements'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 3 — Installation',
+      items: ['ch03-installation'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 4 — Hardware Description',
+      items: ['ch04-hardware-description'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 5 — Signal Flow & Architecture',
+      items: ['ch05-signal-flow'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 6 — Getting Started',
+      collapsed: false,
+      items: ['ch06-getting-started'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 7 — Operation',
+      items: ['ch07-operation'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 8 — Advanced Features',
+      items: ['ch08-advanced-features'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 9 — Troubleshooting',
+      items: ['ch09-troubleshooting'],
+    },
+    {
+      type: 'category',
+      label: 'Ch. 10 — Maintenance',
+      items: ['ch10-maintenance'],
+    },
+    {
+      type: 'category',
+      label: 'Appendices',
+      items: ['appendices'],
+    },
+  ],
+};
+
+module.exports = sidebars;

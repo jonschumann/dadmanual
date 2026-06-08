@@ -1,0 +1,208 @@
+/**
+ * DADman User Manual — custom Docusaurus theme
+ * Brand: Digital Audio Denmark / NTP Technology A/S
+ */
+
+/* DAD brand colour palette */
+:root {
+  /* Primary: DAD dark blue */
+  --ifm-color-primary: #1a3a5c;
+  --ifm-color-primary-dark: #163249;
+  --ifm-color-primary-darker: #132d41;
+  --ifm-color-primary-darkest: #0e2230;
+  --ifm-color-primary-light: #1e4270;
+  --ifm-color-primary-lighter: #214778;
+  --ifm-color-primary-lightest: #2a5a96;
+
+  /* Accent: DAD signal blue */
+  --dad-accent: #0077cc;
+  --dad-accent-light: #e8f4fd;
+
+  /* Warning/caution colours */
+  --ifm-color-warning: #e67e00;
+  --ifm-color-danger: #c0392b;
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 119, 204, 0.08);
+
+  /* Table styling */
+  --ifm-table-border-color: #d0d7de;
+  --ifm-table-head-background: #f0f4f8;
+
+  /* Sidebar */
+  --ifm-sidebar-width: 280px;
+  --ifm-toc-border-color: #e8edf2;
+}
+
+/* Dark mode overrides */
+[data-theme='dark'] {
+  --ifm-color-primary: #4a9edd;
+  --ifm-color-primary-dark: #3089cc;
+  --ifm-color-primary-darker: #2880c2;
+  --ifm-color-primary-darkest: #1e67a1;
+  --ifm-color-primary-light: #64aee3;
+  --ifm-color-primary-lighter: #72b5e6;
+  --ifm-color-primary-lightest: #99cdee;
+
+  --dad-accent: #4a9edd;
+  --dad-accent-light: rgba(74, 158, 221, 0.12);
+
+  --ifm-table-head-background: #1e2a38;
+  --ifm-toc-border-color: #2d3f52;
+
+  --docusaurus-highlighted-code-line-bg: rgba(74, 158, 221, 0.15);
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Chapter/appendix headings */
+article h1 {
+  font-size: 1.9rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+article h2 {
+  font-size: 1.35rem;
+  margin-top: 2.5rem;
+  color: var(--ifm-color-primary);
+}
+
+article h3 {
+  font-size: 1.1rem;
+  margin-top: 1.8rem;
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
+
+table {
+  display: table;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+table th {
+  background-color: var(--ifm-table-head-background);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+table td, table th {
+  border: 1px solid var(--ifm-table-border-color);
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+/* Zebra striping */
+table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+[data-theme='dark'] table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* ── Admonitions (NOTE / CAUTION / TIP / WARNING) ───────────── */
+
+.alert {
+  border-radius: 4px;
+  border-left-width: 4px;
+}
+
+/* Override: NOTE → blue */
+.alert--info {
+  --ifm-alert-border-color: var(--dad-accent);
+  background-color: var(--dad-accent-light);
+}
+
+/* ── Screenshot placeholders ─────────────────────────────────── */
+
+em:only-child {
+  /* Placeholder paragraphs like *[Placeholder: ...]* */
+}
+
+p > em:first-child:last-child {
+  display: block;
+  padding: 1rem 1.25rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f5f7fa,
+    #f5f7fa 8px,
+    #edf0f4 8px,
+    #edf0f4 16px
+  );
+  border: 1.5px dashed #aab4c0;
+  border-radius: 4px;
+  color: #6b7a8d;
+  font-style: normal;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] p > em:first-child:last-child {
+  background: repeating-linear-gradient(
+    -45deg,
+    #1a2530,
+    #1a2530 8px,
+    #1e2d3d 8px,
+    #1e2d3d 16px
+  );
+  border-color: #3a5068;
+  color: #7a96b0;
+}
+
+/* ── Code blocks ─────────────────────────────────────────────── */
+
+code {
+  font-size: 0.88em;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────── */
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Sidebar category labels (chapter numbers) */
+.menu__list-item-collapsible .menu__link {
+  font-weight: 600;
+}
+
+/* ── Navbar ──────────────────────────────────────────────────── */
+
+.navbar {
+  border-bottom: 2px solid var(--ifm-color-primary);
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+
+.footer {
+  background-color: #0e1e2e;
+}
+
+/* ── Print styles ─────────────────────────────────────────────── */
+
+@media print {
+  .navbar, .footer, .table-of-contents, .theme-doc-sidebar-container {
+    display: none !important;
+  }
+  article {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}

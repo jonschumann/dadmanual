@@ -1,0 +1,11 @@
+# Docusaurus
+.docusaurus
+build/
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
