@@ -12,10 +12,10 @@ sidebar_position: 3
 
 ---
 
-## 2.1 Front Panel
+## 2.1 Controls Reference
 
-![MOM control face](/img/ch04-fig07-mom-control-face.png)
-*Figure 2.1 — MOM controls*
+![MOM control face](/img/panel-mom.png)
+*Figure 2.1 — MOM control face. Numbered callouts correspond to the reference table below.*
 
 *[Placeholder — complete callout table drawn from panel diagram. Reference ch04 for existing content.]*
 

@@ -36,10 +36,12 @@ slug: /hardware-description
 
 The AX Center is a 1U rack-mount Thunderbolt audio interface in the Thunder\|Core product family. It provides two mic/line/instrument inputs and stereo monitor outputs directly on the front panel, with MADI, ADAT, word clock, analogue expansion slots, and dual Thunderbolt 3 ports on the rear. All routing, gain, monitoring, and configuration is performed via DADman over Ethernet. The AX Center also hosts the MOM (Monitor Operating Module) when used as a desktop monitor controller system — the MOM connects to the AX Center via USB-C.
 
-### 4.1.2 Front Panel
+### 4.1.2 Panel Overview
 
-![AX Center front panel](/img/ch04-fig01-ax-center-front-panel.png)
-*Figure 4.1 — AX Center front panel*
+![AX Center front and rear panels](/img/panel-ax-center.png)
+*Figure 4.1 — AX Center front (top) and rear (bottom) panels. Numbered callouts correspond to the tables in Sections 4.1.3 and 4.1.4.*
+
+### 4.1.3 Front Panel Controls
 
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|
@@ -56,10 +58,7 @@ The AX Center is a 1U rack-mount Thunderbolt audio interface in the Thunder\|Cor
 | 4 | **HP 1** | 6.35 mm TRS jack | Headphone output 1. Level controlled via DADman or MOM. |
 | 5 | **HP 2** | 6.35 mm TRS jack | Headphone output 2. Level controlled via DADman or MOM. |
 
-### 4.1.3 Rear Panel
-
-![AX Center rear panel](/img/ch04-fig02-ax-center-rear-panel.png)
-*Figure 4.2 — AX Center rear panel*
+### 4.1.4 Rear Panel
 
 | Ref | Label | Connector | Function |
 |-----|-------|-----------|----------|
@@ -92,10 +91,12 @@ The Core 256 is a half-rack Thunderbolt audio interface in the Thunder\|Core pro
 
 > **NOTICE — Racking the Core 256:** The Core 256 is a half-rack-width unit. A dedicated 1U rack shelf or the Core 256 Racking Hardware accessory is required to mount it in a standard 19-inch rack. See [Chapter 2 — System Requirements] for racking options.
 
-### 4.2.2 Front Panel
+### 4.2.2 Panel Overview
 
-![Core 256 front panel](/img/ch04-fig03-core256-front-panel.png)
-*Figure 4.3 — Core 256 front panel*
+![Core 256 front and rear panels](/img/panel-core256.png)
+*Figure 4.2 — Core 256 front (top) and rear (bottom) panels. Numbered callouts correspond to the tables in Sections 4.2.3 and 4.2.4.*
+
+### 4.2.3 Front Panel Controls
 
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|
@@ -105,10 +106,7 @@ The Core 256 is a half-rack Thunderbolt audio interface in the Thunder\|Core pro
 | — | **Ext.** | LED indicator (green) | Lit when locked to external clock source |
 | — | **Err.** | LED indicator (red) | Lit on clock error or internal fault |
 
-### 4.2.3 Rear Panel
-
-![Core 256 rear panel](/img/ch04-fig04-core256-rear-panel.png)
-*Figure 4.4 — Core 256 rear panel*
+### 4.2.4 Rear Panel
 
 The Core 256 rear panel carries the same connector set as the AX Center (see [Section 4.1.3]), with the following differences:
 
@@ -128,10 +126,12 @@ All other rear-panel connectors (EXPANSION / SFP bays, NET 1/NET 2, THUNDERBOLT 
 
 The AX 64 is a 2U rack-mount Thunderbolt audio interface with up to eight expansion card slots, providing up to 64 channels of analogue I/O in a single unit (dependent on expansion cards fitted). Like the AX Center, all control is via DADman over Ethernet. The AX 64 carries the same core connectivity as the AX Center (MADI, ADAT, word clock, Thunderbolt 3, dual Ethernet) but adds up to eight DB25-format analogue expansion card slots in place of the AX Center's fixed front-panel I/O.
 
-### 4.3.2 Front Panel
+### 4.3.2 Panel Overview
 
-![AX 64 front panel](/img/ch04-fig05-ax64-front-panel.png)
-*Figure 4.5 — AX 64 front panel*
+![AX 64 front and rear panels](/img/panel-ax64.png)
+*Figure 4.3 — AX 64 front (top) and rear (bottom) panels. Numbered callouts correspond to the tables in Sections 4.3.3 and 4.3.4.*
+
+### 4.3.3 Front Panel Controls
 
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|
@@ -143,10 +143,7 @@ The AX 64 is a 2U rack-mount Thunderbolt audio interface with up to eight expans
 
 > **NOTICE:** The AX 64 front panel provides status indicators only. All audio I/O connections are made on the rear panel (Figure 4.6).
 
-### 4.3.3 Rear Panel
-
-![AX 64 rear panel](/img/ch04-fig06-ax64-rear-panel.png)
-*Figure 4.6 — AX 64 rear panel*
+### 4.3.4 Rear Panel
 
 | Ref | Label | Connector | Function |
 |-----|-------|-----------|----------|
@@ -180,8 +177,8 @@ The MOM (Monitor Operating Module) is a desktop monitor controller that connects
 
 ### 4.4.2 Controls Reference
 
-![MOM control face](/img/ch04-fig07-mom-control-face.png)
-*Figure 4.7 — MOM controls*
+![MOM control face](/img/panel-mom.png)
+*Figure 4.4 — MOM control face. Numbered callouts correspond to the reference table below.*
 
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|
@@ -228,13 +225,13 @@ The Penta 720 and Penta 721s are modular audio interface and signal conversion p
 
 The Penta 720 is a 2U rack-mount chassis that accepts expansion cards in its internal slots. The Penta 721s is a slimmer 1U variant. The rear-panel connector complement depends on the expansion cards fitted; the layout shown in Section 4.6.3 reflects a typical configuration with a Dante/AES67 I/O card in Slot 1.
 
-### 4.6.2 Front Panel
+### 4.6.2 Panel Overview
 
-![Penta 720 front panel](/img/ch04-fig08-penta720-front-panel.png)
-*Figure 4.8 — Penta 720 Modular I/O front panel*
+![Penta 720 panels](/img/panel-penta720.png)
+*Figure 4.5 — Penta 720 front panel. Numbered callouts correspond to the reference table in Section 4.6.3.*
 
-![Penta 721s front panel](/img/ch04-fig09-penta721s-front-panel.png)
-*Figure 4.9 — Penta 721s front panel*
+![Penta 721s panels](/img/panel-penta721s.png)
+*Figure 4.6 — Penta 721s front and rear panels. Numbered callouts correspond to the reference tables in Sections 4.6.3 and 4.6.4.*
 
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|
@@ -242,10 +239,7 @@ The Penta 720 is a 2U rack-mount chassis that accepts expansion cards in its int
 | — | **Error** | LED indicator (red) | An internal fault or configuration error has been detected |
 | — | **PSU OK** | LED indicator (green) | Primary power supply is operating correctly. On units with redundant PSU, a second PSU OK indicator confirms the backup supply status. |
 
-### 4.6.3 Rear Panel
-
-![Penta 721s rear panel](/img/ch04-fig10-penta721s-rear-panel.png)
-*Figure 4.10 — Penta 721s rear panel (shown with Dante/AES67 I/O card in Slot 1)*
+### 4.6.4 Rear Panel
 
 | Ref | Label | Connector | Function |
 |-----|-------|-----------|----------|

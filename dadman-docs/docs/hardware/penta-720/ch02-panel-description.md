@@ -12,10 +12,10 @@ sidebar_position: 3
 
 ---
 
-## 2.1 Front Panel
+## 2.1 Panel Overview
 
-![Penta 720 front panel](/img/ch04-fig08-penta720-front-panel.png)
-*Figure 2.1 — Penta 720 front panel*
+![Penta 720 front panel](/img/panel-penta720.png)
+*Figure 2.1 — Penta 720 front panel. Numbered callouts correspond to the reference table below.*
 
 *[Placeholder — complete callout table drawn from panel diagram. Reference ch04 for existing content.]*
 

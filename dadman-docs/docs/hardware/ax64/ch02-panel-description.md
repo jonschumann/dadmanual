@@ -12,10 +12,10 @@ sidebar_position: 3
 
 ---
 
-## 2.1 Front Panel
+## 2.1 Panel Overview
 
-![AX64 front panel](/img/ch04-fig05-ax64-front-panel.png)
-*Figure 2.1 — AX64 front panel*
+![AX 64 front and rear panels](/img/panel-ax64.png)
+*Figure 2.1 — AX 64 front (top) and rear (bottom) panels. Numbered callouts correspond to the tables below.*
 
 *[Placeholder — complete callout table drawn from panel diagram. Reference ch04 for existing content.]*
 
@@ -28,8 +28,6 @@ sidebar_position: 3
 
 ## 2.2 Rear Panel
 
-![AX64 rear panel](/img/ch04-fig06-ax64-rear-panel.png)
-*Figure 2.2 — AX64 rear panel*
 
 *[Placeholder — complete callout table.]*
 

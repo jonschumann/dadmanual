@@ -1,7 +1,11 @@
 /**
  * screenshot-panels.mjs
- * Serves the Figma Make build and screenshots each panel section,
- * saving composited images (panel + dots + legend) to static/img/.
+ * Serves the Figma Make build and screenshots each device's full panel section,
+ * saving composited images (panel + callout dots + legend) to static/img/.
+ *
+ * Each entry screenshots the ENTIRE section element so that the absolutely-
+ * positioned legend (sibling of the panel image, not a child) is always
+ * included in the output image.
  *
  * Usage:  node screenshot-panels.mjs
  */
@@ -17,20 +21,17 @@ const DIST_DIR  = '/tmp/Linkandstyledotcolors/dist';
 const OUT_DIR   = '/Users/jonschumann/Documents/Claude/Projects/DADman User Manual/dadman-docs/static/img';
 const PORT      = 8787;
 
-// data-name → output filename(s)
-// When a section contains both front and back panels we screenshot
-// the child elements directly; otherwise we screenshot the section.
+// One entry per device — screenshots the whole section so the legend is never cropped.
+// The legend elements (data-name="FRONT legend", "BACK legend") are absolutely-positioned
+// siblings of the panel images within each section, so we must screenshot the section
+// itself rather than individual child elements.
 const PANELS = [
-  { section: 'AX Center section',   child: 'AX Center Back',    out: 'ch04-fig02-ax-center-rear-panel.png'   },
-  { section: 'AX Center section',   child: null,                out: 'ch04-fig01-ax-center-front-panel.png',  wholeSection: true },
-  { section: 'Core 256 section',    child: 'Core 256 Front',    out: 'ch04-fig03-core256-front-panel.png'    },
-  { section: 'Core 256 section',    child: 'Core 256 Back',     out: 'ch04-fig04-core256-rear-panel.png'     },
-  { section: 'AX64 section',        child: 'AX64 Front',        out: 'ch04-fig05-ax64-front-panel.png'       },
-  { section: 'AX64 section',        child: 'AX64 Back',         out: 'ch04-fig06-ax64-rear-panel.png'        },
-  { section: 'MOM section',         child: 'MOM Face',          out: 'ch04-fig07-mom-control-face.png'       },
-  { section: 'Penta 720 section',   child: 'Penta 720 Front',   out: 'ch04-fig08-penta720-front-panel.png'   },
-  { section: 'Penta 721s section',  child: 'Penta 721s Front',  out: 'ch04-fig09-penta721s-front-panel.png'  },
-  { section: 'Penta 721s section',  child: 'Penta 721s Back',   out: 'ch04-fig10-penta721s-rear-panel.png'   },
+  { section: 'AX Center section',  out: 'panel-ax-center.png'  },
+  { section: 'Core 256 section',   out: 'panel-core256.png'    },
+  { section: 'AX64 section',       out: 'panel-ax64.png'       },
+  { section: 'MOM section',        out: 'panel-mom.png'        },
+  { section: 'Penta 720 section',  out: 'panel-penta720.png'   },
+  { section: 'Penta 721s section', out: 'panel-penta721s.png'  },
 ];
 
 // ── static file server ────────────────────────────────────────────────────────
@@ -64,14 +65,10 @@ function startServer() {
   await page.setViewport({ width: 2400, height: 4000, deviceScaleFactor: 2 });
   await page.goto(`http://localhost:${PORT}`, { waitUntil: 'networkidle0' });
 
-  for (const { section, child, out } of PANELS) {
-    const selector = child
-      ? `[data-name="${child}"]`
-      : `[data-name="${section}"]`;
-
-    const el = await page.$(selector);
+  for (const { section, out } of PANELS) {
+    const el = await page.$(`[data-name="${section}"]`);
     if (!el) {
-      console.warn(`  SKIP  ${out} — element not found: ${selector}`);
+      console.warn(`  SKIP  ${out} — section not found: ${section}`);
       continue;
     }
 

@@ -12,10 +12,10 @@ sidebar_position: 3
 
 ---
 
-## 2.1 Front Panel
+## 2.1 Panel Overview
 
-![Penta 721s front panel](/img/ch04-fig09-penta721s-front-panel.png)
-*Figure 2.1 — Penta 721s front panel*
+![Penta 721s front and rear panels](/img/panel-penta721s.png)
+*Figure 2.1 — Penta 721s front (top) and rear (bottom) panels. Numbered callouts correspond to the tables below.*
 
 *[Placeholder — complete callout table drawn from panel diagram. Reference ch04 for existing content.]*
 
@@ -28,8 +28,6 @@ sidebar_position: 3
 
 ## 2.2 Rear Panel
 
-![Penta 721s rear panel](/img/ch04-fig10-penta721s-rear-panel.png)
-*Figure 2.2 — Penta 721s rear panel*
 
 *[Placeholder — complete callout table.]*
 

@@ -12,10 +12,10 @@ sidebar_position: 3
 
 ---
 
-## 2.1 Front Panel
+## 2.1 Panel Overview
 
-![Core 256 front panel](/img/ch04-fig03-core256-front-panel.png)
-*Figure 2.1 — Core 256 front panel*
+![Core 256 front and rear panels](/img/panel-core256.png)
+*Figure 2.1 — Core 256 front (top) and rear (bottom) panels. Numbered callouts correspond to the tables below.*
 
 *[Placeholder — complete callout table drawn from panel diagram. Reference ch04 for existing content.]*
 
@@ -28,8 +28,6 @@ sidebar_position: 3
 
 ## 2.2 Rear Panel
 
-![Core 256 rear panel](/img/ch04-fig04-core256-rear-panel.png)
-*Figure 2.2 — Core 256 rear panel*
 
 *[Placeholder — complete callout table.]*
 

@@ -12,10 +12,10 @@ sidebar_position: 3
 
 ---
 
-## 2.1 Front Panel
+## 2.1 Panel Overview
 
-![AX Center front panel](/img/ch04-fig01-ax-center-front-panel.png)
-*Figure 2.1 — AX Center front panel*
+![AX Center front and rear panels](/img/panel-ax-center.png)
+*Figure 2.1 — AX Center front (top) and rear (bottom) panels. Numbered callouts correspond to the tables below.*
 
 *[Placeholder — complete callout table drawn from panel diagram. Reference ch04 for existing content.]*
 
@@ -28,8 +28,6 @@ sidebar_position: 3
 
 ## 2.2 Rear Panel
 
-![AX Center rear panel](/img/ch04-fig02-ax-center-rear-panel.png)
-*Figure 2.2 — AX Center rear panel*
 
 *[Placeholder — complete callout table.]*
 
