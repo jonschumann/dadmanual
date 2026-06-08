@@ -1,0 +1,10 @@
+{
+  "label": "Penta 720 Hardware Manual",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Hardware manual for the Digital Audio Denmark Penta 720."
+  }
+}

@@ -1,0 +1,78 @@
+---
+id: mom/ch01-introduction
+title: "Chapter 1 — Introduction"
+sidebar_label: "Ch. 1 — Introduction"
+sidebar_position: 2
+---
+
+# Chapter 1 — Introduction
+
+> **Product:** Digital Audio Denmark MOM
+
+---
+
+## 1.1 Product Overview
+
+The MOM (Monitor Operating Module) is a physical monitor controller that connects to an AX Center or AX64 via USB-C. It provides direct-access controls for speaker selection, source selection, master level, dim, cut, talkback, and reference level. The MOM contains no audio circuitry; all audio processing occurs in the host unit.
+
+**Connection to host:** USB-C to host AX Center / AX64
+**Form factor:** Desktop or rackmount
+**Audio channels:** Control surface only — no audio channels
+
+---
+
+## 1.2 Key Features
+
+*[Placeholder — enumerate key features drawn from product brief and engineering documentation.]*
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+---
+
+## 1.3 Contents of Box
+
+*[Placeholder — list all items included in the standard shipping box. Verify against current packing list from operations.]*
+
+| Item | Quantity |
+|------|----------|
+| MOM unit | 1 |
+| IEC C13 power cable | 1 |
+| Quick-start guide | 1 |
+| *[Additional items TBC]* | — |
+
+---
+
+## 1.4 Part Numbers and Ordering
+
+*[Placeholder — DAD part numbers, SKUs, and available factory-configuration options.]*
+
+| Part number | Description |
+|-------------|-------------|
+| *TBC* | MOM standard |
+| *TBC* | *[Optional configuration]* |
+
+### Optional Accessories
+
+*[Placeholder — list separately-ordered accessories: rack ears, cables, expansion cards, etc.]*
+
+---
+
+## 1.5 Firmware and Software Compatibility
+
+*[Placeholder — minimum firmware version, compatible DADman version(s).]*
+
+| Component | Minimum version |
+|-----------|-----------------|
+| MOM firmware | TBC |
+| DADman | v5.8 or later |
+|  |
+
+---
+
+## Cross-References
+
+- [Front Matter — Safety & Conventions](./mom/fm-safety) — Read before installation
+- [Ch. 3 — Installation](./mom/ch03-installation) — Mounting and initial setup
+- [DADman User Manual — Chapter 4](../ch04-hardware-description) — Software integration overview

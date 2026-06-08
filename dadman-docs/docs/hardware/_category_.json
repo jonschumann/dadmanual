@@ -1,0 +1,11 @@
+{
+  "label": "Hardware Manuals",
+  "position": 99,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Hardware Manuals",
+    "description": "Individual hardware manuals for Digital Audio Denmark products. Each manual covers panel description, installation, connections, clocking, operation, DADman integration, maintenance, troubleshooting, and full technical specifications."
+  }
+}

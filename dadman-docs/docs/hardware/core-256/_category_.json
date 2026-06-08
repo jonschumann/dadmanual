@@ -1,0 +1,10 @@
+{
+  "label": "Core 256 Hardware Manual",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Hardware manual for the Digital Audio Denmark Core 256."
+  }
+}

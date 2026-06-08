@@ -1,0 +1,10 @@
+{
+  "label": "Penta 721s Hardware Manual",
+  "position": 6,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Hardware manual for the Digital Audio Denmark Penta 721s."
+  }
+}

@@ -66,7 +66,13 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'manualSidebar',
             position: 'left',
-            label: 'Manual',
+            label: 'DADman Manual',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'hardwareSidebar',
+            position: 'left',
+            label: 'Hardware Manuals',
           },
           {
             href: 'https://www.digitalaudiosupport.com',
