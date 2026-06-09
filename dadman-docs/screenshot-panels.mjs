@@ -25,28 +25,26 @@ const PORT      = 8787;
 //   out     : output filename
 const SHOTS = [
   // ── AX Center ────────────────────────────────────────────────────────────────
-  { section: 'AX Center section', panel: 'Frame',         legend: 'FRONT legend', out: 'panel-ax-center-front.png' },
-  { section: 'AX Center section', panel: 'AX Center Back',legend: 'BACK legend',  out: 'panel-ax-center-rear.png'  },
+  { section: 'AX Center section', panel: 'Frame',         legend: null, out: 'panel-ax-center-front.png' },
+  { section: 'AX Center section', panel: 'AX Center Back',legend: null, out: 'panel-ax-center-rear.png'  },
 
   // ── Core 256 ─────────────────────────────────────────────────────────────────
-  // Core 256 front has NO legend (blank front face); rear has the legend
-  { section: 'Core 256 section',  panel: 'Core 256 Front',legend: null,           out: 'panel-core256-front.png'   },
-  { section: 'Core 256 section',  panel: 'Core 256 Back', legend: 'BACK legend',  out: 'panel-core256-rear.png'    },
+  { section: 'Core 256 section',  panel: 'Core 256 Front',legend: null, out: 'panel-core256-front.png'   },
+  { section: 'Core 256 section',  panel: 'Core 256 Back', legend: null, out: 'panel-core256-rear.png'    },
 
   // ── AX 64 ────────────────────────────────────────────────────────────────────
-  { section: 'AX64 section',      panel: 'AX64 Front',    legend: 'FRONT legend', out: 'panel-ax64-front.png'      },
-  { section: 'AX64 section',      panel: 'AX64 Back',     legend: 'BACK legend',  out: 'panel-ax64-rear.png'       },
+  { section: 'AX64 section',      panel: 'AX64 Front',    legend: null, out: 'panel-ax64-front.png'      },
+  { section: 'AX64 section',      panel: 'AX64 Back',     legend: null, out: 'panel-ax64-rear.png'       },
 
-  // ── MOM (single face) ────────────────────────────────────────────────────────
-  // MOM uses numbered legend-1..5, no "FRONT legend" container — screenshot whole section
-  { section: 'MOM section',       panel: null,            legend: null,           out: 'panel-mom.png'             },
+  // ── MOM (face only — legend replaced by table in ch02) ───────────────────────
+  { section: 'MOM section',       panel: 'MOM Face',      legend: null, out: 'panel-mom.png'             },
 
   // ── Penta 720 (front only) ───────────────────────────────────────────────────
-  { section: 'Penta 720 section', panel: null,            legend: null,           out: 'panel-penta720.png'        },
+  { section: 'Penta 720 section', panel: null,            legend: null, out: 'panel-penta720.png'        },
 
   // ── Penta 721s ───────────────────────────────────────────────────────────────
-  { section: 'Penta 721s section',panel: 'Penta 721s Front',legend: null,         out: 'panel-penta721s-front.png' },
-  { section: 'Penta 721s section',panel: 'Penta 721s Back', legend: 'BACK legend',out: 'panel-penta721s-rear.png'  },
+  { section: 'Penta 721s section',panel: 'Penta 721s Front',legend: null, out: 'panel-penta721s-front.png' },
+  { section: 'Penta 721s section',panel: 'Penta 721s Back', legend: null, out: 'panel-penta721s-rear.png'  },
 ];
 
 // ── static file server ────────────────────────────────────────────────────────
