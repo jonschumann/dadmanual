@@ -16,11 +16,11 @@ sidebar_position: 3
 ![Penta 721s front panel](/img/panel-penta721s-front.png)
 *Figure 2.1 — Penta 721s front panel. Numbered callouts correspond to the reference table below.*
 
-| Ref | Label | Type | Function |
-|-----|-------|------|----------|
-| — | **Ready** | LED indicator (green) | Unit has completed boot sequence and is ready for operation |
-| — | **Error** | LED indicator (red) | An internal fault or configuration error has been detected |
-| — | **PSU OK** | LED indicator (green) | Primary power supply is operating correctly. On units with redundant PSU, a second PSU OK indicator confirms backup supply status. |
+| Ref | Label | Type | Function | Dot |
+|-----|-------|------|----------|-----|
+| 1 | **Ready** | LED indicator (green) | Unit has completed boot sequence and is ready for operation | Grey |
+| 2 | **Error** | LED indicator (red) | An internal fault or configuration error has been detected | Grey |
+| 3 | **PSU OK** | LED indicator (green) | Primary power supply is operating correctly. On units with redundant PSU, a second PSU OK indicator confirms backup supply status. | Grey |
 
 ---
 
@@ -31,21 +31,21 @@ sidebar_position: 3
 
 > **NOTICE:** The Penta 721s rear panel layout varies depending on the expansion cards fitted. The connector complement shown below reflects a typical configuration. Verify the actual card layout in your unit before making connections.
 
-| Ref | Label | Connector | Function |
-|-----|-------|-----------|----------|
-| 1 | **Power (primary)** | IEC C14 inlet | Mains power input. 100–240 V AC, 50/60 Hz, 0.45–0.20 A. Fuse: T1AH/250VAC. |
-| 2 | **Power (backup)** | IEC C14 inlet | Redundant mains power input (where fitted). Provides hot-swap PSU redundancy. |
-| 3 | **AES/EBU I/O 1–4** | DB25 (Tascam pinout) | AES/EBU digital audio I/O, channels 1–4 (4 stereo pairs = 8 channels). |
-| 4 | **AES/EBU I/O 5–8** | DB25 (Tascam pinout) | AES/EBU digital audio I/O, channels 5–8 (4 stereo pairs = 8 channels). |
-| 5 | **MADI IN** | BNC, 75 Ω | MADI coaxial input. AES10 compliant. |
-| 6 | **MADI OUT** | BNC, 75 Ω | MADI coaxial output. |
-| 7 | **Optical I/O** | TOSLINK (optical) | Optical MADI or ADAT I/O (card-dependent). |
-| 8 | **WC/VBB IN** | BNC, 75 Ω | Word clock or Video Black Burst input. |
-| 9 | **WC OUT** | BNC, 75 Ω | Word clock output. |
-| 10 | **AES11 IN** | XLR (female) | AES11 digital audio reference signal input. |
-| 11 | **NET 1** | RJ45 (1000BASE-T) | Ethernet control and/or Dante audio network, port 1. |
-| 12 | **NET 2** | RJ45 (1000BASE-T) | Ethernet control and/or Dante audio network, port 2. |
-| 13 | **SLOT 1** *(typical: Dante/AES67 I/O)* | 2× SFP | Expansion card slot 1. When fitted with a Dante/AES67 I/O card: two SFP ports for optical or copper Dante network connections. |
+| Ref | Label | Connector | Function | Dot |
+|-----|-------|-----------|----------|-----|
+| 1 | **Power (primary)** | IEC C14 inlet | Mains power input. 100–240 V AC, 50/60 Hz, 0.45–0.20 A. Fuse: T1AH/250VAC. | Dark |
+| 2 | **Power (backup)** | IEC C14 inlet | Redundant mains power input (where fitted). Provides hot-swap PSU redundancy. | Dark |
+| 3 | **AES/EBU I/O 1–4** | DB25 (Tascam pinout) | AES/EBU digital audio I/O, channels 1–4 (4 stereo pairs = 8 channels). | Orange |
+| 4 | **AES/EBU I/O 5–8** | DB25 (Tascam pinout) | AES/EBU digital audio I/O, channels 5–8 (4 stereo pairs = 8 channels). | Orange |
+| 5 | **MADI IN** | BNC, 75 Ω | MADI coaxial input. AES10 compliant. | Blue |
+| 6 | **MADI OUT** | BNC, 75 Ω | MADI coaxial output. | Blue |
+| 7 | **Optical I/O** | TOSLINK (optical) | Optical MADI or ADAT I/O (card-dependent). | Cyan |
+| 8 | **WC/VBB IN** | BNC, 75 Ω | Word clock or Video Black Burst input. | Violet |
+| 9 | **WC OUT** | BNC, 75 Ω | Word clock output. | Violet |
+| 10 | **AES11 IN** | XLR (female) | AES11 digital audio reference signal input. | Green |
+| 11 | **NET 1** | RJ45 (1000BASE-T) | Ethernet control and/or Dante audio network, port 1. | Slate |
+| 12 | **NET 2** | RJ45 (1000BASE-T) | Ethernet control and/or Dante audio network, port 2. | Slate |
+| 13 | **SLOT 1** *(typical: Dante/AES67 I/O)* | 2× SFP | Expansion card slot 1. When fitted with a Dante/AES67 I/O card: two SFP ports for optical or copper Dante network connections. | Cyan |
 
 ---
 

@@ -16,22 +16,22 @@ sidebar_position: 3
 ![MOM control face](/img/panel-mom.png)
 *Figure 2.1 — MOM control face. Numbered callouts correspond to the reference table below.*
 
-| Ref | Label | Type | Function |
-|-----|-------|------|----------|
-| 1 | **Spkr. 1** | Illuminated push-button | Selects speaker output set 1 (e.g., main monitors). Corresponds to a speaker output set configured in the active Monitor Profile in DADman. |
-| 2 | **Spkr. 2** | Illuminated push-button | Selects speaker output set 2 (e.g., near-field monitors). |
-| 3 | **Spkr. 3** | Illuminated push-button | Selects speaker output set 3 (e.g., translation speaker or Atmos bed). |
-| 4 | **Src. A** | Illuminated push-button | Selects monitoring source A as defined in the active Monitor Profile. |
-| 5 | **Src. B** | Illuminated push-button | Selects monitoring source B. |
-| 6 | **Src. C** | Illuminated push-button | Selects monitoring source C. |
-| 7 | **Layer** | Illuminated push-button | Switches the MOM between control layers. Pressing Layer cycles through configured layers, reassigning Spkr. and Src. buttons. |
-| — | **Status LEDs 1–4** | LED indicators | Indicate the status of the four active monitoring layers or presets. Illuminated when the corresponding layer is active. |
-| — | **Stat.** | LED indicator (green) | MOM is connected to the AX Center / AX 64 and communicating correctly. Flashes during initialisation. Off when disconnected. |
-| 8 | **TB** | Push-button | Talkback. Routes the talkback microphone (configured in DADman) into the talent feeds while held. |
-| 9 | **Ref** | Push-button | Reference level. Switches the monitor output to the calibrated reference level defined in the active Monitor Profile. Press again to return to the previous level. |
-| 10 | **Cut** | Illuminated push-button | Cuts (mutes) the monitor output. Illuminates red when active. |
-| 11 | **Dim** | Illuminated push-button | Attenuates the monitor output by the Dim amount configured in the active Monitor Profile (typically −20 dB). Illuminates amber when active. |
-| 12 | **Level** | Rotary encoder with LED ring | Master monitor level control. Turn to adjust the output level. The LED ring indicates the current level position relative to the reference level. Range: approximately −40 dB to +6 dB relative to reference. |
+| Ref | Label | Type | Function | Dot |
+|-----|-------|------|----------|-----|
+| 1 | **Spkr. 1** | Illuminated push-button | Selects speaker output set 1 (e.g., main monitors). Corresponds to a speaker output set configured in the active Monitor Profile in DADman. | Cyan |
+| 2 | **Spkr. 2** | Illuminated push-button | Selects speaker output set 2 (e.g., near-field monitors). | Teal |
+| 3 | **Spkr. 3** | Illuminated push-button | Selects speaker output set 3 (e.g., translation speaker or Atmos bed). | Blue |
+| 4 | **Src. A** | Illuminated push-button | Selects monitoring source A as defined in the active Monitor Profile. | Amber |
+| 5 | **Src. B** | Illuminated push-button | Selects monitoring source B. | Orange |
+| 6 | **Src. C** | Illuminated push-button | Selects monitoring source C. | Yellow |
+| 7 | **Layer** | Illuminated push-button | Switches the MOM between control layers. Pressing Layer cycles through configured layers, reassigning Spkr. and Src. buttons. | Violet |
+| 8 | **Status LEDs 1–4** | LED indicators | Indicate the status of the four active monitoring layers or presets. Illuminated when the corresponding layer is active. | — |
+| 9 | **Stat.** | LED indicator (green) | MOM is connected to the AX Center / AX 64 and communicating correctly. Flashes during initialisation. Off when disconnected. | — |
+| 10 | **TB** | Push-button | Talkback. Routes the talkback microphone (configured in DADman) into the talent feeds while held. | Red |
+| 11 | **Ref** | Push-button | Reference level. Switches the monitor output to the calibrated reference level defined in the active Monitor Profile. Press again to return to the previous level. | Green |
+| 12 | **Cut** | Illuminated push-button | Cuts (mutes) the monitor output. Illuminates red when active. | Purple |
+| 13 | **Dim** | Illuminated push-button | Attenuates the monitor output by the Dim amount configured in the active Monitor Profile (typically −20 dB). Illuminates amber when active. | Slate |
+| 14 | **Level** | Rotary encoder with LED ring | Master monitor level control. Turn to adjust the output level. The LED ring indicates the current level position relative to the reference level. Range: approximately −40 dB to +6 dB relative to reference. | Dark |
 
 > **NOTICE — MOM and Monitor Profiles:** The functions of the Spkr., Src., and Layer buttons are determined by the Monitor Profile loaded in DADman. Configure Monitor Profiles before using the MOM in a session. See [Ch. 8 — Advanced Features, Section 8.1 — Monitor Profiles].
 

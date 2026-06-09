@@ -14,17 +14,17 @@ sidebar_position: 3
 ## 2.1 Front Panel
 
 ![AX 64 front panel](/img/panel-ax64-front.png)
-*Figure 2.1 — AX 64 front panel. Numbered callouts correspond to the table below.*
+*Figure 2.1 — AX 64 front panel. The legend strip below the panel identifies the Power button; clock reference LEDs are unlabelled.*
 
 > **NOTICE:** The AX 64 front panel provides status indicators only. All audio I/O connections are made on the rear panel (Figure 2.2).
 
-| Ref | Label | Type | Function |
-|-----|-------|------|----------|
-| — | **DAD** | Illuminated logo | Blue illumination; indicates power-on |
-| 1 | **Power** | Illuminated push-button | Initiates controlled power-on/shutdown sequence |
-| — | **Int.** | LED indicator | Lit when locked to internal clock reference |
-| — | **Ext.** | LED indicator (green) | Lit when locked to external clock source |
-| — | **Err.** | LED indicator (red) | Lit on clock error or internal fault. See [Section 2.3](#23-led-state-reference). |
+| Ref | Label | Type | Function | Dot |
+|-----|-------|------|----------|-----|
+| 1 | **DAD** | Illuminated logo | Blue illumination; indicates power-on | — |
+| 2 | **Power** | Illuminated push-button | Initiates controlled power-on/shutdown sequence | Grey |
+| 3 | **Int.** | LED indicator | Lit when locked to internal clock reference | — |
+| 4 | **Ext.** | LED indicator (green) | Lit when locked to external clock source | — |
+| 5 | **Err.** | LED indicator (red) | Lit on clock error or internal fault. See [Section 2.3](#23-led-state-reference). | — |
 
 ---
 
@@ -33,21 +33,21 @@ sidebar_position: 3
 ![AX 64 rear panel](/img/panel-ax64-rear.png)
 *Figure 2.2 — AX 64 rear panel. Numbered callouts correspond to the table below.*
 
-| Ref | Label | Connector | Function |
-|-----|-------|-----------|----------|
-| 1 | **Power** | IEC C14 inlet | Mains power input. 100–240 V AC, 50/60 Hz, auto-ranging. |
-| 1a | *(Optional)* | IEC C14 inlet | Redundant power supply inlet (factory-fitted option). |
-| 2, 3 | **EXPANSION** | 2× SFP bay | DADLink / MADI optical expansion. Accepts SFP modules for DADLink or optical MADI I/O. |
-| 4, 5 | **NET 1 / NET 2** | 2× RJ45 + SFP bay | Ethernet control network. Connect NET 1 or NET 2 to the DADman control network. |
-| 6 | **THUNDERBOLT 1** (upper) | USB-C (Thunderbolt 3) | Primary Thunderbolt 3 connection to the computer. |
-| 7 | **THUNDERBOLT 2** (lower) | USB-C (Thunderbolt 3) | Thunderbolt 3 daisy-chain / passthrough. |
-| 8 | **WC IN** | BNC, 75 Ω | Word clock input. |
-| 9 | **WC OUT** | BNC, 75 Ω | Word clock output. |
-| 10 | **MADI IN** | BNC, 75 Ω | MADI coaxial input. AES10 compliant. |
-| 11 | **MADI OUT** | BNC, 75 Ω | MADI coaxial output. |
-| 12, 14 | **ADAT OUT 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe outputs. Up to 8 ch at 44.1/48 kHz; 4 ch at 88.2/96 kHz (S/MUX). |
-| 13, 15 | **ADAT IN 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe inputs. |
-| 16–23 | **Slot 1 – Slot 8** | Up to 8× DB25 | Analogue expansion card slots. Each slot accepts one 8-channel DAD expansion card (A/D, D/A, or digital I/O). Slot numbering runs right to left as viewed from the rear (Slot 1 is rightmost). Card type and routing is configured in DADman. |
+| Ref | Label | Connector | Function | Dot |
+|-----|-------|-----------|----------|-----|
+| 1 | **Power** | IEC C14 inlet | Mains power input. 100–240 V AC, 50/60 Hz, auto-ranging. | Dark |
+| 1a | *(Optional)* | IEC C14 inlet | Redundant power supply inlet (factory-fitted option). | Cyan |
+| 2, 3 | **EXPANSION** | 2× SFP bay | DADLink / MADI optical expansion. Accepts SFP modules for DADLink or optical MADI I/O. | Cyan |
+| 4, 5 | **NET 1 / NET 2** | 2× RJ45 + SFP bay | Ethernet control network. Connect NET 1 or NET 2 to the DADman control network. | Slate |
+| 6 | **THUNDERBOLT 1** (upper) | USB-C (Thunderbolt 3) | Primary Thunderbolt 3 connection to the computer. | Amber |
+| 7 | **THUNDERBOLT 2** (lower) | USB-C (Thunderbolt 3) | Thunderbolt 3 daisy-chain / passthrough. | Amber |
+| 8 | **WC IN** | BNC, 75 Ω | Word clock input. | Violet |
+| 9 | **WC OUT** | BNC, 75 Ω | Word clock output. | Violet |
+| 10 | **MADI IN** | BNC, 75 Ω | MADI coaxial input. AES10 compliant. | Blue |
+| 11 | **MADI OUT** | BNC, 75 Ω | MADI coaxial output. | Blue |
+| 12, 14 | **ADAT OUT 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe outputs. Up to 8 ch at 44.1/48 kHz; 4 ch at 88.2/96 kHz (S/MUX). | Teal |
+| 13, 15 | **ADAT IN 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe inputs. | Teal |
+| 16–23 | **Slot 1 – Slot 8** | Up to 8× DB25 | Analogue expansion card slots. Each slot accepts one 8-channel DAD expansion card (A/D, D/A, or digital I/O). Slot numbering runs right to left as viewed from the rear (Slot 1 is rightmost). Card type and routing is configured in DADman. | Yellow |
 
 > **NOTICE — Expansion card slots:** Unpopulated slots are covered by a blanking plate. Do not remove blanking plates — they are required for correct airflow. Expansion cards must only be installed or removed with the unit powered off.
 

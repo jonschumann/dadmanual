@@ -14,17 +14,17 @@ sidebar_position: 3
 ## 2.1 Front Panel
 
 ![Core 256 front panel](/img/panel-core256-front.png)
-*Figure 2.1 — Core 256 front panel. Numbered callouts correspond to the table below.*
+*Figure 2.1 — Core 256 front panel.*
 
 > **NOTICE:** The Core 256 front panel provides status indicators only. There are no audio I/O connectors on the front panel.
 
-| Ref | Label | Type | Function |
-|-----|-------|------|----------|
-| — | **DAD** | Illuminated logo | Blue illumination; indicates power-on |
-| 1 | **Power** | Illuminated push-button | Initiates controlled power-on/shutdown sequence |
-| — | **Int.** | LED indicator | Lit when locked to internal clock reference |
-| — | **Ext.** | LED indicator (green) | Lit when locked to external clock source |
-| — | **Err.** | LED indicator (red) | Lit on clock error or internal fault. See [Section 2.3](#23-led-state-reference). |
+| Ref | Label | Type | Function | Dot |
+|-----|-------|------|----------|-----|
+| 1 | **DAD** | Illuminated logo | Blue illumination; indicates power-on | — |
+| 2 | **Power** | Illuminated push-button | Initiates controlled power-on/shutdown sequence | — |
+| 3 | **Int.** | LED indicator | Lit when locked to internal clock reference | — |
+| 4 | **Ext.** | LED indicator (green) | Lit when locked to external clock source | — |
+| 5 | **Err.** | LED indicator (red) | Lit on clock error or internal fault. See [Section 2.3](#23-led-state-reference). | — |
 
 ---
 
@@ -43,20 +43,20 @@ The Core 256 rear panel carries the same connector set as the AX Center with the
 
 All other rear-panel connectors (EXPANSION / SFP bays, NET 1/NET 2, THUNDERBOLT 1/2, WC/VBB IN, WC OUT, MADI IN, MADI OUT, ADAT OUT 1/2, ADAT IN 1/2) are identical to the AX Center. Refer to [Ch. 4 — AX Center Rear Panel](../ax-center/ch04-connections) for function and specification of those connectors.
 
-| Ref | Label | Connector | Function |
-|-----|-------|-----------|----------|
-| 1 | **Power** | 12 V DC barrel | DC power input. Connect the supplied external 12 V power supply. Do not substitute with a third-party supply. |
-| 2 | **EXPANSION** | 2× SFP bay | DADLink / MADI optical expansion. Identical to AX Center. |
-| 3 | **NET 1 / NET 2** | 2× RJ45 + SFP bay | Ethernet control network (100/1000BASE-T) + optional SFP fibre. Identical to AX Center. |
-| 4 | **THUNDERBOLT 1** (upper) | USB-C (Thunderbolt 3) | Primary Thunderbolt 3 connection to the computer. |
-| 5 | **THUNDERBOLT 2** (lower) | USB-C (Thunderbolt 3) | Thunderbolt 3 daisy-chain / passthrough. |
-| 6 | **WC/VBB IN** | BNC, 75 Ω | Word clock or Video Black Burst input. |
-| 7 | **WC OUT** | BNC, 75 Ω | Word clock output. |
-| 8 | **MADI IN** | BNC, 75 Ω | MADI input (coaxial). AES10 compliant. |
-| 9 | **MADI OUT** | BNC, 75 Ω | MADI output (coaxial). |
-| 10 | **ADAT OUT 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe outputs. Up to 8 ch at 44.1/48 kHz; 4 ch at 88.2/96 kHz (S/MUX). |
-| 11 | **ADAT IN 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe inputs. Same channel count as ADAT outputs. |
-| 12 | **SLOT 1 / SLOT 2** | 2× expansion slot (DB25) | Analogue I/O expansion slots. Each accepts one 8-channel DAD expansion card. |
+| Ref | Label | Connector | Function | Dot |
+|-----|-------|-----------|----------|-----|
+| 1 | **Power** | 12 V DC barrel | DC power input. Connect the supplied external 12 V power supply. Do not substitute with a third-party supply. | Dark |
+| 2 | **EXPANSION** | 2× SFP bay | DADLink / MADI optical expansion. Identical to AX Center. | Cyan |
+| 3 | **NET 1 / NET 2** | 2× RJ45 + SFP bay | Ethernet control network (100/1000BASE-T) + optional SFP fibre. Identical to AX Center. | Slate |
+| 4 | **THUNDERBOLT 1** (upper) | USB-C (Thunderbolt 3) | Primary Thunderbolt 3 connection to the computer. | Amber |
+| 5 | **THUNDERBOLT 2** (lower) | USB-C (Thunderbolt 3) | Thunderbolt 3 daisy-chain / passthrough. | Amber |
+| 6 | **WC/VBB IN** | BNC, 75 Ω | Word clock or Video Black Burst input. | Violet |
+| 7 | **WC OUT** | BNC, 75 Ω | Word clock output. | Violet |
+| 8 | **MADI IN** | BNC, 75 Ω | MADI input (coaxial). AES10 compliant. | Blue |
+| 9 | **MADI OUT** | BNC, 75 Ω | MADI output (coaxial). | Blue |
+| 10 | **ADAT OUT 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe outputs. Up to 8 ch at 44.1/48 kHz; 4 ch at 88.2/96 kHz (S/MUX). | Teal |
+| 11 | **ADAT IN 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe inputs. Same channel count as ADAT outputs. | Teal |
+| 12 | **SLOT 1 / SLOT 2** | 2× expansion slot (DB25) | Analogue I/O expansion slots. Each accepts one 8-channel DAD expansion card. | — |
 
 ---
 
