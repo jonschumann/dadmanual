@@ -14,7 +14,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DIST_DIR  = '/tmp/Linkandstyledotcolors/dist';
+const DIST_DIR  = '/Users/jonschumann/Documents/Claude/Projects/DADman User Manual/Linkandstyledotcolors/dist';
 const OUT_DIR   = '/Users/jonschumann/Documents/Claude/Projects/DADman User Manual/dadman-docs/static/img';
 const PORT      = 8787;
 
