@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panel Coordinate Picker</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1a1a2e; color: #e0e0e0; font-family: monospace; font-size: 13px; }
+  h1 { padding: 12px 16px; background: #16213e; font-size: 15px; color: #7eb8f7; border-bottom: 1px solid #2d4a7a; }
+  .tabs { display: flex; background: #16213e; border-bottom: 1px solid #2d4a7a; }
+  .tab { padding: 8px 18px; cursor: pointer; border-right: 1px solid #2d4a7a; color: #aaa; }
+  .tab.active { background: #0f3460; color: #fff; font-weight: bold; }
+  .panel-wrap { overflow-x: auto; padding: 16px; }
+  .panel-label { color: #7eb8f7; margin-bottom: 8px; font-size: 12px; }
+  .img-container { position: relative; display: inline-block; cursor: crosshair; }
+  .img-container img { display: block; image-rendering: pixelated; }
+  .dot { position: absolute; width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(255,80,80,0.85); border: 2px solid #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: bold; color: #fff;
+    transform: translate(-50%, -50%); pointer-events: none; }
+  .sidebar { position: fixed; top: 0; right: 0; width: 280px; height: 100vh;
+    background: #16213e; border-left: 1px solid #2d4a7a; padding: 12px;
+    overflow-y: auto; }
+  .sidebar h2 { font-size: 13px; color: #7eb8f7; margin-bottom: 10px; }
+  .coord-list { list-style: none; }
+  .coord-list li { padding: 4px 6px; border-bottom: 1px solid #2d4a7a; font-size: 12px; }
+  .coord-list li span.num { color: #f7b731; margin-right: 6px; }
+  .coord-list li span.pos { color: #26de81; }
+  .coord-list li span.tag { color: #fd9644; }
+  .btn { display: inline-block; padding: 5px 12px; background: #c0392b;
+    color: #fff; border: none; border-radius: 3px; cursor: pointer; margin-top: 8px; font-size: 12px; }
+  .btn.green { background: #27ae60; }
+  #coords-text { width: 100%; background: #0f1923; color: #26de81; border: 1px solid #2d4a7a;
+    padding: 8px; font-size: 11px; margin-top: 8px; resize: vertical; height: 220px; }
+  .hint { font-size: 11px; color: #888; margin-top: 6px; }
+  .panel-section { display: none; }
+  .panel-section.active { display: block; }
+  body { margin-right: 290px; }
+</style>
+</head>
+<body>
+<h1>🎯 Panel Coordinate Picker — click any element to record its CSS position</h1>
+
+<div class="tabs">
+  <div class="tab active" onclick="showPanel('ax64')">AX64</div>
+  <div class="tab" onclick="showPanel('core256')">Core 256</div>
+  <div class="tab" onclick="showPanel('axcenter')">AX Center</div>
+  <div class="tab" onclick="showPanel('mom')">MOM</div>
+</div>
+
+<div class="panel-section active" id="sec-ax64">
+  <div class="panel-wrap">
+    <div class="panel-label">AX64 Front — CSS 1400×254 (image displayed at 50% scale = 1px = 1 CSS px). Click: DAD logo (1), Power btn (2), Int LED (3), Ext LED (4), Err LED (5)</div>
+    <div class="img-container" id="img-ax64" onclick="recordClick(event,'ax64')">
+      <img src="panel-ax64-front.png" style="width:1400px;height:254px;" id="img-ax64-el">
+    </div>
+  </div>
+</div>
+
+<div class="panel-section" id="sec-core256">
+  <div class="panel-wrap">
+    <div class="panel-label">Core 256 Front — CSS 700×143 (image displayed at 50% scale). Click: DAD logo (1), Power btn (2), Int LED (3), Ext LED (4), Err LED (5)</div>
+    <div class="img-container" id="img-core256" onclick="recordClick(event,'core256')">
+      <img src="panel-core256-front.png" style="width:700px;height:143px;" id="img-core256-el">
+    </div>
+  </div>
+</div>
+
+<div class="panel-section" id="sec-axcenter">
+  <div class="panel-wrap">
+    <div class="panel-label">AX Center Front — CSS 1416×166 (image displayed at 50% scale). Click: DAD logo (1), Int LED (3), Ext LED (4), Err LED (5), P48 LED (7), Mic LED (8), Inst LED (9)</div>
+    <div class="img-container" id="img-axcenter" onclick="recordClick(event,'axcenter')">
+      <img src="panel-ax-center-front.png" style="width:1416px;height:166px;" id="img-axcenter-el">
+    </div>
+  </div>
+</div>
+
+<div class="panel-section" id="sec-mom">
+  <div class="panel-wrap">
+    <div class="panel-label">MOM Front — CSS 800×412 (image displayed at 50% scale). Click: Status LEDs 1–4 group center (8), Stat. LED single (9)</div>
+    <div class="img-container" id="img-mom" onclick="recordClick(event,'mom')">
+      <img src="panel-mom.png" style="width:800px;height:412px;" id="img-mom-el">
+    </div>
+  </div>
+</div>
+
+<div class="sidebar">
+  <h2>Recorded Clicks</h2>
+  <ul class="coord-list" id="coord-list"></ul>
+  <button class="btn" onclick="undoLast()">↩ Undo last</button>
+  <button class="btn" onclick="clearAll()">✕ Clear all</button>
+  <button class="btn green" onclick="copyText()">📋 Copy output</button>
+  <p class="hint">Click elements on the panels in order. CSS coords appear here. Copy when done.</p>
+  <textarea id="coords-text" readonly placeholder="Coordinates will appear here..."></textarea>
+</div>
+
+<script>
+const clicks = [];
+
+function showPanel(id) {
+  document.querySelectorAll('.panel-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function recordClick(e, panelId) {
+  const rect = e.currentTarget.getBoundingClientRect();
+  // The image is displayed at 50% scale (CSS width = image pixel width / 2)
+  // So clientX - rect.left directly gives CSS coordinates
+  const cssx = Math.round(e.clientX - rect.left);
+  const cssy = Math.round(e.clientY - rect.top);
+  const n = clicks.length + 1;
+
+  clicks.push({ panel: panelId, x: cssx, y: cssy, n });
+
+  // Draw dot on image
+  const container = e.currentTarget;
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.style.left = cssx + 'px';
+  dot.style.top = cssy + 'px';
+  dot.textContent = n;
+  dot.id = 'dot-' + n;
+  container.appendChild(dot);
+
+  updateList();
+}
+
+function updateList() {
+  const list = document.getElementById('coord-list');
+  list.innerHTML = '';
+  const lines = [];
+  clicks.forEach(c => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="num">#${c.n}</span><span class="tag">[${c.panel}]</span> <span class="pos">css=(${c.x}, ${c.y})</span>`;
+    list.appendChild(li);
+    lines.push(`#${c.n} [${c.panel}] css=(${c.x}, ${c.y})`);
+  });
+  document.getElementById('coords-text').value = lines.join('\n');
+}
+
+function undoLast() {
+  if (!clicks.length) return;
+  const last = clicks.pop();
+  const dot = document.getElementById('dot-' + last.n);
+  if (dot) dot.remove();
+  updateList();
+}
+
+function clearAll() {
+  clicks.length = 0;
+  document.querySelectorAll('.dot').forEach(d => d.remove());
+  updateList();
+}
+
+function copyText() {
+  const ta = document.getElementById('coords-text');
+  ta.select();
+  document.execCommand('copy');
+  alert('Coordinates copied to clipboard!');
+}
+</script>
+</body>
+</html>
