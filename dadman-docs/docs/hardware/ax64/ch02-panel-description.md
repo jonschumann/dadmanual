@@ -25,6 +25,7 @@ sidebar_position: 3
 | 3 | **Int.** | LED indicator | Lit when locked to internal clock reference | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#10B981'}}></span> |
 | 4 | **Ext.** | LED indicator (green) | Lit when locked to external clock source | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#0EA5E9'}}></span> |
 | 5 | **Err.** | LED indicator (red) | Lit on clock error or internal fault. See [Section 2.3](#23-led-state-reference). | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#F97316'}}></span> |
+| 6 | **Fan vent** | Ventilation grille | Exhaust port for the internal cooling fan. Keep clear of obstructions to maintain adequate airflow. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#EF4444'}}></span> |
 
 ---
 
