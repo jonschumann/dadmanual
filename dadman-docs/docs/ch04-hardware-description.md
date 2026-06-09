@@ -38,8 +38,11 @@ The AX Center is a 1U rack-mount Thunderbolt audio interface in the Thunder\|Cor
 
 ### 4.1.2 Panel Overview
 
-![AX Center front and rear panels](/img/panel-ax-center.png)
-*Figure 4.1 — AX Center front (top) and rear (bottom) panels. Numbered callouts correspond to the tables in Sections 4.1.3 and 4.1.4.*
+![AX Center front panel](/img/panel-ax-center-front.png)
+*Figure 4.1 — AX Center front panel. Numbered callouts correspond to Section 4.1.3.*
+
+![AX Center rear panel](/img/panel-ax-center-rear.png)
+*Figure 4.2 — AX Center rear panel. Numbered callouts correspond to Section 4.1.4.*
 
 ### 4.1.3 Front Panel Controls
 
@@ -93,8 +96,11 @@ The Core 256 is a half-rack Thunderbolt audio interface in the Thunder\|Core pro
 
 ### 4.2.2 Panel Overview
 
-![Core 256 front and rear panels](/img/panel-core256.png)
-*Figure 4.2 — Core 256 front (top) and rear (bottom) panels. Numbered callouts correspond to the tables in Sections 4.2.3 and 4.2.4.*
+![Core 256 front panel](/img/panel-core256-front.png)
+*Figure 4.3 — Core 256 front panel. Numbered callouts correspond to Section 4.2.3.*
+
+![Core 256 rear panel](/img/panel-core256-rear.png)
+*Figure 4.4 — Core 256 rear panel. Numbered callouts correspond to Section 4.2.4.*
 
 ### 4.2.3 Front Panel Controls
 
@@ -128,8 +134,11 @@ The AX 64 is a 2U rack-mount Thunderbolt audio interface with up to eight expans
 
 ### 4.3.2 Panel Overview
 
-![AX 64 front and rear panels](/img/panel-ax64.png)
-*Figure 4.3 — AX 64 front (top) and rear (bottom) panels. Numbered callouts correspond to the tables in Sections 4.3.3 and 4.3.4.*
+![AX 64 front panel](/img/panel-ax64-front.png)
+*Figure 4.5 — AX 64 front panel. Numbered callouts correspond to Section 4.3.3.*
+
+![AX 64 rear panel](/img/panel-ax64-rear.png)
+*Figure 4.6 — AX 64 rear panel. Numbered callouts correspond to Section 4.3.4.*
 
 ### 4.3.3 Front Panel Controls
 
@@ -178,7 +187,7 @@ The MOM (Monitor Operating Module) is a desktop monitor controller that connects
 ### 4.4.2 Controls Reference
 
 ![MOM control face](/img/panel-mom.png)
-*Figure 4.4 — MOM control face. Numbered callouts correspond to the reference table below.*
+*Figure 4.7 — MOM control face. Numbered callouts correspond to the reference table below.*
 
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|
@@ -227,11 +236,14 @@ The Penta 720 is a 2U rack-mount chassis that accepts expansion cards in its int
 
 ### 4.6.2 Panel Overview
 
-![Penta 720 panels](/img/panel-penta720.png)
-*Figure 4.5 — Penta 720 front panel. Numbered callouts correspond to the reference table in Section 4.6.3.*
+![Penta 720 front panel](/img/panel-penta720.png)
+*Figure 4.8 — Penta 720 front panel. Numbered callouts correspond to the reference table in Section 4.6.3.*
 
-![Penta 721s panels](/img/panel-penta721s.png)
-*Figure 4.6 — Penta 721s front and rear panels. Numbered callouts correspond to the reference tables in Sections 4.6.3 and 4.6.4.*
+![Penta 721s front panel](/img/panel-penta721s-front.png)
+*Figure 4.9 — Penta 721s front panel.*
+
+![Penta 721s rear panel](/img/panel-penta721s-rear.png)
+*Figure 4.10 — Penta 721s rear panel. Numbered callouts correspond to the reference table in Section 4.6.4.*
 
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|

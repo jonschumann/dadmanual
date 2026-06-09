@@ -1,14 +1,13 @@
 ---
-title: "Chapter 2 — Panel Description"
-sidebar_label: "Ch. 2 — Panel Description"
+title: "Chapter 2 — Controls Reference"
+sidebar_label: "Ch. 2 — Controls Reference"
 sidebar_position: 3
 ---
+# Chapter 2 — Controls Reference
 
-# Chapter 2 — Panel Description
+> **Product:** Digital Audio Denmark MOM (Monitor Operating Module)
 
-> **Product:** Digital Audio Denmark MOM
-
-> **How to use this chapter:** This chapter identifies every control and connector on the MOM. For signal levels and connection procedures, see [Ch. 4 — Signal Connections](./mom/ch04-connections). For LED state meanings, see [Section 2.3](#23-led-state-reference) and [Ch. 6 — Operation](./mom/ch06-operation).
+> **How to use this chapter:** This chapter identifies every control on the MOM front face. The MOM contains no audio circuitry — audio signals are not routed through it. For configuration procedures see [Ch. 6 — Operation](ch06-operation).
 
 ---
 
@@ -17,44 +16,44 @@ sidebar_position: 3
 ![MOM control face](/img/panel-mom.png)
 *Figure 2.1 — MOM control face. Numbered callouts correspond to the reference table below.*
 
-*[Placeholder — complete callout table drawn from panel diagram. Reference ch04 for existing content.]*
-
 | Ref | Label | Type | Function |
 |-----|-------|------|----------|
-| 1 | *TBC* | *TBC* | *TBC* |
+| 1 | **Spkr. 1** | Illuminated push-button | Selects speaker output set 1 (e.g., main monitors). Corresponds to a speaker output set configured in the active Monitor Profile in DADman. |
+| 2 | **Spkr. 2** | Illuminated push-button | Selects speaker output set 2 (e.g., near-field monitors). |
+| 3 | **Spkr. 3** | Illuminated push-button | Selects speaker output set 3 (e.g., translation speaker or Atmos bed). |
+| 4 | **Src. A** | Illuminated push-button | Selects monitoring source A as defined in the active Monitor Profile. |
+| 5 | **Src. B** | Illuminated push-button | Selects monitoring source B. |
+| 6 | **Src. C** | Illuminated push-button | Selects monitoring source C. |
+| 7 | **Layer** | Illuminated push-button | Switches the MOM between control layers. Pressing Layer cycles through configured layers, reassigning Spkr. and Src. buttons. |
+| — | **Status LEDs 1–4** | LED indicators | Indicate the status of the four active monitoring layers or presets. Illuminated when the corresponding layer is active. |
+| — | **Stat.** | LED indicator (green) | MOM is connected to the AX Center / AX 64 and communicating correctly. Flashes during initialisation. Off when disconnected. |
+| 8 | **TB** | Push-button | Talkback. Routes the talkback microphone (configured in DADman) into the talent feeds while held. |
+| 9 | **Ref** | Push-button | Reference level. Switches the monitor output to the calibrated reference level defined in the active Monitor Profile. Press again to return to the previous level. |
+| 10 | **Cut** | Illuminated push-button | Cuts (mutes) the monitor output. Illuminates red when active. |
+| 11 | **Dim** | Illuminated push-button | Attenuates the monitor output by the Dim amount configured in the active Monitor Profile (typically −20 dB). Illuminates amber when active. |
+| 12 | **Level** | Rotary encoder with LED ring | Master monitor level control. Turn to adjust the output level. The LED ring indicates the current level position relative to the reference level. Range: approximately −40 dB to +6 dB relative to reference. |
 
+> **NOTICE — MOM and Monitor Profiles:** The functions of the Spkr., Src., and Layer buttons are determined by the Monitor Profile loaded in DADman. Configure Monitor Profiles before using the MOM in a session. See [Ch. 8 — Advanced Features, Section 8.1 — Monitor Profiles].
 
----
-
+> **NOTICE — MOM connectivity:** The MOM connects to the AX Center or AX 64 via USB-C on the rear of the host unit. It does not connect directly to the computer's USB port. DADman must be running for the MOM to function.
 
 ---
 
 ## 2.3 LED State Reference
 
-*[Placeholder — complete LED state table. Migrate content from DADman manual Ch. 4.7 and expand with device-specific states.]*
+### MOM Status LEDs
 
-### Clock Reference LEDs
+| Stat. LED | Meaning |
+|-----------|---------|
+| Steady green | MOM is connected and communicating with the host AX Center / AX 64 |
+| Slow flash (green) | MOM is initialising or waiting for DADman to respond |
+| Off | MOM is not connected, or the host unit is powered off |
 
-| Int. | Ext. | Err. | Meaning |
-|------|------|------|---------|
-| ● | ○ | ○ | Locked to internal clock reference — clock master mode |
-| ○ | ● | ○ | Locked to external clock reference — clock slave mode |
-| ○ | ○ | ● | **Clock error** — cannot lock to selected reference |
-| ● | ○ | ● | **Internal fault** — power-cycle and contact support if persistent |
-| Slow flash | — | — | Firmware update in progress — do not power off |
-
-### Power Button States
-
-| State | Meaning |
-|-------|---------|
-| Off | Unit powered off |
-| Steady | Unit powered on, normal operation |
-| Slow pulse | Shutdown sequence in progress |
+> **NOTICE:** MOM button illumination states (Cut = red, Dim = amber, Spkr./Src./Layer = white) are described in [Ch. 6 — Operation].
 
 ---
 
 ## Cross-References
 
-- [Ch. 4 — Signal Connections](./mom/ch04-connections) — Signal levels and connection procedures
-- [Ch. 6 — Operation](./mom/ch06-operation) — Controls and display operation
-- [App. A — Connector Pinouts](./mom/appa-connector-pinouts) — Pin assignments
+- [Ch. 6 — Operation](ch06-operation) — Monitor Profile setup; MOM configuration
+- [Ch. 8 — Advanced Features](ch08-advanced-features) — Monitor Profiles
