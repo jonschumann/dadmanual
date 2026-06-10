@@ -8,7 +8,7 @@ sidebar_position: 4
 
 > **Product:** Digital Audio Denmark Penta 721s
 
-> **Before you begin:** Read [Front Matter — Safety & Conventions](./penta-721s/fm-safety) before installing this unit.
+> **Before you begin:** Read [Front Matter — Safety & Conventions](./fm-safety) before installing this unit.
 
 ---
 
@@ -77,7 +77,7 @@ The unit connects to the host computer over Ethernet. A dedicated Gigabit Ethern
 
 1. Confirm all signal cables are disconnected before first power-on.
 2. Apply power.
-3. Observe front-panel LEDs — see [Ch. 2 — Panel Description](./penta-721s/ch02-panel-description) for expected LED states.
+3. Observe front-panel LEDs — see [Ch. 2 — Panel Description](./ch02-panel-description) for expected LED states.
 4. Connect the unit to the host computer (Ethernet (no Thunderbolt)).
 5. Open DADman and confirm the unit appears in the Device List.
 
@@ -85,6 +85,6 @@ The unit connects to the host computer over Ethernet. A dedicated Gigabit Ethern
 
 ## Cross-References
 
-- [Front Matter — Safety](./penta-721s/fm-safety)
-- [Ch. 2 — Panel Description](./penta-721s/ch02-panel-description)
-- [DADman User Manual — Ch. 3 — Installation](../ch03-installation) — Host computer setup
+- [Front Matter — Safety](./fm-safety)
+- [Ch. 2 — Panel Description](./ch02-panel-description)
+- [DADman User Manual — Ch. 3 — Installation](/installation) — Host computer setup

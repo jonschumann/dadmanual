@@ -70,5 +70,5 @@ The Penta 721s includes an integrated SRC that can bridge audio streams running 
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./penta-721s/ch02-panel-description) — Clock LED states
-- [DADman User Manual — Ch. 5 — Signal Flow](../ch05-signal-flow) — System clock topology
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Clock LED states
+- [DADman User Manual — Ch. 5 — Signal Flow](/signal-flow) — System clock topology

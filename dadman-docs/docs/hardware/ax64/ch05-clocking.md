@@ -63,5 +63,5 @@ The AX64 supports multiple clock reference sources. The active clock source is s
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./ax64/ch02-panel-description) — Clock LED states
-- [DADman User Manual — Ch. 5 — Signal Flow](../ch05-signal-flow) — System clock topology
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Clock LED states
+- [DADman User Manual — Ch. 5 — Signal Flow](/signal-flow) — System clock topology

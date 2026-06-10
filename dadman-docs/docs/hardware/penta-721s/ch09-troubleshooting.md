@@ -59,6 +59,6 @@ sidebar_position: 10
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./penta-721s/ch02-panel-description) — LED state reference
-- [Ch. 5 — Clocking](./penta-721s/ch05-clocking)
-- [DADman User Manual — Ch. 9](../ch09-troubleshooting) — Software-side troubleshooting
+- [Ch. 2 — Panel Description](./ch02-panel-description) — LED state reference
+- [Ch. 5 — Clocking](./ch05-clocking)
+- [DADman User Manual — Ch. 9](/troubleshooting) — Software-side troubleshooting

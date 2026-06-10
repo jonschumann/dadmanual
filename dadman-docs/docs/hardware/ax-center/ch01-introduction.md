@@ -72,6 +72,6 @@ The AX Center is a 1U rackmount Thunderbolt 3 audio interface and the primary I/
 
 ## Cross-References
 
-- [Front Matter — Safety & Conventions](./ax-center/fm-safety) — Read before installation
-- [Ch. 3 — Installation](./ax-center/ch03-installation) — Mounting and initial setup
-- [DADman User Manual — Chapter 4](../ch04-hardware-description) — Software integration overview
+- [Front Matter — Safety & Conventions](./fm-safety) — Read before installation
+- [Ch. 3 — Installation](./ch03-installation) — Mounting and initial setup
+- [DADman User Manual — Chapter 4](/hardware-description) — Software integration overview

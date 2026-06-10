@@ -8,7 +8,7 @@ sidebar_position: 4
 
 > **Product:** Digital Audio Denmark AX64
 
-> **Before you begin:** Read [Front Matter — Safety & Conventions](./ax64/fm-safety) before installing this unit.
+> **Before you begin:** Read [Front Matter — Safety & Conventions](./fm-safety) before installing this unit.
 
 ---
 
@@ -77,7 +77,7 @@ The DAD Thunderbolt driver must be installed on the host computer before the uni
 
 1. Confirm all signal cables are disconnected before first power-on.
 2. Apply power.
-3. Observe front-panel LEDs — see [Ch. 2 — Panel Description](./ax64/ch02-panel-description) for expected LED states.
+3. Observe front-panel LEDs — see [Ch. 2 — Panel Description](./ch02-panel-description) for expected LED states.
 4. Connect the unit to the host computer (Thunderbolt 3 or Ethernet).
 5. Open DADman and confirm the unit appears in the Device List.
 
@@ -85,6 +85,6 @@ The DAD Thunderbolt driver must be installed on the host computer before the uni
 
 ## Cross-References
 
-- [Front Matter — Safety](./ax64/fm-safety)
-- [Ch. 2 — Panel Description](./ax64/ch02-panel-description)
-- [DADman User Manual — Ch. 3 — Installation](../ch03-installation) — Host computer setup
+- [Front Matter — Safety](./fm-safety)
+- [Ch. 2 — Panel Description](./ch02-panel-description)
+- [DADman User Manual — Ch. 3 — Installation](/installation) — Host computer setup

@@ -72,6 +72,6 @@ The Penta 721s is the 1U slim variant of the Penta 720, sharing the same modular
 
 ## Cross-References
 
-- [Front Matter — Safety & Conventions](./penta-721s/fm-safety) — Read before installation
-- [Ch. 3 — Installation](./penta-721s/ch03-installation) — Mounting and initial setup
-- [DADman User Manual — Chapter 4](../ch04-hardware-description) — Software integration overview
+- [Front Matter — Safety & Conventions](./fm-safety) — Read before installation
+- [Ch. 3 — Installation](./ch03-installation) — Mounting and initial setup
+- [DADman User Manual — Chapter 4](/hardware-description) — Software integration overview

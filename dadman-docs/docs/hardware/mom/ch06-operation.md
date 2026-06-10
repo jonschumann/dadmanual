@@ -23,7 +23,7 @@ The MOM powers on automatically when connected to a powered-on AX Center or AX64
 
 *[Placeholder — describe operation of each front-panel control. Refer to Ch. 2 for identification.]*
 
-See [Chapter 2 — Panel Description](./{slug}/ch02-panel-description) for a complete controls reference.
+See [Chapter 2 — Panel Description](./ch02-panel-description) for a complete controls reference.
 
 ---
 
@@ -31,7 +31,7 @@ See [Chapter 2 — Panel Description](./{slug}/ch02-panel-description) for a com
 
 *[Placeholder — LED state reference. Expand the table in Ch. 2 with all possible states and their meaning during normal and fault conditions.]*
 
-See [Ch. 2 — Panel Description, Section 2.3](./mom/ch02-panel-description#23-led-state-reference) for the LED state reference table.
+See [Ch. 2 — Panel Description, Section 2.3](./ch02-panel-description#23-led-state-reference) for the LED state reference table.
 
 ---
 
@@ -45,5 +45,5 @@ All operating parameters of the MOM are accessible from DADman. Local front-pane
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./mom/ch02-panel-description)
-- [Ch. 7 — DADman Integration](./mom/ch07-dadman-integration)
+- [Ch. 2 — Panel Description](./ch02-panel-description)
+- [Ch. 7 — DADman Integration](./ch07-dadman-integration)

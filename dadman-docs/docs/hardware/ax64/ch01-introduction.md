@@ -72,6 +72,6 @@ The AX64 is a 2U rackmount Thunderbolt 3 or Ethernet audio interface with up to 
 
 ## Cross-References
 
-- [Front Matter — Safety & Conventions](./ax64/fm-safety) — Read before installation
-- [Ch. 3 — Installation](./ax64/ch03-installation) — Mounting and initial setup
-- [DADman User Manual — Chapter 4](../ch04-hardware-description) — Software integration overview
+- [Front Matter — Safety & Conventions](./fm-safety) — Read before installation
+- [Ch. 3 — Installation](./ch03-installation) — Mounting and initial setup
+- [DADman User Manual — Chapter 4](/hardware-description) — Software integration overview

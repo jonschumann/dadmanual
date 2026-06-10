@@ -56,4 +56,4 @@ sidebar_position: 3
 ## Cross-References
 
 - [Ch. 6 — Operation](ch06-operation) — Monitor Profile setup; MOM configuration
-- [Ch. 8 — Advanced Features](ch08-advanced-features) — Monitor Profiles
+- [Ch. 8 — Advanced Features](/advanced-features) — Monitor Profiles

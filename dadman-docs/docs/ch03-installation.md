@@ -164,7 +164,7 @@ The driver is now installed. Proceed to [Section 3.5.2](#352-windows-asio-config
 
 ## 3.5 Configuring the Thunderbolt 3 Driver
 
-### 3.5.1 macOS — DADDriverSetup
+### 3.5.1 macOS — DADDriverSetup {#351-macos-daddriversetup}
 
 The **DADDriverSetup** application controls the channel count and device selection for the Thunderbolt 3 audio driver on macOS. Changes made here are immediately reflected in **Audio MIDI Setup** and are visible to any Core Audio–compatible application on the computer.
 
@@ -192,7 +192,7 @@ The **DADDriverSetup** application controls the channel count and device selecti
 
 > **TIP:** If DADDriverSetup opens and your connected Thunder\|Core unit appears in the Device Selection dropdown, the Thunderbolt driver is installed and functioning correctly. This is the quickest way to confirm driver operation on macOS without needing to open a DAW.
 
-### 3.5.2 Windows — ASIO Configuration
+### 3.5.2 Windows — ASIO Configuration {#352-windows-asio-configuration}
 
 The Thunderbolt 3 ASIO driver is configured from within your audio application's ASIO settings dialogue.
 

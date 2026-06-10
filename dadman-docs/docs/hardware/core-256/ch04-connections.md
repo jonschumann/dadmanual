@@ -55,6 +55,6 @@ sidebar_position: 5
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./core-256/ch02-panel-description) — Connector locations
-- [App. A — Connector Pinouts](./core-256/appa-connector-pinouts) — Pin assignments
-- [Ch. 5 — Clocking](./core-256/ch05-clocking) — Clock reference connections
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Connector locations
+- [App. A — Connector Pinouts](./appa-connector-pinouts) — Pin assignments
+- [Ch. 5 — Clocking](./ch05-clocking) — Clock reference connections

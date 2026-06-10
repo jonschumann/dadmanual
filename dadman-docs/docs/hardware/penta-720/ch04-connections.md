@@ -55,6 +55,6 @@ sidebar_position: 5
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./penta-720/ch02-panel-description) — Connector locations
-- [App. A — Connector Pinouts](./penta-720/appa-connector-pinouts) — Pin assignments
-- [Ch. 5 — Clocking](./penta-720/ch05-clocking) — Clock reference connections
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Connector locations
+- [App. A — Connector Pinouts](./appa-connector-pinouts) — Pin assignments
+- [Ch. 5 — Clocking](./ch05-clocking) — Clock reference connections

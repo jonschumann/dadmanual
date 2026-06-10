@@ -84,5 +84,5 @@ sidebar_position: 11
 
 ## Cross-References
 
-- [App. A — Connector Pinouts](./mom/appa-connector-pinouts)
-- [App. C — Mechanical Drawings](./mom/appc-mechanical-drawings)
+- [App. A — Connector Pinouts](./appa-connector-pinouts)
+- [App. C — Mechanical Drawings](./appc-mechanical-drawings)

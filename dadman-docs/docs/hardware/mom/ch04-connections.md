@@ -29,5 +29,5 @@ The MOM connects to the USB-C port on the rear of the host AX Center or AX64. It
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./mom/ch02-panel-description) — Controls reference
-- [Ch. 7 — DADman Integration](./mom/ch07-dadman-integration) — Monitor Profiles configuration
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Controls reference
+- [Ch. 7 — DADman Integration](./ch07-dadman-integration) — Monitor Profiles configuration

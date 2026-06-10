@@ -45,12 +45,12 @@ The Device List entry for the MOM shows:
 
 ## 7.4 Firmware Updates
 
-Firmware updates are applied from within DADman. See [Ch. 8 — Maintenance](./mom/ch08-maintenance) for the update procedure.
+Firmware updates are applied from within DADman. See [Ch. 8 — Maintenance](./ch08-maintenance) for the update procedure.
 
 ---
 
 ## Cross-References
 
-- [DADman User Manual — Ch. 4](../ch04-hardware-description) — Supported hardware overview
-- [DADman User Manual — Ch. 7](../ch07-operation) — Routing matrix
-- [DADman User Manual — Ch. 8](../ch08-advanced-features) — Monitor Profiles (MOM)
+- [DADman User Manual — Ch. 4](/hardware-description) — Supported hardware overview
+- [DADman User Manual — Ch. 7](/operation) — Routing matrix
+- [DADman User Manual — Ch. 8](/advanced-features) — Monitor Profiles (MOM)

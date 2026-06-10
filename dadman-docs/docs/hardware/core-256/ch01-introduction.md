@@ -72,6 +72,6 @@ The Core 256 is a compact half-rack Thunderbolt 3 audio interface sharing the sa
 
 ## Cross-References
 
-- [Front Matter — Safety & Conventions](./core-256/fm-safety) — Read before installation
-- [Ch. 3 — Installation](./core-256/ch03-installation) — Mounting and initial setup
-- [DADman User Manual — Chapter 4](../ch04-hardware-description) — Software integration overview
+- [Front Matter — Safety & Conventions](./fm-safety) — Read before installation
+- [Ch. 3 — Installation](./ch03-installation) — Mounting and initial setup
+- [DADman User Manual — Chapter 4](/hardware-description) — Software integration overview

@@ -63,5 +63,5 @@ The Core 256 supports multiple clock reference sources. The active clock source 
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./core-256/ch02-panel-description) — Clock LED states
-- [DADman User Manual — Ch. 5 — Signal Flow](../ch05-signal-flow) — System clock topology
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Clock LED states
+- [DADman User Manual — Ch. 5 — Signal Flow](/signal-flow) — System clock topology

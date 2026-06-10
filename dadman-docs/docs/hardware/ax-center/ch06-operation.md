@@ -45,7 +45,7 @@ sidebar_position: 7
 
 *[Placeholder — LED state reference. Expand the table in Ch. 2 with all possible states and their meaning during normal and fault conditions.]*
 
-See [Ch. 2 — Panel Description, Section 2.3](./ax-center/ch02-panel-description#23-led-state-reference) for the LED state reference table.
+See [Ch. 2 — Panel Description, Section 2.3](./ch02-panel-description#23-led-state-reference) for the LED state reference table.
 
 ---
 
@@ -59,5 +59,5 @@ All operating parameters of the AX Center are accessible from DADman. Local fron
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./ax-center/ch02-panel-description)
-- [Ch. 7 — DADman Integration](./ax-center/ch07-dadman-integration)
+- [Ch. 2 — Panel Description](./ch02-panel-description)
+- [Ch. 7 — DADman Integration](./ch07-dadman-integration)

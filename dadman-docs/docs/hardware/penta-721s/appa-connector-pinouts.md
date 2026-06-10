@@ -69,5 +69,5 @@ Standard 1000BASE-T Ethernet. Wired per TIA-568B.
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./penta-721s/ch02-panel-description) — Connector locations
-- [Ch. 4 — Signal Connections](./penta-721s/ch04-connections) — Connection procedures
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Connector locations
+- [Ch. 4 — Signal Connections](./ch04-connections) — Connection procedures

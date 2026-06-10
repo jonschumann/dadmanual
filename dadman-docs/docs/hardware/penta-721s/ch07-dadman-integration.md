@@ -45,12 +45,12 @@ The Device List entry for the Penta 721s shows:
 
 ## 7.4 Firmware Updates
 
-Firmware updates are applied from within DADman. See [Ch. 8 — Maintenance](./penta-721s/ch08-maintenance) for the update procedure.
+Firmware updates are applied from within DADman. See [Ch. 8 — Maintenance](./ch08-maintenance) for the update procedure.
 
 ---
 
 ## Cross-References
 
-- [DADman User Manual — Ch. 4](../ch04-hardware-description) — Supported hardware overview
-- [DADman User Manual — Ch. 7](../ch07-operation) — Routing matrix
+- [DADman User Manual — Ch. 4](/hardware-description) — Supported hardware overview
+- [DADman User Manual — Ch. 7](/operation) — Routing matrix
 

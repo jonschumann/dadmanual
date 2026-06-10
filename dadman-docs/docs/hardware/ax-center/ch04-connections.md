@@ -55,6 +55,6 @@ sidebar_position: 5
 
 ## Cross-References
 
-- [Ch. 2 — Panel Description](./ax-center/ch02-panel-description) — Connector locations
-- [App. A — Connector Pinouts](./ax-center/appa-connector-pinouts) — Pin assignments
-- [Ch. 5 — Clocking](./ax-center/ch05-clocking) — Clock reference connections
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Connector locations
+- [App. A — Connector Pinouts](./appa-connector-pinouts) — Pin assignments
+- [Ch. 5 — Clocking](./ch05-clocking) — Clock reference connections

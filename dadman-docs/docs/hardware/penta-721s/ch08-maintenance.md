@@ -53,11 +53,11 @@ Firmware is updated from within DADman. No separate firmware tool is required.
 
 *[Placeholder — storage conditions, recommended firmware state before storage.]*
 
-Store the unit in the original packaging or equivalent protective packaging. Observe the storage temperature and humidity limits in [Ch. 3 — Installation, Section 3.1](./penta-721s/ch03-installation).
+Store the unit in the original packaging or equivalent protective packaging. Observe the storage temperature and humidity limits in [Ch. 3 — Installation, Section 3.1](./ch03-installation).
 
 ---
 
 ## Cross-References
 
-- [Ch. 9 — Troubleshooting](./penta-721s/ch09-troubleshooting)
-- [App. D — Firmware Changelog](./penta-721s/appd-firmware-changelog)
+- [Ch. 9 — Troubleshooting](./ch09-troubleshooting)
+- [App. D — Firmware Changelog](./appd-firmware-changelog)

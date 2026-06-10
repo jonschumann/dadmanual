@@ -72,6 +72,6 @@ The MOM (Monitor Operating Module) is a physical monitor controller that connect
 
 ## Cross-References
 
-- [Front Matter — Safety & Conventions](./mom/fm-safety) — Read before installation
-- [Ch. 3 — Installation](./mom/ch03-installation) — Mounting and initial setup
-- [DADman User Manual — Chapter 4](../ch04-hardware-description) — Software integration overview
+- [Front Matter — Safety & Conventions](./fm-safety) — Read before installation
+- [Ch. 3 — Installation](./ch03-installation) — Mounting and initial setup
+- [DADman User Manual — Chapter 4](/hardware-description) — Software integration overview

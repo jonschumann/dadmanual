@@ -72,6 +72,6 @@ The Penta 720 is a modular 2U rackmount audio interface and format-conversion pl
 
 ## Cross-References
 
-- [Front Matter — Safety & Conventions](./penta-720/fm-safety) — Read before installation
-- [Ch. 3 — Installation](./penta-720/ch03-installation) — Mounting and initial setup
-- [DADman User Manual — Chapter 4](../ch04-hardware-description) — Software integration overview
+- [Front Matter — Safety & Conventions](./fm-safety) — Read before installation
+- [Ch. 3 — Installation](./ch03-installation) — Mounting and initial setup
+- [DADman User Manual — Chapter 4](/hardware-description) — Software integration overview
