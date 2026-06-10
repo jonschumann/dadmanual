@@ -39,8 +39,8 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository_owner }}/dadman-docs:latest
             ghcr.io/${{ github.repository_owner }}/dadman-docs:${{ github.sha }}
-          # Build multi-arch so the image runs on both amd64 (TrueNAS) and arm64
-          platforms: linux/amd64,linux/arm64
+          # amd64 only — TrueNAS is x86; arm64 QEMU emulation is too slow on GHA
+          platforms: linux/amd64
           # Layer cache — makes rebuilds fast on repeated pushes
           cache-from: type=gha
           cache-to: type=gha,mode=max
