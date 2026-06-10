@@ -1,0 +1,27 @@
+# dadman-docs — Docker Compose for Dockge on TrueNAS
+#
+# Deploy instructions:
+#   1. Open Dockge → http://10.10.1.24:5001
+#   2. Click "+ Compose" → name the stack "dadman-docs"
+#   3. Paste this file content and click Deploy
+#      OR via SSH: ssh root@10.10.1.24
+#        mkdir -p /mnt/flash/configs/dadman-docs
+#        cd /mnt/flash/configs/dadman-docs && docker compose up -d
+#
+# Cloudflare Tunnel routing:
+#   In Zero Trust → Networks → Tunnels → your tunnel → Public Hostnames:
+#     Subdomain:    docs         Domain: evangelaudio.com
+#     Service type: HTTP         URL:    localhost:8095
+
+services:
+  dadman-docs:
+    image: ghcr.io/jonschumann/dadman-docs:latest
+    container_name: dadman-docs
+    restart: unless-stopped
+    ports:
+      - "8095:80"
+    # Watchtower label — auto-pulls new image when GitHub Actions pushes :latest
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    # No volumes required — static site is baked into the image
+    # Re-deploy happens automatically via Watchtower when CI pushes a new image
