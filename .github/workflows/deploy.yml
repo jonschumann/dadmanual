@@ -56,12 +56,3 @@ jobs:
             /user/packages/container/dadman-docs \
             -f visibility=public \
             2>/dev/null || echo "Package visibility unchanged (may not exist yet)"
-
-      - name: Notify Watchtower (optional — triggers immediate pull)
-        # Requires WATCHTOWER_HTTP_API_TOKEN secret to be set in repo settings.
-        # If the secret is blank/absent, this step is silently skipped.
-        if: ${{ secrets.WATCHTOWER_HTTP_API_TOKEN != '' }}
-        run: |
-          curl -s -f \
-            -H "Authorization: Bearer ${{ secrets.WATCHTOWER_HTTP_API_TOKEN }}" \
-            "http://10.10.1.24:9000/v1/update" || echo "Watchtower ping skipped"
