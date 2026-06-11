@@ -22,11 +22,22 @@ The Penta 720 is a modular 2U rackmount audio interface and format-conversion pl
 
 ## 1.2 Key Features
 
-*[Placeholder — enumerate key features drawn from product brief and engineering documentation.]*
+![Penta 720 — front panel](/img/panel-penta720.png)
+*Penta 720 — front panel*
 
-- Feature 1
-- Feature 2
-- Feature 3
+- **Form factor:** 2U rackmount, 19"; front-access card bays
+- **Expansion:** 8 hot-plug expansion card slots — up to 1,024×1,024 channels of I/O
+- **MADI:** Built-in coaxial MADI I/O — 64 channels at 48 kHz
+- **AES3:** Built-in AES3 I/O — 16 channels via 2 × DB25 (Tascam pinout)
+- **Dante (optional):** Via MOD-DANTE-BK3 module — 64 channels at 48 kHz
+- **DADlink (optional):** Via MOD-MADI-DADLNK module + SFP — up to 256×256 channels
+- **Synchronisation:** Word Clock I/O (BNC, 75 Ω), Video Black Burst input, AES11 input
+- **Routing:** 1,424×1,424 matrix; 256×32 summing processor; 28-bit floating-point
+- **Latency:** 7 samples internal delay, adjustable 3–31 samples; all outputs time- and phase-aligned
+- **Control:** DADman software (macOS and Windows); Avid EuCon compatible; Gigabit Ethernet
+- **Power:** Dual PSU; dual mains inputs
+- **Cooling:** 2 × internal fans
+- **Weight / depth:** 5.0 kg / 11.0 lbs; chassis depth 35 cm / 13.8"
 
 ---
 

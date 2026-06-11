@@ -22,11 +22,25 @@ The Core 256 is a compact half-rack Thunderbolt 3 audio interface sharing the sa
 
 ## 1.2 Key Features
 
-*[Placeholder — enumerate key features drawn from product brief and engineering documentation.]*
+![Core 256 — front](/img/panel-core256-front.png)
+*Core 256 — front*
 
-- Feature 1
-- Feature 2
-- Feature 3
+![Core 256 — rear](/img/panel-core256-rear.png)
+*Core 256 — rear*
+
+- **Form factor:** Half-rack desktop; 1U rack-mountable with optional C256-2MOUNT-BRACKET
+- **No expansion slots** — all I/O is via built-in interfaces
+- **Thunderbolt 3:** 2 × USB-C — 256 channels at 48/96 kHz; 15 W bus power per port
+- **Dante AoIP:** Built-in — 256 channels at 48 kHz, 128 channels at 96 kHz
+- **MADI:** Built-in coaxial MADI I/O — 64 channels at 48 kHz
+- **ADAT / S/PDIF:** Built-in ADAT/SMUX (16 ch) and S/PDIF (2 ch)
+- **DADlink:** 2 × SFP cages — DADlink (up to 256×256 ch) or MADI optical
+- **Synchronisation:** Word Clock I/O (BNC, 75 Ω), Video Black Burst input
+- **Routing:** 848×848 matrix; 512×64 summing processor; 1,024-filter SPQ equaliser; 28-bit floating-point
+- **Latency:** 7 samples internal delay, adjustable 3–31 samples; all outputs time- and phase-aligned
+- **Control:** DADman software (macOS and Windows); Avid EuCon compatible; Gigabit Ethernet
+- **Power:** DC input (12 V); external PSU included — no IEC mains connector on unit
+- **Weight / depth:** 1.3 kg / 2.9 lbs; chassis depth 23.1 cm / 9.1"
 
 ---
 

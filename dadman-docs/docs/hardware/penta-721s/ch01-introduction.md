@@ -22,11 +22,25 @@ The Penta 721s is the 1U slim variant of the Penta 720, sharing the same modular
 
 ## 1.2 Key Features
 
-*[Placeholder — enumerate key features drawn from product brief and engineering documentation.]*
+![Penta 721S — front panel](/img/panel-penta721s-front.png)
+*Penta 721S — front panel*
 
-- Feature 1
-- Feature 2
-- Feature 3
+![Penta 721S — rear panel](/img/panel-penta721s-rear.png)
+*Penta 721S — rear panel*
+
+- **Form factor:** 2U rackmount, 19"
+- **Expansion:** 1 hot-plug expansion card slot
+- **MADI:** Built-in coaxial MADI I/O — 64 channels at 48 kHz
+- **AES3:** Built-in AES3 I/O — 16 channels via 2 × DB25 (Tascam pinout)
+- **Dante AoIP:** Built-in — 64 channels at 48 kHz
+- **DADlink:** 2 × SFP cages — DADlink (up to 256×256 ch) or MADI optical
+- **Synchronisation:** Word Clock I/O (BNC, 75 Ω), Video Black Burst input, AES11 input, Dante sync
+- **Routing:** 528×528 matrix; 256×32 summing processor; 28-bit floating-point
+- **Latency:** 7 samples internal delay, adjustable 3–31 samples; all outputs time- and phase-aligned
+- **Control:** DADman software (macOS and Windows); Avid EuCon compatible; Gigabit Ethernet
+- **Power:** Dual PSU; dual mains inputs
+- **Cooling:** 1 × low-noise internal fan
+- **Weight / depth:** 3.3 kg / 7.3 lbs; chassis depth 32 cm / 12.6"
 
 ---
 
