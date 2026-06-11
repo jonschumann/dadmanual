@@ -6,79 +6,98 @@ sidebar_position: 11
 
 # Chapter 10 — Technical Specifications
 
-> **Product:** Digital Audio Denmark Penta 720
-
-> *[Placeholder — all values below are provisional. Replace with verified data from the engineering specification sheet before publication.]*
-
----
-
-## 10.1 General
-
-| Parameter | Specification |
-|-----------|--------------|
-| Form factor | 2U rackmount (modular chassis) |
-| Primary host connection | Ethernet (no Thunderbolt) |
-| Maximum audio channels | Up to 720 channels (card-dependent) |
-| Supported sample rates | *TBC* |
-| Bit depth | *TBC* |
+> **Product:** Digital Audio Denmark Penta 720  
+> **SKU:** PENTA720-BASE  
+> **Source:** Spec Sheet PENTA720-BASE, Issue June 2026
 
 ---
 
-## 10.2 Power Supply
+## 10.1 Digital I/O
 
-| Parameter | Specification |
-|-----------|--------------|
-| Supply | Internal. IEC C14 inlet. 100–240 V AC, 50/60 Hz, 0.45–0.20 A. Optional redundant PSU. |
-| Power consumption (typical) | *TBC* W |
-| Power consumption (maximum) | *TBC* W |
-
----
-
-## 10.3 Analogue Performance
-
-*[Placeholder — confirm applicability for this unit. Omit section if unit has no analogue I/O.]*
-
-| Parameter | Specification |
-|-----------|--------------|
-| Frequency response (line in) | *TBC* Hz — *TBC* kHz, ±*TBC* dB |
-| THD+N (line in) | < *TBC*% @ *TBC* dBu, 1 kHz |
-| Dynamic range (A-weighted) | *TBC* dB |
-| Maximum input level | *TBC* dBu |
-| Input impedance | *TBC* Ω |
-| Maximum output level | *TBC* dBu |
-| Output impedance | *TBC* Ω |
-| Crosstalk | < *TBC* dB @ 1 kHz |
+| Parameter | Value | Conditions / Notes |
+|---|---|---|
+| MADI | 64 ch in / 64 ch out | At 48 kHz; coaxial BNC and optical via SFP |
+| AES3 (built-in) | 16 ch in / 16 ch out | 2 × DB25 (Tascam pinout) |
+| Via expansion cards | Up to 8 cards | See Section 10.5 for compatible cards |
 
 ---
 
-## 10.4 Digital I/O
+## 10.2 Supported Sample Rates
 
-| Interface | Format | Channels | Connector |
-|-----------|--------|---------|-----------|
-| MADI (coaxial) | AES10, 56/64 ch | Up to 64 @ 48 kHz | BNC, 75 Ω |
-| ADAT | Lightpipe | 8 ch @ 48 kHz / 4 ch @ 96 kHz | TOSLINK |
-| Word clock in | 1×, 256× | — | BNC, 75 Ω |
-| Word clock out | 1× | — | BNC, 75 Ω |
-
----
-
-## 10.5 Environmental
-
-| Parameter | Specification |
-|-----------|--------------|
-| Operating temperature | 0 °C to 40 °C |
-| Storage temperature | −20 °C to 60 °C |
-| Relative humidity | 20% to 80%, non-condensing |
+| Format | Sample Rates |
+|---|---|
+| MADI | 44.1, 48, 88.2, 96, 176.4, 192, 352.8, 384 kHz |
+| AES3 | 44.1, 48, 88.2, 96, 176.4, 192 kHz |
+| Expansion cards | Dependent on card type |
 
 ---
 
-## 10.6 Mechanical
+## 10.3 Routing and Processing
 
-| Parameter | Specification |
-|-----------|--------------|
-| Dimensions (W × H × D) | *TBC* mm |
-| Weight | *TBC* kg |
-| Finish | *TBC* |
+| Parameter | Value |
+|---|---|
+| Routing matrix | 1,424×1,424 |
+| Processing word length | 28-bit floating point |
+| Output alignment | All outputs time- and phase-aligned |
+
+---
+
+## 10.4 Synchronisation
+
+| Source | Notes |
+|---|---|
+| Word Clock | BNC input and output |
+| Video Black Burst (VBB) | Input |
+| MADI | Via MADI port |
+| AES3 | Via AES3 input |
+
+---
+
+## 10.5 Expansion Slots
+
+| Parameter | Value |
+|---|---|
+| Number of slots | 8 |
+| Compatible cards | CARD-L8, CARD-M8, CARD-DA8, CARD-2SDI, CARD-8AES, CARD-2MADI, CARD-2MADI-SO, CARD-DANTE, CARD-RAVENNA |
+
+---
+
+## 10.6 Power
+
+| Parameter | Value | Notes |
+|---|---|---|
+| Input voltage | 90–260 V AC | Nominal 100–240 V AC, 47–63 Hz |
+| Max power consumption | 90 W | |
+
+---
+
+## 10.7 Mechanical
+
+| Parameter | Value |
+|---|---|
+| Form factor | 19" rack mount, 2RU (88.9 mm) |
+| Weight | 5.0 kg / 11.0 lbs |
+
+---
+
+## 10.8 Environmental
+
+| Parameter | Value |
+|---|---|
+| Operating temperature | 0–45 °C / 32–113 °F |
+| Humidity | 20–85%, non-condensing |
+
+---
+
+## 10.9 Regulatory Compliance
+
+| Standard | Scope |
+|---|---|
+| EN 60950-1:2006 + A11:2009 + A1:2010 + A12:2011 + A2:2013 | Safety — IT equipment |
+| CISPR 32 | Emissions — multimedia equipment |
+| CISPR 35 | Immunity — multimedia equipment |
+| FCC Part 15, Subpart B | USA — unintentional radiators |
+| ICES-003 | Canada |
 
 ---
 

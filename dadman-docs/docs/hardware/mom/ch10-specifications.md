@@ -6,79 +6,69 @@ sidebar_position: 11
 
 # Chapter 10 — Technical Specifications
 
-> **Product:** Digital Audio Denmark MOM
-
-> *[Placeholder — all values below are provisional. Replace with verified data from the engineering specification sheet before publication.]*
-
----
-
-## 10.1 General
-
-| Parameter | Specification |
-|-----------|--------------|
-| Form factor | Desktop or rackmount |
-| Primary host connection | USB-C to host AX Center / AX64 |
-| Maximum audio channels | Control surface only — no audio channels |
-| Supported sample rates | *TBC* |
-| Bit depth | *TBC* |
+> **Product:** Digital Audio Denmark MOM  
+> **SKU:** MOM-BASE  
+> **Source:** Spec Sheet MOM-BASE, Issue June 2026
 
 ---
 
-## 10.2 Power Supply
+## 10.1 Control Surface
 
-| Parameter | Specification |
-|-----------|--------------|
-| Supply | Bus-powered via USB-C from host unit. |
-| Power consumption (typical) | *TBC* W |
-| Power consumption (maximum) | *TBC* W |
-
----
-
-## 10.3 Analogue Performance
-
-*[Placeholder — confirm applicability for this unit. Omit section if unit has no analogue I/O.]*
-
-| Parameter | Specification |
-|-----------|--------------|
-| Frequency response (line in) | *TBC* Hz — *TBC* kHz, ±*TBC* dB |
-| THD+N (line in) | < *TBC*% @ *TBC* dBu, 1 kHz |
-| Dynamic range (A-weighted) | *TBC* dB |
-| Maximum input level | *TBC* dBu |
-| Input impedance | *TBC* Ω |
-| Maximum output level | *TBC* dBu |
-| Output impedance | *TBC* Ω |
-| Crosstalk | < *TBC* dB @ 1 kHz |
+| Parameter | Value | Notes |
+|---|---|---|
+| Keys | 10 keys × 4 layers | 40 assignable functions total |
+| Rotary encoder | 1 × main encoder | With 27-LED ring display |
+| LED ring | 27 LEDs | Level / parameter indication |
 
 ---
 
-## 10.4 Digital I/O
+## 10.2 Network Interface
 
-| Interface | Format | Channels | Connector |
-|-----------|--------|---------|-----------|
-| MADI (coaxial) | AES10, 56/64 ch | Up to 64 @ 48 kHz | BNC, 75 Ω |
-| ADAT | Lightpipe | 8 ch @ 48 kHz / 4 ch @ 96 kHz | TOSLINK |
-| Word clock in | 1×, 256× | — | BNC, 75 Ω |
-| Word clock out | 1× | — | BNC, 75 Ω |
+| Parameter | Value |
+|---|---|
+| Standard | 100BASE-TX |
+| Connector | RJ45 |
+| Power over Ethernet | IEEE 802.3af (PoE) |
+
+---
+
+## 10.3 Power
+
+| Parameter | Value | Notes |
+|---|---|---|
+| Power source | PoE (IEEE 802.3af) | No external PSU required |
+| Power consumption | 5 W | |
+
+---
+
+## 10.4 Mechanical
+
+| Parameter | Value |
+|---|---|
+| Width | 17.2 cm / 6.8" |
+| Depth | 11.0 cm / 4.3" |
+| Height | 5.0 cm / 2.0" |
+| Weight | 1.0 kg / 2.2 lbs |
 
 ---
 
 ## 10.5 Environmental
 
-| Parameter | Specification |
-|-----------|--------------|
-| Operating temperature | 0 °C to 40 °C |
-| Storage temperature | −20 °C to 60 °C |
-| Relative humidity | 20% to 80%, non-condensing |
+| Parameter | Value |
+|---|---|
+| Operating temperature | 0–45 °C / 32–113 °F |
+| Humidity | 20–85%, non-condensing |
 
 ---
 
-## 10.6 Mechanical
+## 10.6 Regulatory Compliance
 
-| Parameter | Specification |
-|-----------|--------------|
-| Dimensions (W × H × D) | *TBC* mm |
-| Weight | *TBC* kg |
-| Finish | *TBC* |
+| Standard | Scope |
+|---|---|
+| IEC 62368-1:2018 | Safety — audio/video and IT equipment |
+| CISPR 32 | Emissions — multimedia equipment |
+| FCC Part 15, Subpart B | USA — unintentional radiators |
+| ICES-003 | Canada |
 
 ---
 
