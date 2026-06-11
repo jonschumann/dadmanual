@@ -22,10 +22,10 @@ The AX Center is a 1U rackmount Thunderbolt 3 audio interface and the primary I/
 
 ## 1.2 Key Features
 
-![AX Center — front panel](/img/panel-ax-center-front.png)
+![AX Center — front panel](/img/panel-ax-center-front-clean.png)
 *AX Center — front panel*
 
-![AX Center — rear panel](/img/panel-ax-center-rear.png)
+![AX Center — rear panel](/img/panel-ax-center-rear-clean.png)
 *AX Center — rear panel*
 
 - **Form factor:** 1U rackmount, 19"

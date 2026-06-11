@@ -22,10 +22,10 @@ The Core 256 is a compact half-rack Thunderbolt 3 audio interface sharing the sa
 
 ## 1.2 Key Features
 
-![Core 256 — front](/img/panel-core256-front.png)
+![Core 256 — front](/img/panel-core256-front-clean.png)
 *Core 256 — front*
 
-![Core 256 — rear](/img/panel-core256-rear.png)
+![Core 256 — rear](/img/panel-core256-rear-clean.png)
 *Core 256 — rear*
 
 - **Form factor:** Half-rack desktop; 1U rack-mountable with optional C256-2MOUNT-BRACKET

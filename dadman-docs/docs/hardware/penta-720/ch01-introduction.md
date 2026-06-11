@@ -22,7 +22,7 @@ The Penta 720 is a modular 2U rackmount audio interface and format-conversion pl
 
 ## 1.2 Key Features
 
-![Penta 720 — front panel](/img/panel-penta720.png)
+![Penta 720 — front panel](/img/panel-penta720-clean.png)
 *Penta 720 — front panel*
 
 - **Form factor:** 2U rackmount, 19"; front-access card bays

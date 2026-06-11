@@ -22,7 +22,7 @@ The MOM (Monitor Operating Module) is a physical monitor controller that connect
 
 ## 1.2 Key Features
 
-![MOM — overview](/img/panel-mom.png)
+![MOM — overview](/img/panel-mom-clean.png)
 *MOM — overview*
 
 - **Form factor:** Desktop; rackmountable with optional bracket

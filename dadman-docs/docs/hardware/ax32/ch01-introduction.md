@@ -23,7 +23,8 @@ The AX32 is a 2U rackmount modular I/O and format-conversion platform. It provid
 
 ## 1.2 Key Features
 
-*[Panel images to be added — photography pending.]*
+![AX32 — front panel](/img/panel-ax32-front-clean.png)
+*AX32 — front panel*
 
 - **Form factor:** 2U rackmount, 19"
 - **Expansion:** 8 hot-plug expansion card slots — up to 1,024×1,024 channels of I/O

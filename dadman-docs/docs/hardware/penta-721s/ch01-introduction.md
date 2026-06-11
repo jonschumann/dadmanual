@@ -22,10 +22,10 @@ The Penta 721s is the 1U slim variant of the Penta 720, sharing the same modular
 
 ## 1.2 Key Features
 
-![Penta 721S — front panel](/img/panel-penta721s-front.png)
+![Penta 721S — front panel](/img/panel-penta721s-front-clean.png)
 *Penta 721S — front panel*
 
-![Penta 721S — rear panel](/img/panel-penta721s-rear.png)
+![Penta 721S — rear panel](/img/panel-penta721s-rear-clean.png)
 *Penta 721S — rear panel*
 
 - **Form factor:** 2U rackmount, 19"

@@ -22,10 +22,10 @@ The AX64 is a 2U rackmount Thunderbolt 3 or Ethernet audio interface with up to 
 
 ## 1.2 Key Features
 
-![AX64 — front panel](/img/panel-ax64-front.png)
+![AX64 — front panel](/img/panel-ax64-front-clean.png)
 *AX64 — front panel*
 
-![AX64 — rear panel](/img/panel-ax64-rear.png)
+![AX64 — rear panel](/img/panel-ax64-rear-clean.png)
 *AX64 — rear panel*
 
 - **Form factor:** 2U rackmount, 19"
