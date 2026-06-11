@@ -1,0 +1,91 @@
+# DADman User Manual — Translation Glossary
+# ─────────────────────────────────────────────────────────────────────────────
+# Import this file into:
+#   • Crowdin: Project → Terminology → Import (CSV format)
+#   • DeepL: Settings → Glossaries → Create glossary (use pairwise columns)
+#
+# Columns: English, German, French, Japanese, Spanish (LatAm), Korean
+# DO NOT TRANSLATE = term is a brand name, acronym, or technical standard;
+#                    use the English form in all languages.
+#
+# Last updated: 2026-06-11
+# ─────────────────────────────────────────────────────────────────────────────
+English,German,French,Japanese,Spanish (Latinoamérica),Korean,Notes
+
+# ── Brand & product names (DO NOT TRANSLATE) ────────────────────────────────
+DADman,DADman,DADman,DADman,DADman,DADman,Brand name — always roman script
+Digital Audio Denmark,Digital Audio Denmark,Digital Audio Denmark,Digital Audio Denmark,Digital Audio Denmark,Digital Audio Denmark,Company name
+NTP Technology,NTP Technology,NTP Technology,NTP Technology,NTP Technology,NTP Technology,Parent company name
+Control|Pack,Control|Pack,Control|Pack,Control|Pack,Control|Pack,Control|Pack,Product name — include pipe character
+EuControl,EuControl,EuControl,EuControl,EuControl,EuControl,Avid product name
+Pro Tools,Pro Tools,Pro Tools,Pro Tools,Pro Tools,Pro Tools,Avid product name
+Avid,Avid,Avid,Avid,Avid,Avid,Company name
+Dante,Dante,Dante,Dante,Dante,Dante,Audinate brand — do not translate
+MADI,MADI,MADI,MADI,MADI,MADI,Acronym: Multichannel Audio Digital Interface
+AES67,AES67,AES67,AES67,AES67,AES67,Standard name
+AES3,AES3,AES3,AES3,AES3,AES3,Standard name
+ADAT,ADAT,ADAT,ADAT,ADAT,ADAT,Standard name
+AX Center,AX Center,AX Center,AX Center,AX Center,AX Center,Product name
+AX64,AX64,AX64,AX64,AX64,AX64,Product name
+Core 256,Core 256,Core 256,Core 256,Core 256,Core 256,Product name
+MOM,MOM,MOM,MOM,MOM,MOM,Product name
+DAD Junior,DAD Junior,DAD Junior,DAD Junior,DAD Junior,DAD Junior,Product name
+Thunderbolt,Thunderbolt,Thunderbolt,Thunderbolt,Thunderbolt,Thunderbolt,Apple trademark
+ASIO,ASIO,ASIO,ASIO,ASIO,ASIO,Steinberg standard acronym
+MIDI,MIDI,MIDI,MIDI,MIDI,MIDI,Acronym: Musical Instrument Digital Interface
+SPQ,SPQ,SPQ,SPQ,SPQ,SPQ,Feature acronym — do not translate
+DADman File (.dms),.dms-Datei,fichier .dms,.dmsファイル,archivo .dms,.dms 파일,File extension always shown as .dms
+DADman Profile (.dmprof),.dmprof-Datei,fichier .dmprof,.dmprofファイル,archivo .dmprof,.dmprof 파일,File extension always shown as .dmprof
+
+# ── Signal routing & architecture ───────────────────────────────────────────
+routing matrix,Routing-Matrix,matrice de routage,ルーティング マトリクス,matriz de enrutamiento,라우팅 매트릭스,
+signal flow,Signalfluss,flux du signal,信号フロー,flujo de señal,신호 흐름,
+input,Eingang,entrée,入力,entrada,입력,
+output,Ausgang,sortie,出力,salida,출력,
+analogue input,Analogeingang,entrée analogique,アナログ入力,entrada analógica,아날로그 입력,
+analogue output,Analogausgang,sortie analogique,アナログ出力,salida analógica,아날로그 출력,
+digital input,Digitaleingang,entrée numérique,デジタル入力,entrada digital,디지털 입력,
+digital output,Digitalausgang,sortie numérique,デジタル出力,salida digital,디지털 출력,
+channel,Kanal,canal,チャンネル,canal,채널,
+channel strip,Kanalzug,tranche de canal,チャンネル ストリップ,canal de banda,채널 스트립,
+
+# ── Clocking & synchronisation ──────────────────────────────────────────────
+clock master,Taktgeber,maître d'horloge,クロック マスター,maestro de reloj,클록 마스터,
+clock slave,Taktempfänger,esclave d'horloge,クロック スレーブ,esclavo de reloj,클록 슬레이브,Preferred over "Taktsklave" (DE)
+word clock,Worduhr,horloge de mot,ワード クロック,reloj de palabra,워드 클록,
+sample rate,Abtastrate,fréquence d'échantillonnage,サンプル レート,frecuencia de muestreo,샘플 레이트,
+bit depth,Bittiefe,résolution,ビット深度,profundidad de bits,비트 깊이,
+synchronisation,Synchronisation,synchronisation,同期,sincronización,동기화,Use -isation (not -ization) in English
+
+# ── Analogue parameters ──────────────────────────────────────────────────────
+gain,Verstärkung,gain,ゲイン,ganancia,게인,
+phantom power,Phantomspeisung,alimentation fantôme,ファンタム電源,alimentación fantasma,팬텀 전원,
+pad,Pad,pad,パッド,pad,패드,Technical term — keep as "Pad" in all languages
+reference level,Referenzpegel,niveau de référence,基準レベル,nivel de referencia,기준 레벨,
+headroom,Headroom,headroom,ヘッドルーム,margen dinámico,헤드룸,
+
+# ── Monitoring ───────────────────────────────────────────────────────────────
+monitor control,Monitorsteuerung,contrôle de monitoring,モニター コントロール,control de monitor,모니터 컨트롤,
+speaker set,Lautsprecherset,ensemble d'enceintes,スピーカー セット,conjunto de altavoces,스피커 세트,
+fold-down,Fold-Down,repli,フォールド ダウン,mezcla descendente,폴드다운,Sometimes "downmix" in other standards
+bass management,Bassverwaltung,gestion des basses,バス マネジメント,gestión de graves,베이스 매니지먼트,
+Dolby Atmos,Dolby Atmos,Dolby Atmos,Dolby Atmos,Dolby Atmos,Dolby Atmos,Brand name — do not translate
+immersive audio,immersiver Ton,audio immersif,イマーシブ オーディオ,audio inmersivo,이머시브 오디오,
+
+# ── Software & sessions ──────────────────────────────────────────────────────
+session,Session,session,セッション,sesión,세션,
+configuration,Konfiguration,configuration,コンフィグレーション,configuración,구성,
+profile,Profil,profil,プロファイル,perfil,프로파일,
+preset,Preset,préréglage,プリセット,ajuste predefinido,프리셋,
+firmware,Firmware,micrologiciel,ファームウェア,firmware,펌웨어,
+driver,Treiber,pilote,ドライバー,controlador,드라이버,
+device,Gerät,périphérique,デバイス,dispositivo,장치,
+unit,Gerät,appareil,ユニット,unidad,유닛,Same DE as "device" — context distinguishes
+device list,Geräteliste,liste des périphériques,デバイス リスト,lista de dispositivos,장치 목록,
+cloning,Klonen,clonage,クローニング,clonación,클로닝,Copying config from one unit to another
+
+# ── Safety & regulatory ──────────────────────────────────────────────────────
+DANGER,GEFAHR,DANGER,危険,PELIGRO,위험,IEC 82079-1 signal word — all caps
+WARNING,WARNUNG,AVERTISSEMENT,警告,ADVERTENCIA,경고,IEC 82079-1 signal word — all caps
+CAUTION,VORSICHT,ATTENTION,注意,PRECAUCIÓN,주의,IEC 82079-1 signal word — all caps
+NOTE,HINWEIS,REMARQUE,注記,NOTA,참고,IEC 82079-1 signal word — all caps

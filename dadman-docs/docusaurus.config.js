@@ -1,14 +1,24 @@
 // @ts-check
 // DADman User Manual — Docusaurus configuration
-// Target: docs.evangelaudio.com
+// Target: docs.digitalaudio.dk (current: docs.evangelaudio.com)
 
 const { themes: prismThemes } = require('prism-react-renderer');
+
+// Build metadata injected by CI — fall back to sensible defaults locally
+const DOC_VERSION   = process.env.DOC_VERSION   || require('./package.json').version;
+const DOC_BUILD_DATE = process.env.DOC_BUILD_DATE || new Date().toISOString().split('T')[0];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DADman User Manual',
   tagline: 'Complete reference for DADman control software v5.8.2',
   favicon: 'img/favicon.ico',
+
+  // Build metadata available to all pages and the PDF generator
+  customFields: {
+    docVersion:   DOC_VERSION,
+    docBuildDate: DOC_BUILD_DATE,
+  },
 
   // Production URL
   url: 'https://docs.evangelaudio.com',
@@ -23,7 +33,16 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'de', 'fr', 'ja', 'es', 'ko', 'da'],
+    localeConfigs: {
+      en: { label: 'English',                    direction: 'ltr', htmlLang: 'en-GB' },
+      de: { label: 'Deutsch',                    direction: 'ltr', htmlLang: 'de'    },
+      fr: { label: 'Français',                   direction: 'ltr', htmlLang: 'fr'    },
+      ja: { label: '日本語',                      direction: 'ltr', htmlLang: 'ja'    },
+      es: { label: 'Español (Latinoamérica)',     direction: 'ltr', htmlLang: 'es-419'},
+      ko: { label: '한국어',                       direction: 'ltr', htmlLang: 'ko'    },
+      da: { label: 'Dansk',                       direction: 'ltr', htmlLang: 'da'    },
+    },
   },
 
   presets: [
@@ -75,8 +94,17 @@ const config = {
             label: 'Hardware Manuals',
           },
           {
+            to: '/downloads',
+            label: 'Download PDF',
+            position: 'right',
+          },
+          {
             href: 'https://www.digitalaudiosupport.com',
             label: 'Support Portal',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
           {

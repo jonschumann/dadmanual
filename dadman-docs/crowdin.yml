@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# DADman User Manual — Crowdin Configuration
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Setup steps (one-time):
+#   1. Create a project at crowdin.com
+#   2. Replace YOUR_PROJECT_ID below with the numeric project ID
+#   3. In Crowdin project settings:
+#      • Add target languages: de, fr, ja, es-MX, ko, da
+#      • Language mapping: map es-MX → "es" (Docusaurus locale code)
+#      • Enable DeepL integration for machine translation pre-fill
+#      • Import this file's Glossary CSV (localization/terminology-glossary.csv)
+#   4. Add CROWDIN_PERSONAL_TOKEN to GitHub repository Secrets
+#   5. Install the Crowdin GitHub App on the repo (crowdin.com/github-integration)
+#
+# How it works:
+#   • Source (English) Markdown files are pulled from GitHub automatically
+#   • Translators work in Crowdin's editor with DeepL-assisted suggestions
+#   • When a translation reaches 100%, Crowdin opens a PR to push i18n/ files
+#   • The standard deploy.yml CI build picks up the new translations
+# ─────────────────────────────────────────────────────────────────────────────
+
+project_id: "YOUR_PROJECT_ID"
+api_token_env: CROWDIN_PERSONAL_TOKEN
+
+base_path: "."
+base_url: "https://api.crowdin.com"
+
+preserve_hierarchy: true
+
+files:
+  # ── Documentation content ────────────────────────────────────────────────
+  # Source Markdown in docs/ maps to i18n/<locale>/docusaurus-plugin-content-docs/
+  - source: /docs/**/*.md
+    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
+    excluded_target_languages:
+      - en  # English is the source; do not write back to docs/
+
+  # ── Docusaurus UI strings ────────────────────────────────────────────────
+  # Run `npm run write-translations -- --locale en` once to generate these
+  # source JSON files, then add them to git before configuring Crowdin.
+
+  - source: /i18n/en/docusaurus-theme-classic/navbar.json
+    translation: /i18n/%two_letters_code%/docusaurus-theme-classic/navbar.json
+
+  - source: /i18n/en/docusaurus-theme-classic/footer.json
+    translation: /i18n/%two_letters_code%/docusaurus-theme-classic/footer.json
+
+  - source: /i18n/en/docusaurus-plugin-content-docs/current.json
+    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current.json

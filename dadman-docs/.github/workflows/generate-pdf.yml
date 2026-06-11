@@ -1,0 +1,252 @@
+name: Generate Manual PDF
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Triggered manually from the GitHub Actions UI (Actions → Generate Manual PDF
+# → Run workflow). Select a locale and optionally override the version string.
+# Choose "all" to generate PDFs for every supported language in parallel.
+#
+# Also fires automatically when a GitHub Release is published — attaches the
+# English PDF to the release as a downloadable asset.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Domain — update this one line when moving from evangelaudio.com to digitalaudio.dk
+env:
+  DOCS_URL: https://docs.evangelaudio.com
+
+on:
+  workflow_dispatch:
+    inputs:
+      locale:
+        description: 'Language to build'
+        required: true
+        default: 'en'
+        type: choice
+        options:
+          - en        # English (default)
+          - de        # Deutsch
+          - fr        # Français
+          - ja        # 日本語
+          - es        # Español (Latinoamérica)
+          - ko        # 한국어
+          - da        # Dansk
+          - all       # Generate all languages in parallel
+      version:
+        description: 'Version override (blank = package.json version)'
+        required: false
+        default: ''
+
+  release:
+    types: [published]
+
+permissions:
+  contents: write   # required to attach assets to releases
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Job 1 — Single locale (workflow_dispatch, locale ≠ "all")
+# ─────────────────────────────────────────────────────────────────────────────
+jobs:
+  generate-pdf:
+    name: PDF (${{ github.event.inputs.locale || 'en' }})
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.locale != 'all'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dadman-docs
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: dadman-docs/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium for Puppeteer
+        run: npx puppeteer browsers install chrome
+
+      - name: Resolve metadata
+        id: meta
+        run: |
+          V="${{ github.event.inputs.version }}"
+          [ -z "$V" ] && V=$(node -p "require('./package.json').version")
+          D=$(date -u +"%Y-%m-%d")
+          L="${{ github.event.inputs.locale }}"
+          echo "version=$V"                                       >> $GITHUB_OUTPUT
+          echo "date=$D"                                          >> $GITHUB_OUTPUT
+          echo "locale=$L"                                        >> $GITHUB_OUTPUT
+          echo "filename=DADman-User-Manual-v${V}-${D}-${L}.pdf" >> $GITHUB_OUTPUT
+
+      - name: Build Docusaurus (${{ steps.meta.outputs.locale }})
+        run: npx docusaurus build --locale ${{ steps.meta.outputs.locale }}
+        env:
+          DOC_VERSION:    ${{ steps.meta.outputs.version }}
+          DOC_BUILD_DATE: ${{ steps.meta.outputs.date }}
+
+      - name: Serve built site
+        run: npx serve@latest build --listen 3000 &
+
+      - name: Wait for site to be ready
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000 > /dev/null && echo "Ready" && break
+            echo "Waiting... ($i/30)"
+            sleep 2
+          done
+
+      - name: Generate PDF
+        run: |
+          node scripts/generate-pdf.js \
+            --output "${{ steps.meta.outputs.filename }}" \
+            --version "${{ steps.meta.outputs.version }}" \
+            --date "${{ steps.meta.outputs.date }}" \
+            --locale "${{ steps.meta.outputs.locale }}" \
+            --docs-url "${{ env.DOCS_URL }}"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.meta.outputs.filename }}
+          path: dadman-docs/${{ steps.meta.outputs.filename }}
+          retention-days: 90
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Job 2 — All locales in parallel (workflow_dispatch, locale == "all")
+# ─────────────────────────────────────────────────────────────────────────────
+  generate-all-pdfs:
+    name: PDF (${{ matrix.locale }})
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.locale == 'all'
+    strategy:
+      matrix:
+        locale: [en, de, fr, ja, es, ko, da]
+      fail-fast: false   # keep going if one locale fails
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dadman-docs
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: dadman-docs/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium for Puppeteer
+        run: npx puppeteer browsers install chrome
+
+      - name: Resolve metadata
+        id: meta
+        run: |
+          V="${{ github.event.inputs.version }}"
+          [ -z "$V" ] && V=$(node -p "require('./package.json').version")
+          D=$(date -u +"%Y-%m-%d")
+          echo "version=$V"                                                          >> $GITHUB_OUTPUT
+          echo "date=$D"                                                             >> $GITHUB_OUTPUT
+          echo "filename=DADman-User-Manual-v${V}-${D}-${{ matrix.locale }}.pdf"   >> $GITHUB_OUTPUT
+
+      - name: Build Docusaurus (${{ matrix.locale }})
+        run: npx docusaurus build --locale ${{ matrix.locale }}
+        env:
+          DOC_VERSION:    ${{ steps.meta.outputs.version }}
+          DOC_BUILD_DATE: ${{ steps.meta.outputs.date }}
+
+      - name: Serve and wait
+        run: |
+          npx serve@latest build --listen 3000 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000 > /dev/null && echo "Ready" && break
+            sleep 2
+          done
+
+      - name: Generate PDF
+        run: |
+          node scripts/generate-pdf.js \
+            --output "${{ steps.meta.outputs.filename }}" \
+            --version "${{ steps.meta.outputs.version }}" \
+            --date "${{ steps.meta.outputs.date }}" \
+            --locale "${{ matrix.locale }}" \
+            --docs-url "${{ env.DOCS_URL }}"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.meta.outputs.filename }}
+          path: dadman-docs/${{ steps.meta.outputs.filename }}
+          retention-days: 90
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Job 3 — On GitHub Release: auto-generate English PDF and attach to release
+# ─────────────────────────────────────────────────────────────────────────────
+  release-pdf:
+    name: Attach PDF to release
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dadman-docs
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: dadman-docs/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium for Puppeteer
+        run: npx puppeteer browsers install chrome
+
+      - name: Resolve metadata
+        id: meta
+        run: |
+          # Strip leading 'v' from release tag (v5.8.2 → 5.8.2)
+          V="${{ github.event.release.tag_name }}"
+          V="${V#v}"
+          D=$(date -u +"%Y-%m-%d")
+          echo "version=$V"                                       >> $GITHUB_OUTPUT
+          echo "date=$D"                                          >> $GITHUB_OUTPUT
+          echo "filename=DADman-User-Manual-v${V}-${D}-en.pdf"  >> $GITHUB_OUTPUT
+
+      - name: Build Docusaurus (en)
+        run: npx docusaurus build --locale en
+        env:
+          DOC_VERSION:    ${{ steps.meta.outputs.version }}
+          DOC_BUILD_DATE: ${{ steps.meta.outputs.date }}
+
+      - name: Serve and wait
+        run: |
+          npx serve@latest build --listen 3000 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000 > /dev/null && echo "Ready" && break
+            sleep 2
+          done
+
+      - name: Generate PDF
+        run: |
+          node scripts/generate-pdf.js \
+            --output "${{ steps.meta.outputs.filename }}" \
+            --version "${{ steps.meta.outputs.version }}" \
+            --date "${{ steps.meta.outputs.date }}" \
+            --locale en \
+            --docs-url "${{ env.DOCS_URL }}"
+
+      - name: Attach PDF to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dadman-docs/${{ steps.meta.outputs.filename }}

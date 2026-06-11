@@ -10,7 +10,7 @@ slug: /troubleshooting
 
 > **Document:** DADman User Manual  
 > **Software version covered:** DADman v5.8.2 build 2  
-> **Chapter status:** Draft v0.1 — Error message catalogue and LED state tables pending from DAD engineering  
+> **Chapter status:** Draft v0.2 — Log file access documented (9.9.1–9.9.2); error message catalogue and LED state tables still pending from DAD engineering  
 > **Last updated:** June 2026
 
 ---
@@ -238,10 +238,56 @@ support@ntp.dk
 2. Hardware unit model and firmware version (visible in Device List)
 3. Description of the symptom, when it started, and what changed before it appeared
 4. Any error messages displayed on screen
+5. Relevant log output (see below)
+
+### 9.9.1 Accessing DADman Logs — macOS
+
+DADman writes log entries via the macOS Unified Logging system. Logs are not stored as plain text files; use the following methods to collect them.
+
+**Console.app (simplest method):**
+1. Open **Console.app** (Applications > Utilities > Console).
+2. In the search field, type `DADman` and press Return.
+3. Reproduce the problem. Console shows DADman log entries in real time.
+4. Select the relevant entries, right-click, and choose **Copy** to paste into a support ticket.
+
+**Terminal (time-ranged log export):**
+```bash
+log show --predicate 'process == "DADman"' --info --last 1h > ~/Desktop/dadman-log.txt
+```
+Adjust `--last 1h` as needed (e.g., `--last 30m`, `--last 2h`). The resulting file can be attached to a support ticket.
+
+**Crash reports:**  
+If DADman crashed, a crash report is written to:
+```
+~/Library/Logs/DiagnosticReports/
+```
+Look for files named `DADman_<date>_<hostname>.ips` or `DADman_<date>.crash`. These are also visible in Console.app under **Crash Reports**.
+
+**TB3 Driver logs:**  
+To collect Thunderbolt driver log entries:
+```bash
+log show --predicate 'process == "DADThunderboltDriver" OR subsystem CONTAINS "ntp"' --info --last 1h > ~/Desktop/tb3-driver-log.txt
+```
+
+### 9.9.2 Accessing DADman Logs — Windows
+
+**Windows Event Viewer:**
+1. Open **Event Viewer** (Start → search "Event Viewer").
+2. Navigate to **Windows Logs > Application**.
+3. Click **Filter Current Log…** and enter `DADman` in the **Event sources** field.
+4. Copy or export the filtered entries for the support ticket.
+
+**Application data folder:**  
+DADman stores settings and may store log files at:
+```
+%AppData%\NTP Technology\DADman\
+```
+Open this path in Windows Explorer (`Win + R` → paste the path → Enter) and include any `.log` files found there when contacting support.
+
+> **NOTE:** The exact log file paths above have been verified for standard installations. If DADman was installed to a non-default location or run under a different user account, paths may differ. DAD support can provide guidance if these locations do not contain the expected files.
 
 ---
 
 *[Pending from DAD engineering:]*  
 *— Error message catalogue (on-screen alert text → cause → remedy)*  
-*— Front panel LED state tables per hardware model*  
-*— DADman log file locations on macOS and Windows*
+*— Front panel LED state tables per hardware model*
