@@ -45,16 +45,13 @@ The MOM (Monitor Operating Module) is a physical monitor controller that connect
 
 ## 1.4 Part Numbers and Ordering
 
-*[Placeholder — DAD part numbers, SKUs, and available factory-configuration options.]*
-
 | Part number | Description |
 |-------------|-------------|
-| *TBC* | MOM standard |
-| *TBC* | *[Optional configuration]* |
+| MOM-BASE | MOM — standard |
 
 ### Optional Accessories
 
-*[Placeholder — list separately-ordered accessories: rack ears, cables, expansion cards, etc.]*
+*No separately-ordered accessories are currently available for the MOM.*
 
 ---
 

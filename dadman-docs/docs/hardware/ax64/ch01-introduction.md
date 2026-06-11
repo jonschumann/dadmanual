@@ -45,16 +45,25 @@ The AX64 is a 2U rackmount Thunderbolt 3 or Ethernet audio interface with up to 
 
 ## 1.4 Part Numbers and Ordering
 
-*[Placeholder — DAD part numbers, SKUs, and available factory-configuration options.]*
-
 | Part number | Description |
 |-------------|-------------|
-| *TBC* | AX64 standard |
-| *TBC* | *[Optional configuration]* |
+| AX64-BASE | AX64 — standard, single PSU |
+| AX64-BASE-RPS | AX64 — with redundant (dual) PSU |
 
 ### Optional Accessories
 
-*[Placeholder — list separately-ordered accessories: rack ears, cables, expansion cards, etc.]*
+Expansion cards (8 slots available):
+
+| Part number | Description |
+|-------------|-------------|
+| CARD-L8 | 8-Channel AD Line Input Card |
+| CARD-M8 | 8-Channel AD Mic/Line Input Card |
+| CARD-DA8 | 8-Channel DA Output Card |
+| CARD-DANTE | 128-Channel Dante / AES67 Network Audio Card |
+| CARD-2MADI-SO | Dual 64-Channel MADI Interface Card with SRC |
+| CARD-RAVENNA | 128-Channel Ravenna / AES67 / ST 2110-30 Card |
+
+For card specifications and installation, see [Expansion Cards](../../expansion-cards/).
 
 ---
 

@@ -32,6 +32,8 @@ DAD expansion cards slot into the card bays on compatible chassis to extend I/O 
 | [CARD-DANTE](./card-dante) | CARD-DANTE | Dante / AES67 AoIP | 128 ch in + 128 ch out | 2 × RJ45 | 4.5 W |
 | [CARD-2MADI-SO](./card-2madi-so) | CARD-2MADI-SO | Dual MADI via SFP | 2 × 64 ch in + 64 ch out | 2 × SFP | 4.5 W |
 | [CARD-RAVENNA](./card-ravenna) | CARD-RAVENNA | Ravenna / AES67 / ST 2110-30 | 128 ch in + 128 ch out | 2 × RJ45 | 7.5 W |
+| [CARD-8AES](./card-8aes) | CARD-8AES | AES3 digital I/O | 8 ch in + 8 ch out | TBC | TBC |
+| [CARD-AVB](./card-avb) | CARD-AVB | AVB / Milan network audio | TBC | 2 × RJ45 | TBC |
 
 ---
 

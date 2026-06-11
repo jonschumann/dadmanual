@@ -45,16 +45,17 @@ The Core 256 is a compact half-rack Thunderbolt 3 audio interface sharing the sa
 
 ## 1.4 Part Numbers and Ordering
 
-*[Placeholder — DAD part numbers, SKUs, and available factory-configuration options.]*
-
 | Part number | Description |
 |-------------|-------------|
-| *TBC* | Core 256 standard |
-| *TBC* | *[Optional configuration]* |
+| CORE256-BASE | Core 256 — standard |
 
 ### Optional Accessories
 
-*[Placeholder — list separately-ordered accessories: rack ears, cables, expansion cards, etc.]*
+| Part number | Description |
+|-------------|-------------|
+| C256-2MOUNT-BRACKET | 1U rack mount bracket (fits 1–2 Core 256 units) |
+
+> **Note:** The Core 256 has no expansion card slots. Expansion cards are not compatible.
 
 ---
 

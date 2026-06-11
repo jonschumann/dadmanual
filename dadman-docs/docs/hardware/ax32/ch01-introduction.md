@@ -6,17 +6,18 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
-> **Product:** Digital Audio Denmark AX Center
+> **Product:** Digital Audio Denmark AX32  
+> **SKU:** AX32-BASE2
 
 ---
 
 ## 1.1 Product Overview
 
-The AX Center is a 1U rackmount Thunderbolt 3 audio interface and the primary I/O hub in the Thunder|Core family. It provides front-panel mic/instrument inputs, dual headphone outputs, stereo monitor outputs, MADI I/O, ADAT I/O, word clock I/O, two analogue expansion card slots, and dual Thunderbolt 3 ports.
+The AX32 is a 2U full-rack Thunderbolt audio interface and A/D–D/A converter platform. It provides up to 32 channels of analogue I/O (16 in / 16 out) via its eight expansion card slots, along with built-in MADI I/O and Ethernet connectivity for DADman control. The AX32-BASE2 is the standard shipping variant; it does not include any proprietary host interface connectors beyond Thunderbolt and Ethernet.
 
 **Connection to host:** Thunderbolt 3
-**Form factor:** 1U rackmount
-**Audio channels:** Up to 256×256 channels at 48 kHz
+**Form factor:** 2U full-rack
+**Audio channels:** Up to 32 analogue channels (16 in / 16 out) via expansion cards; additional digital I/O via MADI and network audio cards
 
 ---
 
@@ -36,7 +37,7 @@ The AX Center is a 1U rackmount Thunderbolt 3 audio interface and the primary I/
 
 | Item | Quantity |
 |------|----------|
-| AX Center unit | 1 |
+| AX32 unit | 1 |
 | IEC C13 power cable | 1 |
 | Quick-start guide | 1 |
 | *[Additional items TBC]* | — |
@@ -47,11 +48,13 @@ The AX Center is a 1U rackmount Thunderbolt 3 audio interface and the primary I/
 
 | Part number | Description |
 |-------------|-------------|
-| AXCNTR-BASE | AX Center — standard |
+| AX32-BASE2 | AX32 — standard (no proprietary host interface) |
+
+> **NOTICE — Product lifecycle.** The AX32-BASE2 is an active product and is available through authorised distributors. It is no longer actively marketed. Contact Digital Audio Denmark or your local distributor for availability.
 
 ### Optional Accessories
 
-Expansion cards (2 slots available):
+Expansion cards (8 slots available):
 
 | Part number | Description |
 |-------------|-------------|
@@ -72,9 +75,9 @@ For card specifications and installation, see [Expansion Cards](../../expansion-
 
 | Component | Minimum version |
 |-----------|-----------------|
-| AX Center firmware | TBC |
+| AX32 firmware | TBC |
 | DADman | v5.8 or later |
-| DAD Thunderbolt driver | TBC | |
+| DAD Thunderbolt driver | TBC |
 
 ---
 

@@ -1,0 +1,10 @@
+{
+  "label": "AX32 Hardware Manual",
+  "position": 8,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Hardware manual for the Digital Audio Denmark AX32."
+  }
+}
