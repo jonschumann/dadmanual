@@ -45,10 +45,11 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Make package public (first push only — idempotent)
-        # Ensures Watchtower can pull without registry credentials
+      - name: Make package public (idempotent — requires PAT with write:packages)
+        # GITHUB_TOKEN cannot change package visibility; a PAT is required.
+        # Add a PAT with write:packages scope as repo secret GHCR_PAT.
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GHCR_PAT }}
         run: |
           gh api \
             --method PATCH \

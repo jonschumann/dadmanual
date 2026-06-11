@@ -20,17 +20,13 @@ BNC connectors are unbalanced 75 Ω coaxial. Signal is carried on the centre pin
 
 ## A.2 DB25 — Analogue I/O (Tascam Pinout)
 
-*[Placeholder — 25-pin D-sub pinout for the Tascam/ELCO standard used on DAD expansion cards and Penta AES connectors.]*
+The AX Center base unit does not include any DB25 connectors. DB25 connections are provided by optional expansion cards (CARD-L8, CARD-M8, CARD-DA8) installed in the two expansion slots.
 
-| Pin | Signal | Direction | Notes |
-|-----|--------|-----------|-------|
-| 1 | Ch 1 + | *In/Out TBC* | |
-| 14 | Ch 1 − | *In/Out TBC* | |
-| 2 | Ch 2 + | *In/Out TBC* | |
-| 15 | Ch 2 − | *In/Out TBC* | |
-| *…* | *…* | *…* | *…* |
-| 12 | Ground | — | Chassis / cable shield |
-| 25 | Ground | — | Chassis / cable shield |
+For DB25 pinout details, see the relevant expansion card reference page:
+
+- [CARD-L8 — 8-Channel AD Line Input](../../expansion-cards/card-l8#db25-input-pinout-tascam)
+- [CARD-M8 — 8-Channel AD Mic/Line Input](../../expansion-cards/card-m8#db25-input-pinout-tascam)
+- [CARD-DA8 — 8-Channel DA Output](../../expansion-cards/card-da8#db25-output-pinout-tascam)
 
 ---
 
