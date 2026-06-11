@@ -76,6 +76,8 @@ sidebar_position: 11
 | Parameter | Value |
 |---|---|
 | Form factor | 19" rack mount, 2RU (88.9 mm) |
+| Chassis depth | 35 cm / 13.8" |
+| Body width | 43.5 cm / 17.2" |
 | Weight | 5.0 kg / 11.0 lbs |
 
 ---

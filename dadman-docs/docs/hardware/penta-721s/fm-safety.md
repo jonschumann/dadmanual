@@ -73,7 +73,7 @@ Connector labels in this manual match the silkscreened labels on the physical un
 
 ## About This Manual
 
-This manual covers the Penta 721s hardware. For DADman software configuration and operation, see the **DADman User Manual** available at [docs.digitalaudio.dk](https://docs.digitalaudio.dk).
+This manual covers the Penta 721s hardware. For DADman software configuration and operation, see the **DADman User Manual** available at [docs.evangelaudio.com](https://docs.evangelaudio.com).
 
 | Manual section | Covers |
 |----------------|--------|

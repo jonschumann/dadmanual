@@ -2,7 +2,7 @@
 
 This is the source for the DADman User Manual, built with [Docusaurus 3](https://docusaurus.io).
 
-**Target URL:** https://docs.digitalaudio.dk/dadman/
+**Target URL:** https://docs.evangelaudio.com/dadman/
 
 ## Quick start
 

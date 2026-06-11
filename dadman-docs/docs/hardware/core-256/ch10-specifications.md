@@ -106,6 +106,7 @@ sidebar_position: 11
 |---|---|
 | Form factor | Desktop / 1RU rackmount (with optional C256-2MOUNT-BRACKET) |
 | Width | 21.1 cm / 8.3" |
+| Depth | 23.1 cm / 9.1" |
 | Weight | 1.3 kg / 2.9 lbs |
 
 ---

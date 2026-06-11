@@ -44,4 +44,4 @@ Firmware updates for the AX32 are applied through DADman. See [Ch. 8 — Mainten
 ## Cross-References
 
 - [Ch. 8 — Maintenance & Firmware Updates](./ch08-maintenance)
-- [DADman User Manual](https://docs.digitalaudio.dk) — Full DADman software reference
+- [DADman User Manual](https://docs.evangelaudio.com) — Full DADman software reference

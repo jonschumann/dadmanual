@@ -1,6 +1,6 @@
 // @ts-check
 // DADman User Manual — Docusaurus configuration
-// Target: docs.digitalaudio.dk
+// Target: docs.evangelaudio.com
 
 const { themes: prismThemes } = require('prism-react-renderer');
 
@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Production URL
-  url: 'https://docs.digitalaudio.dk',
+  url: 'https://docs.evangelaudio.com',
   baseUrl: '/',  // change to '/dadman/' before deploying to production
 
   // GitHub Pages deployment config (for CI)

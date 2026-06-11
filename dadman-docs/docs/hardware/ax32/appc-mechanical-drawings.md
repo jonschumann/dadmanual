@@ -20,9 +20,9 @@ sidebar_position: 14
 | Dimension | Value |
 |-----------|-------|
 | Form factor | 2U (88.9 mm) |
-| Width | 19" / 482.6 mm (rack ears) |
-| Depth | TBC |
-| Weight | TBC |
+| Width | 19" / 482.6 mm (rack ears); body width 43.5 cm / 17.2" |
+| Depth | 35 cm / 13.8" |
+| Weight | 5.0 kg / 11.0 lbs |
 
 ---
 

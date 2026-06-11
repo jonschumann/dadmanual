@@ -8,7 +8,7 @@ sidebar_position: 8
 
 > **Product:** Digital Audio Denmark Penta 720
 
-> For full DADman operation, see the **DADman User Manual** at [docs.digitalaudio.dk](https://docs.digitalaudio.dk).
+> For full DADman operation, see the **DADman User Manual** at [docs.evangelaudio.com](https://docs.evangelaudio.com).
 
 ---
 
