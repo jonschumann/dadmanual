@@ -1,0 +1,53 @@
+name: Crowdin — Download translations
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Downloads completed translations from Crowdin and opens a PR against
+# hardware-manuals. Merging the PR triggers deploy.yml automatically,
+# updating docs.evangelaudio.com with the new translated content.
+#
+# Runs:
+#   • Every Monday at 07:00 UTC (catches weekly translation progress)
+#   • Manually via the Actions tab (Run workflow) for on-demand pulls
+#     — use this for demos or after a machine-translation pre-fill
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # Every Monday at 07:00 UTC
+  workflow_dispatch:
+
+jobs:
+  download-translations:
+    name: Download translations → open PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download translations and create PR
+        uses: crowdin/github-action@v2
+        with:
+          config: dadman-docs/crowdin.yml
+          upload_sources: false
+          upload_translations: false
+          download_translations: true
+
+          # Opens a pull request so translations can be reviewed before merging.
+          # Merging the PR triggers deploy.yml which rebuilds and deploys the site.
+          create_pull_request: true
+          pull_request_title: "i18n: new translations from Crowdin"
+          pull_request_body: |
+            Automated PR — latest translations pulled from Crowdin.
+
+            **Review checklist:**
+            - [ ] Spot-check at least one language for obvious MT errors
+            - [ ] Merge to trigger site rebuild and deploy
+
+          pull_request_base_branch_name: hardware-manuals
+          pull_request_labels: "translations,automated"
+
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

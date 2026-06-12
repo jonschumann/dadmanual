@@ -35,19 +35,14 @@ jobs:
         with:
           context: ./dadman-docs
           push: true
-          # Tag with :latest (Watchtower watches this) + immutable SHA tag
           tags: |
             ghcr.io/${{ github.repository_owner }}/dadman-docs:latest
             ghcr.io/${{ github.repository_owner }}/dadman-docs:${{ github.sha }}
-          # amd64 only — TrueNAS is x86; arm64 QEMU emulation is too slow on GHA
           platforms: linux/amd64
-          # Layer cache — makes rebuilds fast on repeated pushes
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Make package public (idempotent — requires PAT with write:packages)
-        # GITHUB_TOKEN cannot change package visibility; a PAT is required.
-        # Add a PAT with write:packages scope as repo secret GHCR_PAT.
         env:
           GH_TOKEN: ${{ secrets.GHCR_PAT }}
         run: |
@@ -56,4 +51,4 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             /user/packages/container/dadman-docs \
             -f visibility=public \
-            2>/dev/null || echo "Package visibility unchanged (may not exist yet)"
+            2>/dev/null || echo "Package visibility unchanged"
