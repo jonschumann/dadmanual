@@ -1,0 +1,35 @@
+name: Crowdin — Upload sources
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Triggers whenever English source content changes on hardware-manuals.
+# Uploads new/updated strings to Crowdin so translators (and MT) can act on them.
+# Also available as a manual trigger from the Actions tab.
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  push:
+    branches: [hardware-manuals]
+    paths:
+      - "dadman-docs/docs/**"
+      - "dadman-docs/i18n/en/**"
+  workflow_dispatch:
+
+jobs:
+  upload-sources:
+    name: Upload source strings to Crowdin
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload sources
+        uses: crowdin/github-action@v2
+        with:
+          config: dadman-docs/crowdin.yml
+          upload_sources: true
+          upload_translations: false
+          download_translations: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
