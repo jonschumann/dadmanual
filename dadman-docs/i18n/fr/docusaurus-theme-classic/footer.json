@@ -1,0 +1,54 @@
+{
+  "link.title.Manual": {
+    "message": "Manuelle",
+    "description": "The title of the footer links column with title=Manual in the footer"
+  },
+  "link.title.Resources": {
+    "message": "Ressource",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.DAD": {
+    "message": "DAD",
+    "description": "The title of the footer links column with title=DAD in the footer"
+  },
+  "link.item.label.Getting Started": {
+    "message": "Commencer",
+    "description": "The label of footer link with label=Getting Started linking to getting-started"
+  },
+  "link.item.label.Operation": {
+    "message": "Opération",
+    "description": "The label of footer link with label=Operation linking to operation"
+  },
+  "link.item.label.Advanced Features": {
+    "message": "Fonctionnalités Avancées",
+    "description": "The label of footer link with label=Advanced Features linking to advanced-features"
+  },
+  "link.item.label.Troubleshooting": {
+    "message": "Dépannage",
+    "description": "The label of footer link with label=Troubleshooting linking to troubleshooting"
+  },
+  "link.item.label.DAD Support Portal": {
+    "message": "Portail de support DAD",
+    "description": "The label of footer link with label=DAD Support Portal linking to https://www.digitalaudiosupport.com"
+  },
+  "link.item.label.Software Downloads": {
+    "message": "Téléchargements de logiciels",
+    "description": "The label of footer link with label=Software Downloads linking to https://www.digitalaudiosupport.com/login"
+  },
+  "link.item.label.Community Forum": {
+    "message": "Forum de la communauté",
+    "description": "The label of footer link with label=Community Forum linking to https://www.digitalaudiosupport.com/forums"
+  },
+  "link.item.label.digitalaudio.dk": {
+    "message": "digitalaudio.dk",
+    "description": "The label of footer link with label=digitalaudio.dk linking to https://www.digitalaudio.dk"
+  },
+  "link.item.label.Contact": {
+    "message": "Contacter",
+    "description": "The label of footer link with label=Contact linking to mailto:support@ntp.dk"
+  },
+  "copyright": {
+    "message": "Copyright ©️ 2026 NTP Technology A/S. Construit avec Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

@@ -1,0 +1,52 @@
+---
+title: "Appendix A — Connector Pinouts"
+sidebar_label: "App. A — Connector Pinouts"
+sidebar_position: 12
+---
+
+# Appendix A — Connector Pinouts
+
+> **Product:** Digital Audio Denmark AX32  
+> **SKU:** AX32-BASE2
+
+---
+
+## A.1 BNC (MADI, Word Clock)
+
+BNC connectors are unbalanced 75 Ω coaxial. Signal is carried on the centre pin; shield on the outer shell. No additional pinout table is required beyond the connector standard.
+
+---
+
+## A.2 DB25 — Analogue I/O (Tascam Pinout)
+
+The AX32 base unit does not include any DB25 connectors. DB25 connections are provided by optional expansion cards (CARD-L8, CARD-M8, CARD-DA8) installed in the expansion slots.
+
+For DB25 pinout details, see the relevant expansion card reference page:
+
+- [CARD-L8 — 8-Channel AD Line Input](../../expansion-cards/card-l8#db25-input-pinout-tascam)
+- [CARD-M8 — 8-Channel AD Mic/Line Input](../../expansion-cards/card-m8#db25-input-pinout-tascam)
+- [CARD-DA8 — 8-Channel DA Output](../../expansion-cards/card-da8#db25-output-pinout-tascam)
+
+---
+
+## A.3 RJ45 (Ethernet)
+
+Standard 1000BASE-T Ethernet. Wired per TIA-568B.
+
+| Pin | Signal |
+| --- | ------ |
+| 1   | Tx +   |
+| 2   | Tx −   |
+| 3   | Rx +   |
+| 4   | —      |
+| 5   | —      |
+| 6   | Rx −   |
+| 7   | —      |
+| 8   | —      |
+
+---
+
+## Cross-References
+
+- [Ch. 2 — Panel Description](./ch02-panel-description) — Connector locations
+- [Ch. 4 — Signal Connections](./ch04-connections) — Connection procedures

@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "DADman Benutzerhandbuch",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Digital Audio Dänemark",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.DADman Manual": {
+    "message": "DADman Handbuch",
+    "description": "Navbar item with label DADman Manual"
+  },
+  "item.label.Hardware Manuals": {
+    "message": "Hardware-Handbücher",
+    "description": "Navbar item with label Hardware Manuals"
+  },
+  "item.label.Download PDF": {
+    "message": "PDF herunterladen",
+    "description": "Navbar item with label Download PDF"
+  },
+  "item.label.Support Portal": {
+    "message": "Support-Portal",
+    "description": "Navbar item with label Support Portal"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

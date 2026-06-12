@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "DADman ユーザーマニュアル",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Digital Audio Denmark",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.DADman Manual": {
+    "message": "DADman マニュアル",
+    "description": "Navbar item with label DADman Manual"
+  },
+  "item.label.Hardware Manuals": {
+    "message": "ハードウェアマニュアル",
+    "description": "Navbar item with label Hardware Manuals"
+  },
+  "item.label.Download PDF": {
+    "message": "PDFをダウンロード",
+    "description": "Navbar item with label Download PDF"
+  },
+  "item.label.Support Portal": {
+    "message": "サポートポータル",
+    "description": "Navbar item with label Support Portal"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

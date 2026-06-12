@@ -1,0 +1,118 @@
+{
+  "version.label": {
+    "message": "Nächste",
+    "description": "The label for version current"
+  },
+  "sidebar.manualSidebar.category.Front Matter & Safety": {
+    "message": "Frontfrage & Sicherheit",
+    "description": "The label for category 'Front Matter & Safety' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 1 — Introduction": {
+    "message": "Ch. 1 — Einführung",
+    "description": "The label for category 'Ch. 1 — Introduction' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 2 — System Requirements": {
+    "message": "Ch. 2 — Systemanforderungen",
+    "description": "The label for category 'Ch. 2 — System Requirements' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 3 — Installation": {
+    "message": "Ch. 3 — Installation",
+    "description": "The label for category 'Ch. 3 — Installation' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 4 — Hardware Description": {
+    "message": "Ch. 4 — Hardware-Beschreibung",
+    "description": "The label for category 'Ch. 4 — Hardware Description' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 5 — Signal Flow & Architecture": {
+    "message": "Ch. 5 — Signalfluss & Architektur",
+    "description": "The label for category 'Ch. 5 — Signal Flow & Architecture' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 6 — Getting Started": {
+    "message": "Ch. 6 — Erste Schritte",
+    "description": "The label for category 'Ch. 6 — Getting Started' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 7 — Operation": {
+    "message": "Ch. 7 — Operation",
+    "description": "The label for category 'Ch. 7 — Operation' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 8 — Advanced Features": {
+    "message": "Ch. 8 — Erweiterte Funktionen",
+    "description": "The label for category 'Ch. 8 — Advanced Features' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 9 — Troubleshooting": {
+    "message": "Ch. 9 — Fehlerbehebung",
+    "description": "The label for category 'Ch. 9 — Troubleshooting' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Ch. 10 — Maintenance": {
+    "message": "Ch. 10 — Wartung",
+    "description": "The label for category 'Ch. 10 — Maintenance' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.category.Appendices": {
+    "message": "Anhänge",
+    "description": "The label for category 'Appendices' in sidebar 'manualSidebar'"
+  },
+  "sidebar.manualSidebar.doc.About This Manual": {
+    "message": "Über dieses Handbuch",
+    "description": "The label for the doc item 'About This Manual' in sidebar 'manualSidebar', linking to the doc intro"
+  },
+  "sidebar.hardwareSidebar.category.AX Center Hardware Manual": {
+    "message": "AX Center Hardware-Handbuch",
+    "description": "The label for category 'AX Center Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.AX Center Hardware Manual.link.generated-index.description": {
+    "message": "Hardware-Handbuch für das Digital Audio Denmark AX Center.",
+    "description": "The generated-index page description for category 'AX Center Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.Core 256 Hardware Manual": {
+    "message": "Core 256 Hardware-Handbuch",
+    "description": "The label for category 'Core 256 Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.Core 256 Hardware Manual.link.generated-index.description": {
+    "message": "Hardware-Handbuch für das Digital Audio Denmark Core 256.",
+    "description": "The generated-index page description for category 'Core 256 Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.AX64 Hardware Manual": {
+    "message": "AX64 Hardware-Handbuch",
+    "description": "The label for category 'AX64 Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.AX64 Hardware Manual.link.generated-index.description": {
+    "message": "Hardware-Handbuch für das Digital Audio Denmark AX64.",
+    "description": "The generated-index page description for category 'AX64 Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.MOM Hardware Manual": {
+    "message": "MOM Hardware-Handbuch",
+    "description": "The label for category 'MOM Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.MOM Hardware Manual.link.generated-index.description": {
+    "message": "Hardware-Handbuch für den Digital Audio Denmark MOM.",
+    "description": "The generated-index page description for category 'MOM Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.Penta 720 Hardware Manual": {
+    "message": "Penta 720 Hardware-Handbuch",
+    "description": "The label for category 'Penta 720 Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.Penta 720 Hardware Manual.link.generated-index.description": {
+    "message": "Hardware-Handbuch für die Digital Audio Denmark Penta 720.",
+    "description": "The generated-index page description for category 'Penta 720 Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.Penta 721s Hardware Manual": {
+    "message": "Penta 721s Hardware-Handbuch",
+    "description": "The label for category 'Penta 721s Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.Penta 721s Hardware Manual.link.generated-index.description": {
+    "message": "Hardware-Handbuch für die Digital Audio Denmark Penta 721s.",
+    "description": "The generated-index page description for category 'Penta 721s Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.Expansion Cards": {
+    "message": "Erweiterungskarten",
+    "description": "The label for category 'Expansion Cards' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.AX32 Hardware Manual": {
+    "message": "AX32 Hardware-Handbuch",
+    "description": "The label for category 'AX32 Hardware Manual' in sidebar 'hardwareSidebar'"
+  },
+  "sidebar.hardwareSidebar.category.AX32 Hardware Manual.link.generated-index.description": {
+    "message": "Hardware-Handbuch für das Digital Audio Denmark AX32.",
+    "description": "The generated-index page description for category 'AX32 Hardware Manual' in sidebar 'hardwareSidebar'"
+  }
+}
