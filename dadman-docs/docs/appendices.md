@@ -16,7 +16,432 @@ slug: /appendices
 
 ## Appendix A — Technical Specifications
 
-*[Placeholder: full hardware specification tables per product — electrical, mechanical, I/O counts, supported formats, routing matrix capacities, environmental specs. To be provided by DAD engineering.]*
+This appendix provides complete technical specifications for all DADman-controlled hardware in the current active product lineup. Specifications are sourced from official DAD product documentation. All channel counts reflect maximum figures at the stated sample rate; actual counts depend on expansion cards installed.
+
+> **NOTE:** AX32 (BASE1/BASE2) is no longer in active production and is not included here. Refer to the AX32 hardware manual for legacy specifications.
+
+---
+
+### A.1 AX Center (AXCNTR-BASE)
+
+**Product overview:** Compact 1U, 2-slot modular audio interface with native analogue I/O. Ideal as a studio centrepiece for recording, monitor control, and immersive audio applications. Includes onboard Thunderbolt 3, Dante, MADI, and ADAT, with two expansion card slots for additional I/O.
+
+#### Routing Matrix
+
+| Resource | Capacity |
+|---|---|
+| Routing matrix | 1,006 × 1,112 |
+| PRO\|MON summing processor | 512 × 64 channels |
+| SPQ equaliser | 1,024 filters |
+| Expansion card slots | 2 |
+
+#### Native I/O
+
+| Interface | Channel count |
+|---|---|
+| Microphone / Line / Instrument inputs | 2 (selectable per channel) |
+| Stereo headphone outputs | 2 |
+| Stereo monitor outputs | 2 |
+| Thunderbolt 3 | 256 ch @ 48 & 96 kHz |
+| Dante AoIP | 256 ch @ 48 kHz; 128 ch @ 96 kHz |
+| MADI I/O | 64 ch @ 48 kHz |
+| ADAT I/O | 16 ch / S/PDIF 2 ch |
+| DADlink (via SFP) | Up to 256 × 256 ch |
+
+#### Analogue Specifications
+
+**Headphone output**
+
+| Parameter | Value |
+|---|---|
+| Dynamic range | > 120 dB |
+| THD+N (A-weighted) | < −100 dB @ −3 dBFS |
+| Crosstalk | < −110 dB |
+| Load impedance | 18 – 600 Ω |
+| Output impedance | < 1 Ω |
+| Max output level | Adjustable −80 to +19 dBu (0.1 dB steps) |
+| Conversion latency @ 96 kHz | 450 µs (high-res filter) / 150 µs (short-delay) |
+
+**Analogue monitor output**
+
+| Parameter | Value |
+|---|---|
+| Dynamic range | > 128 dB |
+| THD+N (A-weighted) | < −115 dB @ −3 dBFS |
+| Crosstalk | < −115 dB |
+| Max output level | Adjustable −60 to +24 dBu (0.1 dB steps) |
+| Conversion latency | 450 µs @ 96 kHz |
+
+**Microphone / instrument input**
+
+| Parameter | Value |
+|---|---|
+| Dynamic range | > 124 dB |
+| THD+N (A-weighted) | < −115 dB @ −3 dBFS |
+| Crosstalk | < −115 dB |
+| Input impedance | 2 kΩ (Mic) / > 1 MΩ (Instrument) |
+| Microphone gain range | −21 to +100 dB (0.1 dB steps) |
+| Microphone EIN (A-weighted) | < −131 dBu |
+| Conversion latency | 350 µs @ 96 kHz |
+
+#### Digital I/O and Synchronisation
+
+| Parameter | Value |
+|---|---|
+| Supported sample rates | 44.1 – 384 kHz (TB3, MADI, DADlink); 44.1 – 192 kHz (Dante, ADAT); 44.1 – 96 kHz (S/PDIF) |
+| Internal system latency | 7 samples (adjustable 3 – 31 samples) |
+| DADlink format | 28-bit floating point, zero-sample latency |
+| Synchronisation sources | Word Clock, Video Black Burst, Dante, ADAT, MADI |
+| Network interface | 1000BASE-T, RJ45 |
+| Thunderbolt 3 | 2 × USB-C, link + 15 W power per port |
+
+#### Electrical Specifications
+
+| Parameter | Value |
+|---|---|
+| Max mains rating | 90 W |
+| Input voltage | 90 – 260 VAC (100 – 240 VAC nominal), 47 – 63 Hz |
+| Mains fuse | 1 A T, IEC connector mounted |
+| Mains connector | IEC 60309 |
+| Digital section power | 15 W |
+| Expansion card power (max) | 30 W |
+| Thunderbolt power (max) | 2 × 15 W |
+
+#### Mechanical Specifications
+
+| Parameter | Value |
+|---|---|
+| Form factor | 19" rack mount, 1 RU (44.4 mm) |
+| Chassis depth | 320 mm / 12.6" |
+| Body width | 435 mm / 17.2" |
+| Weight | 3.2 kg / 7.1 lbs |
+
+#### Environmental and Compliance
+
+| Parameter | Value |
+|---|---|
+| Operating temperature | 0 – 45 °C / 32 – 113 °F |
+| Humidity | 20 – 85%, non-condensing |
+| EMC compliance | CISPR 32:2015 (+AMD1:2019), CISPR 35:2016, IEC 61000-3-2:2018 (+AMD1:2020), IEC 61000-3-3:2013 (+AMD1:2017), ICES-003, AS/NZS CISPR 32, FCC Part 15 Subpart B |
+| Safety compliance | IEC 62368-1:2018 |
+
+---
+
+### A.2 AX64 (AX64-BASE)
+
+**Product overview:** High-channel-count 2U, 8-slot modular audio interface. Designed for large-format studio and live applications requiring extensive I/O expansion. Supports optional redundant power supply (AX64-RPS).
+
+#### Routing Matrix
+
+| Resource | Capacity |
+|---|---|
+| Routing matrix | 1,872 × 1,872 |
+| PRO\|MON summing processor | 512 × 64 channels |
+| SPQ equaliser | 1,024 filters |
+| Expansion card slots | 8 |
+
+#### Native I/O
+
+| Interface | Channel count |
+|---|---|
+| Thunderbolt 3 | 256 ch @ 48 & 96 kHz |
+| Dante AoIP | 256 ch @ 48 kHz; 128 ch @ 96 kHz |
+| MADI I/O | 64 ch @ 48 kHz |
+| ADAT I/O | 16 ch / S/PDIF 2 ch |
+| Via expansion cards (max) | Up to 1,024 × 1,024 ch |
+| DADlink / MADI via SFP (max) | Up to 256 × 256 DADlink or 128 × 128 MADI ch @ 48 kHz |
+
+#### Digital I/O and Synchronisation
+
+| Parameter | Value |
+|---|---|
+| Supported sample rates | 44.1 – 384 kHz (TB3, MADI, DADlink); 44.1 – 192 kHz (Dante, ADAT); 44.1 – 96 kHz (S/PDIF) |
+| Internal system latency | 7 samples (adjustable 3 – 31 samples) |
+| DADlink format | 28-bit floating point, zero-sample latency |
+| Synchronisation sources | Word Clock, Video Black Burst, Dante, ADAT, MADI, DADlink |
+| Network interface | 1000BASE-T, RJ45 |
+| Thunderbolt 3 | 2 × USB-C, link + 15 W power per port |
+
+#### Electrical Specifications
+
+| Parameter | Value |
+|---|---|
+| Power connection | Single or dual input; dual PSU always fitted |
+| Max mains rating | 120 W |
+| Input voltage | 90 – 260 VAC (100 – 240 VAC nominal), 47 – 63 Hz |
+| Mains fuse | 1.5 A T, IEC connector mounted |
+| Mains connector | IEC 60309 |
+| Digital section power | 15 W |
+| Expansion card power (max) | 70 W |
+| Thunderbolt power (max) | 2 × 15 W |
+
+#### Mechanical Specifications
+
+| Parameter | Value |
+|---|---|
+| Form factor | 19" rack mount, 2 RU (88.9 mm) |
+| Chassis depth | 345 mm / 13.6" |
+| Body width | 435 mm / 17.2" |
+| Weight | 5.5 kg / 12.2 lbs |
+
+#### Environmental and Compliance
+
+| Parameter | Value |
+|---|---|
+| Operating temperature | 0 – 45 °C / 32 – 113 °F |
+| Humidity | 20 – 85%, non-condensing |
+| EMC compliance | CISPR 32:2015 (+AMD1:2019), CISPR 35:2016, IEC 61000-3-2:2018 (+AMD1:2020), IEC 61000-3-3:2013 (+AMD1:2017), ICES-003, AS/NZS CISPR 32, FCC Part 15 Subpart B |
+| Safety compliance | IEC 62368-1:2018 |
+
+---
+
+### A.3 Core 256 (CORE256-BASE)
+
+**Product overview:** Compact half-rack-width unit (full 1U height) combining Thunderbolt 3, Dante, MADI, and ADAT I/O with a large internal routing matrix. Mounts in a standard 19" rack via the optional C256-2MOUNT-BRACKET (one or two units per 1U). Powered by 12 V DC.
+
+#### Routing Matrix
+
+| Resource | Capacity |
+|---|---|
+| Routing matrix | 848 × 848 |
+| PRO\|MON summing processor | 512 × 64 channels |
+| SPQ equaliser | 1,024 filters |
+
+#### Native I/O
+
+| Interface | Channel count |
+|---|---|
+| Thunderbolt 3 | 256 ch @ 48 & 96 kHz |
+| Dante AoIP | 256 ch @ 48 kHz; 128 ch @ 96 kHz |
+| MADI I/O | 64 ch @ 48 kHz |
+| ADAT I/O | 16 ch / S/PDIF 2 ch |
+| DADlink / MADI via SFP (max) | Up to 256 × 256 DADlink or 128 × 128 MADI ch @ 48 kHz |
+
+#### Digital I/O and Synchronisation
+
+| Parameter | Value |
+|---|---|
+| Supported sample rates | 44.1 – 384 kHz (TB3, MADI, DADlink); 44.1 – 192 kHz (Dante, ADAT); 44.1 – 96 kHz (S/PDIF) |
+| Internal system latency | 7 samples (adjustable 3 – 31 samples) |
+| DADlink format | 28-bit floating point, zero-sample latency |
+| Synchronisation sources | Word Clock, Video Black Burst, Dante, ADAT, MADI, DADlink |
+| Network interface | 1000BASE-T, RJ45 |
+| Thunderbolt 3 | 2 × USB-C, link + 15 W power per port |
+
+#### Electrical Specifications
+
+| Parameter | Value |
+|---|---|
+| Supply voltage | 12 V DC |
+| DC connector | 5.5 × 2.5 mm barrel (tip positive) |
+| Max input current | 5 A |
+| Max mains rating | 60 W |
+| Digital section power | 15 W |
+| Thunderbolt power (max) | 2 × 15 W |
+
+#### Mechanical Specifications
+
+| Parameter | Value |
+|---|---|
+| Form factor | Half-rack width, 1 RU (44.4 mm) — requires C256-2MOUNT-BRACKET for 19" rack |
+| Chassis depth | 231 mm / 9.1" |
+| Body width | 211 mm / 8.3" |
+| Weight | 1.3 kg / 2.9 lbs |
+
+#### Environmental and Compliance
+
+| Parameter | Value |
+|---|---|
+| Operating temperature | 0 – 45 °C / 32 – 113 °F |
+| Humidity | 20 – 85%, non-condensing |
+| EMC compliance | CISPR 32:2015 (+AMD1:2019), CISPR 35:2016, IEC 61000-3-2:2018 (+AMD1:2020), IEC 61000-3-3:2013 (+AMD1:2017), ICES-003, AS/NZS CISPR 32, FCC Part 15 Subpart B |
+| Safety compliance | IEC 62368-1:2018 |
+
+---
+
+### A.4 Penta 720 (PENTA720-BASE)
+
+**Product overview:** 2U, 8-slot modular audio router in a 19" sub-rack with hot-swap, front-access expansion card bays. Designed for broadcast and media installation. Standard I/O includes 8 stereo AES3 pairs (16 channels) and one MADI port. Optional Dante module (MOD-DANTE-BK3) and dual MADI/DADlink module (MOD-MADI-DADLNK) available. Does not include Thunderbolt 3.
+
+#### Routing Matrix
+
+| Resource | Capacity |
+|---|---|
+| Routing matrix | 1,424 × 1,424 |
+| PRO\|MON summing processor | 256 × 32 channels |
+| Expansion card slots | 8 (up to 6 analogue cards or 8 digital cards) |
+
+#### Native I/O
+
+| Interface | Channel count |
+|---|---|
+| AES3 I/O | 16 ch @ 48 kHz (8 stereo pairs) |
+| MADI I/O | 64 ch @ 48 kHz |
+| Via expansion cards (max) | Up to 1,024 × 1,024 ch |
+| DADlink / MADI via SFP (max) | Up to 256 × 256 DADlink or 128 × 128 MADI/HotLink ch @ 48 kHz |
+
+#### Digital I/O and Synchronisation
+
+| Parameter | Value |
+|---|---|
+| Supported sample rates | 44.1 – 384 kHz (AES3, MADI, DADlink); HotLink fixed 48 kHz; Dante option 44.1 – 192 kHz |
+| Internal system latency | 7 samples (adjustable 3 – 31 samples) |
+| DADlink format | 28-bit floating point, zero-sample latency |
+| Synchronisation sources | Word Clock, Video Black Burst, AES11, AES3, MADI, DADlink, HotLink |
+| Network interface | 1000BASE-T, RJ45 |
+
+#### Electrical Specifications
+
+| Parameter | Value |
+|---|---|
+| Power connection | Dual input, dual PSU |
+| Max mains rating | 90 W |
+| Input voltage | 90 – 260 VAC (100 – 240 VAC nominal), 47 – 63 Hz |
+| Mains fuse | 1 A T, IEC connector mounted |
+| Mains connector | IEC 60309 |
+| Digital section power | 15 W |
+| Expansion card power (max) | 65 W |
+
+#### Mechanical Specifications
+
+| Parameter | Value |
+|---|---|
+| Form factor | 19" rack mount, 2 RU (88.9 mm) |
+| Chassis depth | 350 mm / 13.8" |
+| Body width | 435 mm / 17.2" |
+| Weight | 5.0 kg / 11.0 lbs |
+| Cooling | 2 × internal fans |
+
+#### Environmental and Compliance
+
+| Parameter | Value |
+|---|---|
+| Operating temperature | 0 – 45 °C / 32 – 113 °F |
+| Humidity | 20 – 85%, non-condensing |
+| EMC compliance | EN 55103-1, EN 55103-2, FCC Part 15 Subpart B |
+| Safety compliance | EN 60950-1:2006 |
+
+---
+
+### A.5 Penta 721S (PENTA721S-BASE)
+
+**Product overview:** Compact 2U, single-slot audio interface and router. Includes standard Dante module and dual MADI/DADlink module as factory-fitted. Designed for broadcast and media install where a smaller footprint is required. One expansion card slot for additional I/O.
+
+#### Routing Matrix
+
+| Resource | Capacity |
+|---|---|
+| Routing matrix | 528 × 528 |
+| PRO\|MON summing processor | 256 × 32 channels |
+| Expansion card slots | 1 |
+
+#### Native I/O
+
+| Interface | Channel count |
+|---|---|
+| AES3 I/O | 16 ch @ 48 kHz (8 stereo pairs) |
+| MADI I/O | 64 ch @ 48 kHz |
+| Dante AoIP | 64 ch @ 48 kHz |
+| Via expansion card (max) | Up to 128 × 128 additional ch |
+| DADlink / MADI via SFP | Up to 256 × 256 DADlink or 128 × 128 MADI/HotLink ch @ 48 kHz |
+
+#### Digital I/O and Synchronisation
+
+| Parameter | Value |
+|---|---|
+| Supported sample rates | 44.1 – 384 kHz (AES3, MADI, DADlink); HotLink fixed 48 kHz; Dante 44.1 – 192 kHz |
+| Internal system latency | 7 samples (adjustable 3 – 31 samples) |
+| DADlink format | 28-bit floating point, zero-sample latency |
+| Synchronisation sources | Word Clock, Video Black Burst, AES11, Dante, MADI, DADlink, HotLink |
+| Network interface | 1000BASE-T, RJ45 |
+
+#### Electrical Specifications
+
+| Parameter | Value |
+|---|---|
+| Power connection | Dual input, dual PSU |
+| Max mains rating | 45 W |
+| Input voltage | 90 – 260 VAC (100 – 240 VAC nominal), 47 – 63 Hz |
+| Mains fuse | 1 A T, IEC connector mounted |
+| Mains connector | IEC 60309 |
+| Digital section power | 15 W |
+| Expansion card power (max) | 15 W |
+
+#### Mechanical Specifications
+
+| Parameter | Value |
+|---|---|
+| Form factor | 19" rack mount, 2 RU (88.9 mm) |
+| Chassis depth | 320 mm / 12.6" |
+| Body width | 435 mm / 17.2" |
+| Weight | 3.3 kg / 7.3 lbs |
+| Cooling | 1 × internal low-noise fan |
+
+#### Environmental and Compliance
+
+| Parameter | Value |
+|---|---|
+| Operating temperature | 0 – 45 °C / 32 – 113 °F |
+| Humidity | 20 – 85%, non-condensing |
+| EMC compliance | EN 55103-1, EN 55103-2, FCC Part 15 Subpart B |
+| Safety compliance | EN 60950-1:2006 |
+
+---
+
+### A.6 Junior Control\|Pack Controller (JUNIOR-BASE)
+
+**Product overview:** PoE-powered compact control unit for direct hands-on control of DADman Control\|Pack routing presets and buckets. Connects via Ethernet directly to any Thunder\|Core unit. Compatible with CORE256-BASE, AXCNTR-BASE, and AX64-BASE. Operates independently of the DADman software once configured.
+
+#### Features
+
+- 6 RGB LED-illuminated buttons
+- 6 RGB status LEDs
+- 6-character OLED display per button
+- Direct IP connection to Thunder\|Core unit
+
+#### Specifications
+
+| Parameter | Value |
+|---|---|
+| Network interface | 1000BASE-T, RJ45 |
+| PoE | IEEE 802.3af, class 0 |
+| DC power input | 12 V, 5.5/2.1 mm barrel (tip +5 V) |
+| Power consumption (max) | 2.5 W |
+| Dimensions | 116 × 48 × 40 mm / 4.6" × 1.9" × 1.6" |
+| Weight | 0.16 kg / 0.35 lbs |
+| Operating temperature | 0 – 45 °C / 32 – 113 °F |
+| Humidity | 20 – 85%, non-condensing |
+| EMC compliance | CISPR 32:2015 (+AMD1:2019), CISPR 35:2016, IEC 61000-3-2:2018 (+AMD1:2020), IEC 61000-3-3:2013 (+AMD1:2017) |
+| Safety compliance | IEC 62368-1:2018 |
+
+---
+
+### A.7 MOM — Monitor Operating Module (MOM-BASE)
+
+**Product overview:** PoE-powered remote monitor controller with large volume encoder, 10 user-definable buttons across 4 layers (up to 40 functions), and external GPI input for footswitch talkback. Connects via Ethernet to DADman for control of any NTP/DAD device with PRO\|MON capability.
+
+#### Features
+
+- Large volume rotary encoder with 27-LED ring (0.5 dB resolution)
+- 10 user-definable keys × 4 layers (40 total)
+- Pre-configured functions: 3 speaker sets, 3 sources, Talkback, Dim, Cut, reference level
+- GPI input (3.5 mm mini-jack) for external footswitch
+
+#### Specifications
+
+| Parameter | Value |
+|---|---|
+| Network interface | 1000BASE-T, RJ45 |
+| PoE | IEEE 802.3af, class 0 |
+| DC power input | 5 V, 5.5/2.1 mm barrel (tip +5 V) |
+| GPI input | 3.5 mm mini-jack |
+| Power consumption (max) | 5 W |
+| Dimensions | 172 × 110 × 50 mm / 6.8" × 4.3" × 2.0" |
+| Weight | 1.0 kg / 2.2 lbs |
+| Operating temperature | 0 – 45 °C / 32 – 113 °F |
+| Humidity | 20 – 85%, non-condensing |
+| EMC compliance | CISPR 32:2015 (+AMD1:2019), CISPR 35:2016, IEC 61000-3-2:2018 (+AMD1:2020), IEC 61000-3-3:2013 (+AMD1:2017) |
+| Safety compliance | IEC 62368-1:2018 |
 
 ---
 

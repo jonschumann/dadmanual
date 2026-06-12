@@ -1,10 +1,14 @@
 # ── Stage 1: Build ─────────────────────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:20 AS builder
 WORKDIR /app
+
+# Skip Chromium download — puppeteer is only used for PDF generation (separate
+# workflow), not for the Docusaurus static build.
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 # Install dependencies (respects package-lock.json for reproducible builds)
 COPY package.json package-lock.json ./
-RUN npm ci --prefer-offline
+RUN npm ci
 
 # Copy source and build Docusaurus static site
 COPY . .
