@@ -54,7 +54,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl: 'https://github.com/digitalaudio/dadman-user-manual/tree/main/',
-          showLastUpdateTime: true,
+          showLastUpdateTime: false,
           showLastUpdateAuthor: false,
         },
         blog: false,
