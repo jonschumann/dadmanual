@@ -28,11 +28,40 @@ base_url: "https://api.crowdin.com"
 
 preserve_hierarchy: true
 
+# Explicit mapping → Docusaurus locale directory names (de, fr, ja, es, ko, da).
+# Prevents "shared language code" warnings when Crowdin uses region variants
+# internally (e.g. es-ES and es-MX both map to our single "es" locale).
+language_mapping:
+  - crowdin_language_code: de
+    custom_code: de
+  - crowdin_language_code: de-AT
+    custom_code: de
+  - crowdin_language_code: de-CH
+    custom_code: de
+  - crowdin_language_code: fr
+    custom_code: fr
+  - crowdin_language_code: fr-CA
+    custom_code: fr
+  - crowdin_language_code: fr-CH
+    custom_code: fr
+  - crowdin_language_code: ja
+    custom_code: ja
+  - crowdin_language_code: es-ES
+    custom_code: es
+  - crowdin_language_code: es-MX
+    custom_code: es
+  - crowdin_language_code: ko
+    custom_code: ko
+  - crowdin_language_code: da
+    custom_code: da
+
 files:
   # ── Documentation content ────────────────────────────────────────────────
   # Source Markdown in docs/ maps to i18n/<locale>/docusaurus-plugin-content-docs/
+  # %custom_code% resolves to the explicit codes in language_mapping above,
+  # matching the Docusaurus locale directory names exactly.
   - source: /docs/**/*.md
-    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
+    translation: /i18n/%custom_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
     excluded_target_languages:
       - en  # English is the source; do not write back to docs/
 
@@ -41,10 +70,10 @@ files:
   # source JSON files, then add them to git before configuring Crowdin.
 
   - source: /i18n/en/docusaurus-theme-classic/navbar.json
-    translation: /i18n/%two_letters_code%/docusaurus-theme-classic/navbar.json
+    translation: /i18n/%custom_code%/docusaurus-theme-classic/navbar.json
 
   - source: /i18n/en/docusaurus-theme-classic/footer.json
-    translation: /i18n/%two_letters_code%/docusaurus-theme-classic/footer.json
+    translation: /i18n/%custom_code%/docusaurus-theme-classic/footer.json
 
   - source: /i18n/en/docusaurus-plugin-content-docs/current.json
-    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current.json
+    translation: /i18n/%custom_code%/docusaurus-plugin-content-docs/current.json
