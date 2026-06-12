@@ -1,9 +1,7 @@
 ---
-id: segurança frontal
 title: "Elemento Frontal & Segurança"
 sidebar_label: "FM — Elementos iniciais e Segurança"
 sidebar_position: 2
-slug: /front-matter-security
 ---
 
 # Elemento da frente — Avisos de segurança e conformidade

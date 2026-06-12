@@ -1,9 +1,7 @@
 ---
-id: flujo de señal ch05
 title: "Capítulo 5 — Flujo de señales y archivo"
 sidebar_label: "Ch. 5 — Flujo de señal"
 sidebar_position: 7
-slug: /signal-flow
 ---
 
 # Capítulo 5 — Flujo de señales y archivo

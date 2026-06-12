@@ -1,9 +1,7 @@
 ---
-id: ch08-avancerede funktioner
 title: "Kapitel 8 — Avancerede Funktioner"
 sidebar_label: "Ch. 8 — Avancerede Funktioner"
 sidebar_position: 10
-slug: /avanceret-features
 ---
 
 # Kapitel 8 — Avancerede Funktioner

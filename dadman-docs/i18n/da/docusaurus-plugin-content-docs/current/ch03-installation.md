@@ -1,9 +1,7 @@
 ---
-id: ch03-installation
 title: "Kapitel 3 — Anlæg"
 sidebar_label: "Ch. 3 — Anbringelse"
 sidebar_position: 5
-slug: /installation
 ---
 
 # Kapitel 3 — Anlæg

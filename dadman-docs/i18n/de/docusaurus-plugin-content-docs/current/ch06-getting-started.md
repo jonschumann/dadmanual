@@ -1,9 +1,7 @@
 ---
-id: ch06-Getting gestartet
 title: "Kapitel 6 — Erste Schritte"
 sidebar_label: "Ch. 6 — Erste Schritte"
 sidebar_position: 8
-slug: /getting-gestartet
 ---
 
 # Kapitel 6 — Erste Schritte
@@ -64,7 +62,7 @@ _[Platzhalter: Screenshot kommentiert — DADman Hauptfenster zeigt alle fünf T
 
 ### Die Geräteliste
 
-Öffne die Geräteliste über **Einstellungen > Geräteliste** oder **<unk> <unk> L** (macOS) / **Strg+Umschalt+L** (Windows). Die Geräteliste zeigt alle Einheiten an, die DADman im Netzwerk entdeckt hat, mit Namen, Einheiten-ID, IP-Adresse und Firmware-Version. Mit einem Rechtsklick auf eine Einheit in der Geräteliste erhalten Sie Zugriff auf Netzwerkeinstellungen, Firmware, Werkseinsetzung, Klonen und Trennen der Verbindung.
+Öffne die Geräteliste über **Einstellungen > Geräteliste** oder **  L** (macOS) / **Strg+Umschalt+L** (Windows). Die Geräteliste zeigt alle Einheiten an, die DADman im Netzwerk entdeckt hat, mit Namen, Einheiten-ID, IP-Adresse und Firmware-Version. Mit einem Rechtsklick auf eine Einheit in der Geräteliste erhalten Sie Zugriff auf Netzwerkeinstellungen, Firmware, Werkseinsetzung, Klonen und Trennen der Verbindung.
 
 ### Dateitypen
 
@@ -109,7 +107,7 @@ Wenn nach 30 Sekunden keine Einheiten erscheinen:
 - Bestätigen Sie unter Windows, dass Ihre Firewall DADman nicht blockiert. Bei Bedarf eine Firewall-Ausnahme hinzufügen.
 - Siehe [Kapitel 9 — Fehlerbehebung, Abschnitt 9.2 — Probleme mit den Netzwerken und Verbindungen [Kapitel 9 — Fehlerbehebung, Abschnitt 9.2 — Probleme mit den Netzwerken und Verbindung] für eine vollständige Diagnosetabelle.
 
-> **TIPP:** Benutze **Einstellungen > Geräteliste** oder **<unk> <unk> L** (macOS) / **Strg+Umschalt+L** (Windows) um die Geräteliste direkt zu öffnen, wenn sie nicht sichtbar ist.
+> **TIPP:** Benutze **Einstellungen > Geräteliste** oder **  L** (macOS) / **Strg+Umschalt+L** (Windows) um die Geräteliste direkt zu öffnen, wenn sie nicht sichtbar ist.
 
 ---
 
@@ -138,7 +136,7 @@ Klicken Sie auf das **Namensfeld** in der Geräteliste und geben Sie einen besch
 | Automatisch die Abtastrate eines verbundenen DAW anpassen | **Anpassen an** → **Thunderbolt 3** (oder relevante digitale Eingabe) |
 
 3. Setze **Sampling Rate** für deine Sitzung ein — typischerweise **48 kHz** für Broadcast oder Post-Production, **44.1 kHz** für Musik.
-4. Setze **Sync termination** auf \*\*75 <unk> \*\*.
+4. Setze **Sync termination** auf \*\*75  \*\*.
 
 **Erwartetes Ergebnis:** Die Abtastrate im Reiter **Conf** entspricht dem beabsichtigten Kurs. Wenn **An anpassen** auf eine externe Quelle gesetzt wird, aktualisiert sich die angezeigte Rate automatisch an den ermittelten externen Kurs.
 
@@ -164,7 +162,7 @@ Vollständige Referenz: [Kapitel 7, Abschnitt 7.3 — Uhr und Synchronisierung]
 
 _[Placeholder: screenshot — AD-Tab mit zwei konfigurierten Mikrokanälen, Signal LED Lite]_
 
-> **TIPP:** Wenn ein Kanal ausgewählt ist, verwenden Sie \*\*<unk> /<unk> \*\* Pfeiltasten, um den Gewinn in 0,1 dB Inkrementen anzupassen. Füge **Umschalt** für eine noch feinere Auflösung hinzu. Dies ist präziser als das Maus ziehen (Schrittweite 0,5 dB).
+> **TIPP:** Wenn ein Kanal ausgewählt ist, verwenden Sie \*\* / \*\* Pfeiltasten, um den Gewinn in 0,1 dB Inkrementen anzupassen. Füge **Umschalt** für eine noch feinere Auflösung hinzu. Dies ist präziser als das Maus ziehen (Schrittweite 0,5 dB).
 
 Vollständige Referenz: [Kapitel 7, Abschnitt 7.4 — Gewinn und Ebenenverwaltung]
 
@@ -242,7 +240,7 @@ Wenn Sie DADman-Monitor-Controller (PRO\|MON) verwenden, benötigen Sie ein Moni
 
 **Um ein bestehendes Profil zu laden:**
 
-1. **Datei > Profil öffnen…** (macOS: **<unk> O** / Windows: **Strg+Alt+O**)
+1. **Datei > Profil öffnen…** (macOS: ** O** / Windows: **Strg+Alt+O**)
 2. Wähle deine `.dmprof` Datei.
 
 **Um ein neues Profil zu erstellen:**
@@ -250,7 +248,7 @@ Wenn Sie DADman-Monitor-Controller (PRO\|MON) verwenden, benötigen Sie ein Moni
 1. **Einstellungen > Profil überwachen** um den Editor zu öffnen.
 2. Rechtsklick **Quellen** → **Neue Quelle hinzufügen** → Eingaben aus deiner Route zuweisen.
 3. Klicken Sie mit der rechten Maustaste auf **Ausgänge** → Neue Ausgabe hinzufügen\*\* → Zuweisen von analogen Ausgängen für jede Lautsprecherkonfiguration.
-4. **Datei > Profil speichern unter…** (macOS: **<unk> <unk> <unk> S** / Windows: **Strg+Alt+Umschalt+S**)
+4. **Datei > Profil speichern unter…** (macOS: **   S** / Windows: **Strg+Alt+Umschalt+S**)
 
 **Erwartetes Ergebnis:** Die Registerkarte **Mon** zeigt den Quellauswahl-Auswahler, die Lautsprecher-Buttons und die Steuerung **Ref**, **Dim** und **Cut** an.
 
@@ -281,7 +279,7 @@ Wenn Ihr Zimmer akustisch kalibriert wurde:
 3. An einem Ort speichern, der regelmäßig gesichert wird.
 
 Wenn du ein Monitorprofil hast, speichere es separat:
-**Datei > Profil speichern unter…** (macOS: **<unk> <unk> S** / Windows: **Strg+Alt+Umschalt+S**)
+**Datei > Profil speichern unter…** (macOS: **  S** / Windows: **Strg+Alt+Umschalt+S**)
 
 > **TIPP:** Aktiviere **Letzte Datei beim Start öffnen** in **DADman > Einstellungen** (macOS) oder **Einstellungen > Optionen** (Windows), um diese Konfiguration bei jedem Start automatisch wiederherzustellen. Empfohlen für permanente Installationen.
 
@@ -320,8 +318,8 @@ Alle Gain, Level und Fader Schieberegler in DADman unterstützen die folgenden M
 | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | **Ziehen** (kein Modifikator)                                       | Normale Auflösung — ca. 0,5 dB pro Pixel                      |
 | **Shift + Drag**                                                                       | Erhöhte Genauigkeit — ungefähr 0,1 dB pro Pixel                               |
-| **″ / <unk> Pfeiltasten** (Schieberegler fokussiert)                | 0.1 dB Schritte                                               |
-| \*\*Shift + <unk> /<unk> \*\*                                                          | Schöne Schritte (0,01 dB)                                  |
+| **″ /  Pfeiltasten** (Schieberegler fokussiert)                | 0.1 dB Schritte                                               |
+| \*\*Shift +  / \*\*                                                          | Schöne Schritte (0,01 dB)                                  |
 | **Strg** (Windows) / **Cmd** (macOS) **+ Klick** | Auf Standardwert zurücksetzen                                                 |
 | **Alt** (Windows) / **Option** (macOS)           | Nur pro Kanal — umgeht Mic Gain Group, passt den ausgewählten Kanal allein an |
 | **Alt/Option + Umschalt**                                                              | Feineinstellungen pro Kanal                                                   |

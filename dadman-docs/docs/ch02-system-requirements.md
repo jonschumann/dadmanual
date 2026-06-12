@@ -1,5 +1,4 @@
 ---
-id: ch02-system-requirements
 title: "Chapter 2 — System Requirements"
 sidebar_label: "Ch. 2 — System Requirements"
 sidebar_position: 4

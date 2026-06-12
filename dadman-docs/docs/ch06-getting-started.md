@@ -1,5 +1,4 @@
 ---
-id: ch06-getting-started
 title: "Chapter 6 — Getting Started"
 sidebar_label: "Ch. 6 — Getting Started"
 sidebar_position: 8

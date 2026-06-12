@@ -31,7 +31,7 @@ _Penta 720 — Frontplatte_
 - **AES3:** Integrierte AES3-I/O — 16 Kanäle über 2 × DB25 (Tascam-Pinout)
 - **Dante (optional):** Via MOD-DANTE-BK3 Modul — 64 Kanäle bei 48 kHz
 - **DADlink (optional):** Via MOD-MADI-DADLNK Modul + SFP — bis zu 256×256 Kanäle
-- **Synchronisierung:** Word Clock I/O (BNC, 75 <unk> ), Video Black Burst Eingang, AES11 Eingang
+- **Synchronisierung:** Word Clock I/O (BNC, 75  ), Video Black Burst Eingang, AES11 Eingang
 - **Routing:** 1,424×1,424 Matrix; 256×32 Summenprozessor; 28-Bit Fließkommazahl
 - **Latenz:** 7 Samples interner Verzögerung, einstellbare 3–31 Samples; alle Ausgänge zeit- und phasenorientiert
 - **Steuerung:** DADman Software (macOS und Windows); Avid EuCon kompatibel; Gigabit Ethernet

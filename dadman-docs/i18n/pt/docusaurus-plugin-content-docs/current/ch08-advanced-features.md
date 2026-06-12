@@ -1,9 +1,7 @@
 ---
-id: ch08-funcionalidade-avançado
 title: "Capítulo 8 — Recursos Avançados"
 sidebar_label: "Cara. 8 — Recursos avançados"
 sidebar_position: 10
-slug: /advanced-features
 ---
 
 # Capítulo 8 — Recursos Avançados

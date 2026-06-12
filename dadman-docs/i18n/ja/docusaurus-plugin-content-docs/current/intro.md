@@ -1,9 +1,7 @@
 ---
-id: intro
 title: このマニュアルについて
 sidebar_label: このマニュアルについて
 sidebar_position: 1
-slug: /
 ---
 
 # DADman ユーザーマニュアル

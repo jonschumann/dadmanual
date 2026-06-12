@@ -1,9 +1,7 @@
 ---
-id: apêndices
 title: "Anexos"
 sidebar_label: "Anexos"
 sidebar_position: 13
-slug: /apêndices
 ---
 
 # Anexos

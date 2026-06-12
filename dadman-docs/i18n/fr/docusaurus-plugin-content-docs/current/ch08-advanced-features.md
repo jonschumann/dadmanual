@@ -1,9 +1,7 @@
 ---
-id: ch08-fonctionnalités avancées
 title: "Chapitre 8 — Fonctionnalités avancées"
 sidebar_label: "Ch. 8 — Fonctionnalités avancées"
 sidebar_position: 10
-slug: /fr/advanced-features
 ---
 
 # Chapitre 8 — Fonctionnalités avancées
@@ -52,7 +50,7 @@ Un profil de moniteur est entièrement séparé du fichier de configuration de l
 
 ### 8.1.2 Ouverture de l'éditeur de profil de moniteur
 
-Ouvrez l'éditeur de profil de moniteur via **Paramètres > Profil de surveillance** (macOS: **文<unk> M** / Windows: **Ctrl+Maj+M**).
+Ouvrez l'éditeur de profil de moniteur via **Paramètres > Profil de surveillance** (macOS: **文 M** / Windows: **Ctrl+Maj+M**).
 
 L'éditeur a cinq onglets : **Sources**, **Sorties**, **Downs**, **Delay**, et **MOM**.
 
@@ -147,11 +145,11 @@ Par défaut, la sortie du casque est un mixage **Cue** séparé, indépendant de
 
 | Action                                                                                | macOS                                        | Fenêtres                                     |
 | ------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| Ouvrir le profil                                                                      | <unk> <unk> O                                | Ctrl+Alt+O                                   |
-| Importer un profil (à partir de n'importe quelle unité compatible) | <unk> <unk> I                                | Ctrl+Alt+I                                   |
-| Enregistrer le profil                                                                 | <unk> <unk> S                                | Ctrl+Alt+S                                   |
-| Enregistrer le profil sous…                                                           | <unk> <unk> <unk> S                          | Ctrl+Alt+Maj+S                               |
-| Fermer le profil                                                                      | <unk> <unk> W                                | Ctrl+Alt+W                                   |
+| Ouvrir le profil                                                                      |   O                                | Ctrl+Alt+O                                   |
+| Importer un profil (à partir de n'importe quelle unité compatible) |   I                                | Ctrl+Alt+I                                   |
+| Enregistrer le profil                                                                 |   S                                | Ctrl+Alt+S                                   |
+| Enregistrer le profil sous…                                                           |    S                          | Ctrl+Alt+Maj+S                               |
+| Fermer le profil                                                                      |   W                                | Ctrl+Alt+W                                   |
 | Ouvrir le profil récent                                                               | Menu principal → **Ouvrir le profil récent** | Menu principal → **Ouvrir le profil récent** |
 
 **Profil Importer:** La fonction **Fichier > Profil Importation…** importe un Profil de Surveillance à partir de n’importe quelle unité connectée compatible et effectue une correspondance optimale avec les E/S disponibles du matériel actuel. Ceci est utile lors de la migration d'un profil entre unités avec différentes configurations d'E/S.
@@ -195,7 +193,7 @@ Maintenir **Alt** (Windows) ou **Option** (macOS) en ajustant le gain ou le muet
 | Action                                                           | Avec Alt/Option                               |
 | ---------------------------------------------------------------- | --------------------------------------------- |
 | Glisser la souris sur le curseur de gain                         | Ajuste seulement le canal sélectionné         |
-| Clavier <unk> /文(curseur de gain sélectionné) | Ajuste seulement le canal sélectionné         |
+| Clavier  /文(curseur de gain sélectionné) | Ajuste seulement le canal sélectionné         |
 | Cliquer sur le champ de valeur de gain sous le curseur           | Ajuste seulement le canal sélectionné         |
 | Click Mute                                                       | Muet/réactive uniquement le canal sélectionné |
 
@@ -451,7 +449,7 @@ DADman peut être configuré pour minimiser sa présence sur le bureau macOS, ce
 
 - Cliquez sur l'icône de la barre de menu DADman → **Afficher**
 - Double-cliquez sur un fichier `.dms` ou `.dmprof` dans le Finder
-- Appuyez sur **Ω<unk> 1**
+- Appuyez sur **Ω 1**
 - Lancez DADman à nouveau depuis les applications
 
 > **REMARQUE :** En mode Barre de menu seulement, si DADman apparaît toujours dans le Dock après avoir changé le paramètre, Faites un clic droit sur l'icône du Dock → **Options > Garder dans Dock** et désactivez-le.

@@ -13,7 +13,7 @@ sidebar_position: 12
 
 ## A.1 BNC (MADI, Wortuhr)
 
-BNC-Steckverbinder sind unausgewogen 75 <unk> Koaxial. Signal wird auf der Mitteingabe transportiert; Schild auf der äußeren Schale. Eine zusätzliche Pinout-Tabelle wird über den Steckverbinder-Standard hinaus nicht benötigt.
+BNC-Steckverbinder sind unausgewogen 75  Koaxial. Signal wird auf der Mitteingabe transportiert; Schild auf der äußeren Schale. Eine zusätzliche Pinout-Tabelle wird über den Steckverbinder-Standard hinaus nicht benötigt.
 
 ---
 

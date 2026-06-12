@@ -1,9 +1,7 @@
 ---
-id: ch10-maintenance
 title: "チャプター10 — メンテナンス"
 sidebar_label: "Ch. 10 — メンテナンス"
 sidebar_position: 12
-slug: /メンテナンス
 ---
 
 # チャプター10 — メンテナンス

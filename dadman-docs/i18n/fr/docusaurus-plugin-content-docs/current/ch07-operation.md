@@ -1,9 +1,7 @@
 ---
-id: opération ch07-
 title: "Chapitre 7 — Opération"
 sidebar_label: "Ch. 7 — Opération"
 sidebar_position: 9
-slug: /opération
 ---
 
 # Chapitre 7 — Opération
@@ -494,17 +492,17 @@ La bande affiche une section par unité Thunder\|Core avec des préréglages de 
 
 | Action                                    | macOS               | Fenêtres       |
 | ----------------------------------------- | ------------------- | -------------- |
-| **Fichier > Ouvrir…**                     | <unk> O             | Ctrl+O         |
-| **Fichier > Enregistrer**                 | <unk> S             | Ctrl+S         |
-| **Fichier > Enregistrer sous…**           | <unk> <unk> S       | Ctrl+Maj+S     |
-| **Fichier > Ouvrir Profil…**              | <unk> <unk> O       | Ctrl+Alt+O     |
-| **Fichier > Importer le profil…**         | <unk> <unk> I       | Ctrl+Alt+I     |
-| **Fichier > Enregistrer le profil**       | <unk> <unk> S       | Ctrl+Alt+S     |
-| **Fichier > Enregistrer le profil sous…** | <unk> <unk> <unk> S | Ctrl+Alt+Maj+S |
-| **Fichier > Fermer le profil**            | <unk> <unk> W       | Ctrl+Alt+W     |
+| **Fichier > Ouvrir…**                     |  O             | Ctrl+O         |
+| **Fichier > Enregistrer**                 |  S             | Ctrl+S         |
+| **Fichier > Enregistrer sous…**           |   S       | Ctrl+Maj+S     |
+| **Fichier > Ouvrir Profil…**              |   O       | Ctrl+Alt+O     |
+| **Fichier > Importer le profil…**         |   I       | Ctrl+Alt+I     |
+| **Fichier > Enregistrer le profil**       |   S       | Ctrl+Alt+S     |
+| **Fichier > Enregistrer le profil sous…** |    S | Ctrl+Alt+Maj+S |
+| **Fichier > Fermer le profil**            |   W       | Ctrl+Alt+W     |
 | Ouvrir / activer la fenêtre principale    | ⌘⇧1                 | —              |
-| Ouvrir la liste des périphériques         | <unk> <unk> L       | Ctrl+Maj+L     |
-| Ouvrir le profil du moniteur              | <unk> M             | Ctrl+Maj+M     |
+| Ouvrir la liste des périphériques         |   L       | Ctrl+Maj+L     |
+| Ouvrir le profil du moniteur              |  M             | Ctrl+Maj+M     |
 | Ouvrir Paramètres / Options               | ⌘,                  | Ctrl+,         |
 
 > **NOTE:** Ces raccourcis ont été introduits dans DADman v5.7.0. Les versions antérieures ne prennent pas en charge les raccourcis clavier pour les opérations de fichiers et fenêtres.

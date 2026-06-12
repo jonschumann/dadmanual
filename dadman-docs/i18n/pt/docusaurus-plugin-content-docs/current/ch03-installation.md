@@ -1,9 +1,7 @@
 ---
-id: ch03-instalação
 title: "Capítulo 3 - Instalação"
 sidebar_label: "Cara. 3 — Instalação"
 sidebar_position: 5
-slug: /instalação
 ---
 
 # Capítulo 3 - Instalação

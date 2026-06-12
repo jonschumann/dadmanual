@@ -1,9 +1,7 @@
 ---
-id: ch01-introducción
 title: "Capítulo 1 — Introducción y descripción de producto"
 sidebar_label: "Ch. 1 — Introducción"
 sidebar_position: 3
-slug: /introducción
 ---
 
 # Capítulo 1 — Introducción y descripción de producto

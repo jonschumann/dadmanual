@@ -1,9 +1,7 @@
 ---
-id: einleitung
 title: Über dieses Handbuch
 sidebar_label: Über dieses Handbuch
 sidebar_position: 1
-slug: /
 ---
 
 # DADman Benutzerhandbuch
@@ -19,7 +17,7 @@ Dieses Handbuch behandelt die komplette Installation, Konfiguration und den Betr
 ## Wie man dieses Handbuch benutzt
 
 - \*\*Neu bei DADman? \* Beginnen Sie mit [Kapitel 3 — Installation](/installation), um die Software zu installieren, dann folgen Sie [Chapter 6 — Erste Sitzung durchgehen](/getting-started) für eine schrittweise erste Sitzung.
-- **Suche nach einer bestimmten Funktion?** Benutze die Sidebar oder suche (drücke **Strg+K** / **<unk> K**).
+- **Suche nach einer bestimmten Funktion?** Benutze die Sidebar oder suche (drücke **Strg+K** / ** K**).
 - **Problembehebung eines Problem?** Gehe direkt zu [Kapitel 9 — Fehlerbehebung](/troubleshooting).
 - **Sieht einen Begriff nach?** Siehe [Anhang G — Glossar](/appendices#appendix-g--glossary).
 

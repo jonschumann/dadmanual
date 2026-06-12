@@ -1,9 +1,7 @@
 ---
-id: requerimientos del sistema ch02
 title: "Capítulo 2 — Requisitos del sistema"
 sidebar_label: "Ch. 2 — Requisitos del sistema"
 sidebar_position: 4
-slug: //system-requirements
 ---
 
 # Capítulo 2 — Requisitos del sistema y Contenido del Paquete

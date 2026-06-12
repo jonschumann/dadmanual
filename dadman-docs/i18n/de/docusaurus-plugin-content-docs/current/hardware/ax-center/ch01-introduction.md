@@ -36,7 +36,7 @@ _AX Center — Heckplatte_
 - **ADAT / S/PDIF:** Eingebautes ADAT/SMUX (16 ch) und S/PDIF (2 ch)
 - **DADlink:** 2 × SFP Käfige — DADlink (bis zu 256×256 ch) oder MADI optisch
 - **Native Analog:** 2 × Mikro-/Instrumenteneingänge (Frontplatte, Combo-Stecker, Phantomleistung); 2 × Stereo-Kopfhörerausgänge; 2 × Stereo-Monitorausgänge.
-- **Synchronisierung:** Word Clock I/O (BNC, 75 <unk> ), Video Black Burst Eingang
+- **Synchronisierung:** Word Clock I/O (BNC, 75  ), Video Black Burst Eingang
 - **Routing:** 1,006×1,112 Matrix; 512×64 Summenprozessor; 1.024-Filter SPQ-Equaliser; 28-bit Fließkommazahl
 - **Latenz:** 7 Samples interner Verzögerung, einstellbare 3–31 Samples; alle Ausgänge zeit- und phasenorientiert
 - **Steuerung:** DADman Software (macOS und Windows); Avid EuCon kompatibel; Gigabit Ethernet

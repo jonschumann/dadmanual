@@ -1,9 +1,7 @@
 ---
-id: ch09-fejlfinding
 title: "Kapitel 9 — Fejlfinding"
 sidebar_label: "Ch. 9 — Fejlfinding"
 sidebar_position: 11
-slug: /fejlfinding
 ---
 
 # Kapitel 9 — Fejlfinding

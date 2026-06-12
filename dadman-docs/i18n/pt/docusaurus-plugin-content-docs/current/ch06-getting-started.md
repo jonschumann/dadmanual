@@ -1,9 +1,7 @@
 ---
-id: ch06-getting-started
 title: "Capítulo 6 — Primeiros passos"
 sidebar_label: "Cara. 6 — Primeiros passos"
 sidebar_position: 8
-slug: /getting-started
 ---
 
 # Capítulo 6 — Primeiros passos

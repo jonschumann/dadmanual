@@ -60,7 +60,7 @@ SFP-Module sind **nicht enthalten** und müssen separat bestellt werden. Zwei Ty
 | MOD-SFP-1300-LD      | SFP optischer Transceiver für MADI — 1310 nm, 100BASE Multimode LC |
 | CON-2BNC-HD/STD-0,5M | HD-BNC zu BNC Adapterkabel (0,5 m)              |
 
-> **Hinweis:** Der MOD-SFP-COAX verwendet HD-BNC-Steckverbinder. Benutzen Sie CON-2BNC-HD/STD-0,5M Adapterkabel, um sich an die Standard 75 <unk> BNC MADI Geräte anzuschließen.
+> **Hinweis:** Der MOD-SFP-COAX verwendet HD-BNC-Steckverbinder. Benutzen Sie CON-2BNC-HD/STD-0,5M Adapterkabel, um sich an die Standard 75  BNC MADI Geräte anzuschließen.
 
 ---
 

@@ -1,9 +1,7 @@
 ---
-id: ch05-Signalfluss
 title: "Kapitel 5 — Signalfluss & Architektur"
 sidebar_label: "Ch. 5 — Signalfluss"
 sidebar_position: 7
-slug: /signal-flow
 ---
 
 # Kapitel 5 — Signalfluss & Architektur

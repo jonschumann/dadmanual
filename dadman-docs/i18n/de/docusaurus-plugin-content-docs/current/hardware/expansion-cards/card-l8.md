@@ -46,7 +46,7 @@ Die Karte unterstützt alle PCM-Abtastrate von 44,1 kHz bis DXD (352,8/384 kHz),
 
 | Port                 | Konnektor     | Signal                         | Notizen                                    |
 | -------------------- | ------------- | ------------------------------ | ------------------------------------------ |
-| Analog-Zeileneingabe | DB25 weiblich | 8 ch ausgeglichen, Linienlevel | Tascam-Pinout; −9 bis +30 dBu, > 10 k<unk> |
+| Analog-Zeileneingabe | DB25 weiblich | 8 ch ausgeglichen, Linienlevel | Tascam-Pinout; −9 bis +30 dBu, > 10 k |
 
 ### DB25 Eingabeausschnitt (Tascam)
 

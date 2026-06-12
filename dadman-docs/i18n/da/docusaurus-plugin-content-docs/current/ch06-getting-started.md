@@ -1,9 +1,7 @@
 ---
-id: ch06-getting-started
 title: "Kapitel 6 — Kom I Gang"
 sidebar_label: "Ch. 6 — Kom I Gang"
 sidebar_position: 8
-slug: /getting-startet
 ---
 
 # Kapitel 6 — Kom I Gang

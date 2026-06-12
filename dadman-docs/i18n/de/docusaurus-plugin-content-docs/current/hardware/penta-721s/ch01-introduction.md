@@ -34,7 +34,7 @@ _Penta 721S — Heckplatte_
 - **AES3:** Integrierte AES3-I/O — 16 Kanäle über 2 × DB25 (Tascam-Pinout)
 - **Dante AoIP:** Integriert — 64 Kanäle bei 48 kHz
 - **DADlink:** 2 × SFP Käfige — DADlink (bis zu 256×256 ch) oder MADI optisch
-- **Synchronisierung:** Word Clock I/O (BNC, 75 <unk> ), Video Black Burst Eingabe, AES11 Eingabe, Dante Sync
+- **Synchronisierung:** Word Clock I/O (BNC, 75  ), Video Black Burst Eingabe, AES11 Eingabe, Dante Sync
 - **Routing:** 528×528 Matrix; 256×32 Summenprozessor; 28-Bit Fließkommazahl
 - **Latenz:** 7 Samples interner Verzögerung, einstellbare 3–31 Samples; alle Ausgänge zeit- und phasenorientiert
 - **Steuerung:** DADman Software (macOS und Windows); Avid EuCon kompatibel; Gigabit Ethernet

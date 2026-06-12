@@ -1,9 +1,7 @@
 ---
-id: sikkerhed i forreste række
 title: "Formål Og Sikkerhed"
 sidebar_label: "FM — Formål Og Sikkerhed"
 sidebar_position: 2
-slug: /sikkerhed i fortiden
 ---
 
 # Forsiden — Sikkerhedsmeddelelser og -overholdelse

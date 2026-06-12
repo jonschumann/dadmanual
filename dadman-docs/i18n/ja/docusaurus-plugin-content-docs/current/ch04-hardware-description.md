@@ -1,9 +1,7 @@
 ---
-id: ch04 hardware-description
 title: "第 4 章 — ハードウェアの説明"
 sidebar_label: "Ch. 4 — ハードウェアの説明"
 sidebar_position: 6
-slug: /hardware-description
 ---
 
 # 第 4 章 — ハードウェアの説明

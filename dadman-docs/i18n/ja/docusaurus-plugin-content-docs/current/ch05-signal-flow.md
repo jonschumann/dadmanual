@@ -1,9 +1,7 @@
 ---
-id: ch05-signal-flow
 title: "第5章 — シグナルフローとアーキテクチャ"
 sidebar_label: "Ch. 5 — シグナルフロー"
 sidebar_position: 7
-slug: /signal-flow
 ---
 
 # 第5章 — シグナルフローとアーキテクチャ

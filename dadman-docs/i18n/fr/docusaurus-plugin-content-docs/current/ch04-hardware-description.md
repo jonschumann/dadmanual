@@ -1,9 +1,7 @@
 ---
-id: format@@0 ch04-hardware-description
 title: "Chapitre 4 — Description du matériel"
 sidebar_label: "Ch. 4 — Description du matériel"
 sidebar_position: 6
-slug: /fr/hardware-description
 ---
 
 # Chapitre 4 — Description du matériel
@@ -279,11 +277,11 @@ Le tableau suivant couvre les indicateurs LED du panneau avant communs à tous l
 
 | Int.                 | Ext.                 | Err.                 | Sens                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ● (lit)           | <unk> (désactivé) | <unk> (désactivé) | L'unité est verrouillée à son propre oscillateur interne. Aucune référence externe n'est connectée ou sélectionnée. État normal pour un maître d'horloge.                                                                                                                                                                                        |
-| <unk> (désactivé) | ● (allumé, vert)  | <unk> (désactivé) | L'unité est verrouillée à la référence externe sélectionnée (horloge de mot, MADI embed, ADAT embed, ou Dante PTP). Etat normal pour un esclave de l'horloge.                                                                                                                                                                                 |
-| ● (lit)           | ● (lit)           | <unk> (désactivé) | L'unité est en cours de verrouillage à une référence externe. L'oscillateur interne est en cours d'exécution pendant que le verrou est acquis. L'état transitoire est généralement résolu en quelques secondes.                                                                                                                                  |
-| <unk> (désactivé) | <unk> (désactivé) | ● (allumé, rouge) | **Erreur de l'horloge.** L'unité ne peut pas verrouiller la référence externe sélectionnée. Vérifiez que la source de référence est présente, au taux d'échantillonnage correct, et connectée à la bonne entrée. Voir [Chapitre 9 — Dépannage, Section 9.3]. |
-| ● (lit)           | <unk> (désactivé) | ● (allumé, rouge) | **Défaut interne.** L'unité a détecté une erreur interne non liée à l'horloge externe. Notez l'état du panneau avant et le cycle d'alimentation de l'unité. Si l'erreur persiste, contactez le support DAD.                                                                                                                      |
+| ● (lit)           |  (désactivé) |  (désactivé) | L'unité est verrouillée à son propre oscillateur interne. Aucune référence externe n'est connectée ou sélectionnée. État normal pour un maître d'horloge.                                                                                                                                                                                        |
+|  (désactivé) | ● (allumé, vert)  |  (désactivé) | L'unité est verrouillée à la référence externe sélectionnée (horloge de mot, MADI embed, ADAT embed, ou Dante PTP). Etat normal pour un esclave de l'horloge.                                                                                                                                                                                 |
+| ● (lit)           | ● (lit)           |  (désactivé) | L'unité est en cours de verrouillage à une référence externe. L'oscillateur interne est en cours d'exécution pendant que le verrou est acquis. L'état transitoire est généralement résolu en quelques secondes.                                                                                                                                  |
+|  (désactivé) |  (désactivé) | ● (allumé, rouge) | **Erreur de l'horloge.** L'unité ne peut pas verrouiller la référence externe sélectionnée. Vérifiez que la source de référence est présente, au taux d'échantillonnage correct, et connectée à la bonne entrée. Voir [Chapitre 9 — Dépannage, Section 9.3]. |
+| ● (lit)           |  (désactivé) | ● (allumé, rouge) | **Défaut interne.** L'unité a détecté une erreur interne non liée à l'horloge externe. Notez l'état du panneau avant et le cycle d'alimentation de l'unité. Si l'erreur persiste, contactez le support DAD.                                                                                                                      |
 | Clignotement lent                    | —                                    | —                                    | L'unité effectue une mise à jour du firmware. N'éteignez pas l'unité pendant une mise à jour du firmware.                                                                                                                                                                                                                                                        |
 
 ### 4.7.2 Bouton d'alimentation
@@ -300,7 +298,7 @@ Le tableau suivant couvre les indicateurs LED du panneau avant communs à tous l
 | ------------------------------------------- | --------------------------------------------------------------- |
 | ● (allumé, vert, stable) | MOM est connecté et communique avec l'hôte AX Center / AX 64    |
 | Ralentissement (vert)    | MOM est en train d'initialiser ou d'attendre que DADman réponde |
-| <unk> (désactivé)        | MOM n'est pas connecté, ou l'unité hôte est éteinte             |
+|  (désactivé)        | MOM n'est pas connecté, ou l'unité hôte est éteinte             |
 
 _[Placeholder: tables LED pour chaque canal/OL/opérateur — applicables aux cartes d'extension AX 64 qui incluent la jauge du panneau avant. En attente de documentation.]_
 

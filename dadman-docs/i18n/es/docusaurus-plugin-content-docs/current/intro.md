@@ -1,9 +1,7 @@
 ---
-id: intro
 title: Acerca de este manual
 sidebar_label: Acerca de este manual
 sidebar_position: 1
-slug: /
 ---
 
 # Manual del usuario de DADman

@@ -41,7 +41,7 @@ _[Placeholder — ADAT/MADI optischer Anschluss und Kanal mit unterschiedlichen 
 
 _[Placeholder — Wortuhr-I/O, Terminierungsanforderung, BNC-Verbindungsprozedur.]_
 
-> **HINWEIS — Kündigung:** Das Wort Uhreneingabe muss beendet werden (75 <unk> ), wenn diese Einheit das letzte Gerät einer Wort-Uhr-Kette ist. Der Terminierungsschalter befindet sich neben dem BNC-Anschluss.
+> **HINWEIS — Kündigung:** Das Wort Uhreneingabe muss beendet werden (75  ), wenn diese Einheit das letzte Gerät einer Wort-Uhr-Kette ist. Der Terminierungsschalter befindet sich neben dem BNC-Anschluss.
 
 ---
 

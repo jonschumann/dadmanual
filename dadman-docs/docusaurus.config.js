@@ -33,7 +33,7 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'de', 'fr', 'ja', 'es', 'ko', 'da', 'zh', 'pt'],
+    locales: ['en', 'de', 'fr', 'ja', 'es', 'ko', 'da'],
     localeConfigs: {
       en: { label: 'English',                    direction: 'ltr', htmlLang: 'en-GB' },
       de: { label: 'Deutsch',                    direction: 'ltr', htmlLang: 'de'    },
@@ -42,8 +42,6 @@ const config = {
       es: { label: 'Español (Latinoamérica)',     direction: 'ltr', htmlLang: 'es-419'},
       ko: { label: '한국어',                       direction: 'ltr', htmlLang: 'ko'    },
       da: { label: 'Dansk',                       direction: 'ltr', htmlLang: 'da'    },
-      zh: { label: '中文',                         direction: 'ltr', htmlLang: 'zh-Hans'},
-      pt: { label: 'Português',                   direction: 'ltr', htmlLang: 'pt'    },
     },
   },
 

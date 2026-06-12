@@ -1,9 +1,7 @@
 ---
-id: ch01-introdução
 title: "Capítulo 1 - Introdução e Visão Geral do Produto"
 sidebar_label: "Cara. 1 — Introdução"
 sidebar_position: 3
-slug: /introdução
 ---
 
 # Capítulo 1 - Introdução e Visão Geral do Produto

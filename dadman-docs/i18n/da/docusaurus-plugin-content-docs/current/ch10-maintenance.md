@@ -1,9 +1,7 @@
 ---
-id: ch10-maintenance
 title: "Kapitel 10 — Vedligeholdelse"
 sidebar_label: "Ch. 10 — Vedligeholdelse"
 sidebar_position: 12
-slug: /vedligeholdelse
 ---
 
 # Kapitel 10 — Vedligeholdelse

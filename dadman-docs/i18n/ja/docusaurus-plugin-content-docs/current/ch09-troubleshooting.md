@@ -1,9 +1,7 @@
 ---
-id: ch09-troubleshooting
 title: "チャプター9 — トラブルシューティング"
 sidebar_label: "Ch. 9 - トラブルシューティング"
 sidebar_position: 11
-slug: /troubleshooting
 ---
 
 # チャプター9 — トラブルシューティング

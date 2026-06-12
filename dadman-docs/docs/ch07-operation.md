@@ -1,5 +1,4 @@
 ---
-id: ch07-operation
 title: "Chapter 7 — Operation"
 sidebar_label: "Ch. 7 — Operation"
 sidebar_position: 9

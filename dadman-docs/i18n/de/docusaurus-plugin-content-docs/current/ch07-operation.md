@@ -1,9 +1,7 @@
 ---
-id: ch07-Operation
 title: "Kapitel 7 — Operation"
 sidebar_label: "Ch. 7 — Operation"
 sidebar_position: 9
-slug: /operation
 ---
 
 # Kapitel 7 — Operation
@@ -225,7 +223,7 @@ Der MIC Gain Slider kann mit den folgenden Methoden angepasst werden:
 | Methode                                                           | Erhöhen                                                                         |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | Maus ziehen                                                       | 0,5 dB pro Schritt                                                              |
-| Tastatur \*\*″ / <unk> \*\* (Kanal ausgewählt) | 0,1 dB pro Schritt                                                              |
+| Tastatur \*\*″ /  \*\* (Kanal ausgewählt) | 0,1 dB pro Schritt                                                              |
 | Tastatur **Seite oben / Seite runter**                            | Größerer Schritt (Wert wird durch DAD-Engineering bestätigt) |
 
 > **TIPP:** Wählen Sie einen Kanalstreifen aus, indem Sie ihn anklicken dann verwenden Sie die Tastaturpfeile zur Feineinstellung während einer Sitzung, ohne Ihre Hände an die Maus zu bewegen.
@@ -357,7 +355,7 @@ _[Platzhalter: Screenshot im Conf Tab für AX Center, zeigt Synchronisation, Dan
 | **Abtastrate Werte** | 44.1 · 48 · 88.2 · 96 · 176.4 · 192 kHz _(und DXD / 384 kHz auf AX32)_ | Setzt die Operationsabtastrate wenn **Anzu** auf **Internal** gesetzt wird. Wenn **Nachbesserung** auf eine digitale Eingabe gesetzt wird, zeigt dieses Feld die erkannte Abtastrate dieser Eingabe (schreibgeschützt) an. |
 | **Anpassen an**      | Intern · AES11 · AES/EBU 1–8 · MADI Coax · MADI Optical · Dante · Thunderbolt 3                                                           | Wenn die Einheit auf einen digitalen Eingang gesetzt wird, entspricht sie automatisch der Abtastrate dieser Eingabe. Wenn auf **Internal** gesetzt wird, wird oben der **Sampling Rate** Parameter verwendet.                                 |
 | **Wortuhr aus**      | Word Clock (Basisrate) · Word Clock (aktueller Kurs)                                                | Legt fest, ob die Ausgabe der BNC Word Clock nur nach der Basisabtastrate oder der tatsächlichen Betriebsgeschwindigkeit erfolgt.                                                                                                                             |
-| **Sync-Beendeung**   | Hohes Z · 75 <unk>                                                                                                                        | Legt fest, ob die Word Clock Eingabe intern mit 75 <unk> beendet wird. **Stark empfohlen: immer 75 <unk> termination** verwenden, um eine optimale Taktstabilität zu erzielen.                                                |
+| **Sync-Beendeung**   | Hohes Z · 75                                                                                                                         | Legt fest, ob die Word Clock Eingabe intern mit 75  beendet wird. **Stark empfohlen: immer 75  termination** verwenden, um eine optimale Taktstabilität zu erzielen.                                                |
 
 > **TIPP:** Wenn Dante als Audio-Netzwerk und Einheit verwendet wird, ist nicht der Dante-Uhr-Master, hat **Quellen** zu **Dante** gesetzt und **Zu** zu **Dante** angepasst. Dadurch wird sichergestellt, dass das Gerät die Dante PTP Uhr verfolgt und die Konvertierung der Abtastrate im Audioweg vermeidet.
 
@@ -477,8 +475,8 @@ Der Streifen zeigt einen Abschnitt pro Thunder\|Core Einheit mit konfigurierten 
 | Aktion                                                   | Modifier                                                         | Ergebnis                                                    |
 | -------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------- |
 | Maus ziehen auf MIC Gain Slider                          | —                                                                | 0,5 dB pro Schritt                                          |
-| \*\*″ / <unk> \*\* (Kanal ausgewählt) | —                                                                | 0,1 dB pro Schritt                                          |
-| \*\*″ / <unk> \*\* (Kanal ausgewählt) | **Schicht**                                                      | Erhöhte Auflösung (feiner als 0,1 dB)    |
+| \*\*″ /  \*\* (Kanal ausgewählt) | —                                                                | 0,1 dB pro Schritt                                          |
+| \*\*″ /  \*\* (Kanal ausgewählt) | **Schicht**                                                      | Erhöhte Auflösung (feiner als 0,1 dB)    |
 | **Klick** auf Verstärkung Kontrolle                      | **Strg (Win) / Cmd (Mac)** | Auf Standardwert zurücksetzen                               |
 | Eines der oben genannten                                 | **Alt / Option**                                                 | Nur auf ausgewählten Kanal anwenden — umgeht Mic Gain Group |
 

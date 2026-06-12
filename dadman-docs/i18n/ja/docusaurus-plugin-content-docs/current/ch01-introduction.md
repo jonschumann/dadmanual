@@ -1,9 +1,7 @@
 ---
-id: ch01 紹介
 title: "Chapter 1 — Introduction & Product 概要"
 sidebar_label: "Ch. 1 — はじめに"
 sidebar_position: 3
-slug: /introduction
 ---
 
 # Chapter 1 — Introduction & Product 概要

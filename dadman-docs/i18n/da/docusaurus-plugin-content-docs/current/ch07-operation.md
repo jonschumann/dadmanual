@@ -1,9 +1,7 @@
 ---
-id: ch07-operation
 title: "Kapitel 7 — Drift"
 sidebar_label: "Ch. 7 — Drift"
 sidebar_position: 9
-slug: /operation
 ---
 
 # Kapitel 7 — Drift

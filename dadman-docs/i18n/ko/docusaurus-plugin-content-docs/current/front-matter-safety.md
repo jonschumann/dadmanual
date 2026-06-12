@@ -1,9 +1,7 @@
 ---
-id: front-matter-safety
 title: "Front Matter & Safety"
 sidebar_label: "FM — Front Matter & Safety"
 sidebar_position: 2
-slug: /front-matter-safety
 ---
 
 # Front Matter — Safety Notices and Compliance

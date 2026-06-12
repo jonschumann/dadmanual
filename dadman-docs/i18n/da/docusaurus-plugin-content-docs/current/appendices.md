@@ -1,9 +1,7 @@
 ---
-id: tillæg
 title: "Tillæg"
 sidebar_label: "Tillæg"
 sidebar_position: 13
-slug: /tillæg
 ---
 
 # Tillæg

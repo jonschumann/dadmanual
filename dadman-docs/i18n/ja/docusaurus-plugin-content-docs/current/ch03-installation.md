@@ -1,9 +1,7 @@
 ---
-id: ch03-installation
 title: "チャプター3 — インストール"
 sidebar_label: "Ch. 3 — インストール"
 sidebar_position: 5
-slug: /installation
 ---
 
 # チャプター3 — インストール

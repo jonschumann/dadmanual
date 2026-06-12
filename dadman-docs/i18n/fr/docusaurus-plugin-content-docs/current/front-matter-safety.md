@@ -1,9 +1,7 @@
 ---
-id: sécurité avant - matière première
 title: "Vêtement avant & Sécurité"
 sidebar_label: "FM — matière première et sécurité"
 sidebar_position: 2
-slug: /front-matter-safety
 ---
 
 # Avant - Avis de sécurité et conformité

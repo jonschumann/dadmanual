@@ -1,5 +1,4 @@
 ---
-id: appendices
 title: "Appendices"
 sidebar_label: "Appendices"
 sidebar_position: 13

@@ -1,9 +1,7 @@
 ---
-id: ch08-advanced-features
 title: "Chapter 8 — Advanced Features"
 sidebar_label: "Ch. 8 — Advanced Features"
 sidebar_position: 10
-slug: /advanced-features
 ---
 
 # Chapter 8 — Advanced Features

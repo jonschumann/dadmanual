@@ -1,9 +1,7 @@
 ---
-id: ch07-operação
 title: "Capítulo 7 — Operação"
 sidebar_label: "Cara. 7 — Operação"
 sidebar_position: 9
-slug: /operação
 ---
 
 # Capítulo 7 — Operação

@@ -1,5 +1,4 @@
 ---
-id: ch05-signal-flow
 title: "Chapter 5 — Signal Flow & Architecture"
 sidebar_label: "Ch. 5 — Signal Flow"
 sidebar_position: 7

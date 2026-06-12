@@ -1,9 +1,7 @@
 ---
-id: 付随物
 title: "付録"
 sidebar_label: "付録"
 sidebar_position: 13
-slug: /appendices
 ---
 
 # 付録
@@ -836,7 +834,7 @@ Full release notes, including detailed firmware change logs, are available in th
 
 **DADman の新機能:**
 
-_メニューバーとシステムトレイモード:_ DADman は、バックグラウンドで最小限のデスクトップ存在で実行できるようになりました。 macOS: 3 つの表示モード — Dock のみ、メニューバーとドック、メニューバーのみ (Dock; 非表示; ⌘<unk> 1 またはDADman を再起動してください)。 Windows: システム トレイモードが追加されました — 左クリックで表示/非表示; 表示/非表示オプションを右クリックします。
+_メニューバーとシステムトレイモード:_ DADman は、バックグラウンドで最小限のデスクトップ存在で実行できるようになりました。 macOS: 3 つの表示モード — Dock のみ、メニューバーとドック、メニューバーのみ (Dock; 非表示; ⌘ 1 またはDADman を再起動してください)。 Windows: システム トレイモードが追加されました — 左クリックで表示/非表示; 表示/非表示オプションを右クリックします。
 
 _Talkback RAWモード:_ ボタンが押されたときに終了したとき(push-to-talk)のみトークバックが有効になる新しいトークバックモードです。 前の切り替え/ラッチモードは引き続き使用可能です。 RAWモードはMOMハードウェアとMTRX Studioフロントパネルコントロールに適用されます。EuConサーフェスは常にトグル/ラッチモードを使用します。
 
@@ -852,15 +850,15 @@ _ファイル処理:_ `.dms` と `.dmprof` ファイルをダブルクリック�
 | ----------------------- | -------------- | ---------------- |
 | File > Open…            | ⌘O             | Ctrl+O           |
 | ファイル > 保存               | ⌘S             | Ctrl+S           |
-| File > Save As…         | ⌘<unk> S       | Ctrl+Shift+S     |
-| File > Open Profile…    | <unk> ⌘O       | Ctrl+Alt+O       |
-| ファイル > インポートプロファイル…     | <unk> ⌘I       | Ctrl+Alt+I       |
-| ファイル > プロファイルを保存        | <unk> ⌘S       | Ctrl+Alt+S       |
-| File > Save Profile As… | <unk> ⌘<unk> S | Ctrl+Alt+Shift+S |
-| ファイル > プロファイルを閉じる       | <unk> ⌘W       | Ctrl+Alt+W       |
+| File > Save As…         | ⌘ S       | Ctrl+Shift+S     |
+| File > Open Profile…    |  ⌘O       | Ctrl+Alt+O       |
+| ファイル > インポートプロファイル…     |  ⌘I       | Ctrl+Alt+I       |
+| ファイル > プロファイルを保存        |  ⌘S       | Ctrl+Alt+S       |
+| File > Save Profile As… |  ⌘ S | Ctrl+Alt+Shift+S |
+| ファイル > プロファイルを閉じる       |  ⌘W       | Ctrl+Alt+W       |
 | メインウィンドウを表示             | ⌘⇧1            | —                |
-| デバイス リスト                | ⌘<unk> L       | Ctrl+Shift+L     |
-| モニタープロファイル              | ⌘<unk> M       | Ctrl+Shift+M     |
+| デバイス リスト                | ⌘ L       | Ctrl+Shift+L     |
+| モニタープロファイル              | ⌘ M       | Ctrl+Shift+M     |
 | 設定 / オプション              | ⌘,             | Ctrl+,           |
 
 **バグ修正:**

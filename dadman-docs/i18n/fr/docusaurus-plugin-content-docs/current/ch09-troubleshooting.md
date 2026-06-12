@@ -1,9 +1,7 @@
 ---
-id: ch09-dépannage
 title: "Chapitre 9 — Dépannage"
 sidebar_label: "Ch. 9 — Dépannage"
 sidebar_position: 11
-slug: /dépannage
 ---
 
 # Chapitre 9 — Dépannage

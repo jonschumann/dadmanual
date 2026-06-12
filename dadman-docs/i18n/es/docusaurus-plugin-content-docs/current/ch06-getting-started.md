@@ -1,9 +1,7 @@
 ---
-id: comienzo de ch06
 title: "Capítulo 6 — Empezando"
 sidebar_label: "Ch. 6 — Empezando"
 sidebar_position: 8
-slug: /getting-started
 ---
 
 # Capítulo 6 — Empezando

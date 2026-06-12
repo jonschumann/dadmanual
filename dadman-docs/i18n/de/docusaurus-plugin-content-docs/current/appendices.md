@@ -1,9 +1,7 @@
 ---
-id: Anhänge
 title: "Anhänge"
 sidebar_label: "Anhänge"
 sidebar_position: 13
-slug: /Anhänge
 ---
 
 # Anhänge
@@ -58,7 +56,7 @@ Dieser Anhang bietet komplette technische Spezifikationen für alle von DADman g
 | THD+N (Gewichtet)    | < −100 dB @ −3 dBFS                                |
 | Rose                                    | < −110 dB                                                       |
 | Load Impedance                          | 18 – 600 Ω                                                                               |
-| Ausgang Impedanz                        | < 1 <unk>                                                       |
+| Ausgang Impedanz                        | < 1                                                        |
 | Maximale Ausgabestufe                   | Anpassbar −80 bis +19 dBu (0.1 dB Schritte)           |
 | Konversionslatenz @ 96 kHz | 450 μs (Hochres Filter) / 150 μs (Kurzverzögerung) |
 
@@ -79,7 +77,7 @@ Dieser Anhang bietet komplette technische Spezifikationen für alle von DADman g
 | Dynamischer Bereich                         | > 124 dB                                                                       |
 | THD+N (Gewichtet)        | < −115 dB @ −3 dBFS                      |
 | Rose                                        | < −115 dB                                             |
-| Input-Impedanz                              | 2 k<unk> (Mic) / > 1 M<unk> (Instrument) |
+| Input-Impedanz                              | 2 k (Mic) / > 1 M (Instrument) |
 | Bereich Mikrofon-Verstärkung                | −21 bis +100 dB (0.1 dB Schritte)           |
 | Mikrofon EIN (Gewichtet) | < −131 dBu                                            |
 | Konversionslatenz                           | 350 µs @ 96 kHz                                                   |
@@ -475,7 +473,7 @@ MADI wird von allen DAD / NTP-Technologie-Hardware-Familien als Erweiterungskart
 
 **Physikalische Schnittstellen:**
 
-- Koaxial-BNC (75 <unk> ) — maximale Kabellänge ca. 100 m (Standard-Koaxie)
+- Koaxial-BNC (75  ) — maximale Kabellänge ca. 100 m (Standard-Koaxie)
 - Optisches SFP — Mehrfach- oder Einzelmodusfaser je nach Typ des SFP-Moduls; bis zu mehrere Kilometer mit Single-Mode-SFP
 
 **Bildbewertungsmodus:**
@@ -836,7 +834,7 @@ Vollständige Release-Notizen, einschließlich detaillierter Firmware-Änderungs
 
 **Neu in DADman:**
 
-_Menüleiste und System Tray-Modus:_ DADman kann nun im Hintergrund mit minimaler Desktop-Präsenz laufen. macOS: drei Anzeigemodi — Dock Only, Menu Bar und Dock, und Menu Bar nur (versteckt vor dem Dock; mit <unk> <unk> 1 wiederherstellen oder DADman erneut starten). Windows: System Tray Modus hinzugefügt — Linksklick zum Anzeigen/Verstecken; Rechtsklick für Anzeigen/Verstecken von Optionen.
+_Menüleiste und System Tray-Modus:_ DADman kann nun im Hintergrund mit minimaler Desktop-Präsenz laufen. macOS: drei Anzeigemodi — Dock Only, Menu Bar und Dock, und Menu Bar nur (versteckt vor dem Dock; mit   1 wiederherstellen oder DADman erneut starten). Windows: System Tray Modus hinzugefügt — Linksklick zum Anzeigen/Verstecken; Rechtsklick für Anzeigen/Verstecken von Optionen.
 
 _Talkback RAW-Modus:_ Ein neuer Talkback-Modus, in dem Talkback nur aktiv ist, wenn der Button gedrückt wird und bei der Freigabe endet (Push-to-Talk). Der vorherige Schalter/Latch-Modus bleibt verfügbar. Der RAW-Modus gilt für MOM Hardware und MTRX Studio Frontpaneelen; EuCon Oberflächen verwenden immer den Umschalt-/Latch-Modus.
 
@@ -1065,7 +1063,7 @@ Ein DAD Audio-Interface in der Thunder\|Core Produktfamilie. Stellt 64 Kanäle m
 **Bucket**
 In Control\|Pack-Routing Presets ist ein _Bucket_ eine von bis zu vier unabhängigen Eingangslagen innerhalb einer einzigen Voreinstellung des Routers. Jede Gruppe definiert einen kompletten Satz von Quellkanälen, die als einzelne Aktion auf die Ausgabe des Presets umgestellt werden können. Eimer werden manuell oder automatisch auf Basis von Signaldetektor-Triggern geschaltet. Siehe auch: _Control\|Pack_, _Routing Preset_, _Trigger_. Siehe _Kapitel 8, Abschnitt 8.4_.
 
-**CE** (Conformite<unk> Europe<unk> enne)
+**CE** (Conformite Europe enne)
 Eine obligatorische Produktkennzeichnung für Waren, die innerhalb des Europäischen Wirtschaftsraums verkauft werden, die Angabe des Produkts erfüllt alle anwendbaren EU-Richtlinien für Sicherheit, elektromagnetische Kompatibilität und andere regulatorische Anforderungen. DAD / NTP-Technologie-Hardware trägt CE-Kennzeichnung. Die vollständige Deklaration der Konformität ist in der DAD verfügbar und in _Anhang F_ wiedergegeben.
 
 **Klonen / Klonen**
@@ -1261,7 +1259,7 @@ Eine benutzerdefinierte Fold-down-Matrix in einem DADman Monitor-Profil, die ein
 EU-Richtlinie 2012/19/EU zur Erfassung, Recycling und Entsorgung von Elektro- und Elektronikgeräten. Die Beschläge DAD / NTP-Technologie tragen das WEEE-Symbol (Crossed-out-Wheelie-Behälter) und dürfen nicht in unsortierten Hausmüll entsorgt werden. Siehe: _Kapitel 10, Abschnitt 10.8_ und _Front Matter, Abschnitt FM.8_.
 
 **Word Clock**
-Ein quadratisches Synchronisations-Signal, das zur Phasensperre von digitalem Audiogerät zu einer gemeinsamen Abtastrate verwendet wird. Word uhr wird bei der Betriebsabtastrate (z.B. 48 kHz) über 75 <unk> BNC-Kabel verteilt. DAD-Hardware unterstützt Word Clock in und aus für die Integration in Werkssynchronisationssysteme. Wortuhrverbindungen erfordern 75 <unk> Beenden am Endgerät in der Kette. Siehe: _Kapitel 9, Abschnitt 9.5_.
+Ein quadratisches Synchronisations-Signal, das zur Phasensperre von digitalem Audiogerät zu einer gemeinsamen Abtastrate verwendet wird. Word uhr wird bei der Betriebsabtastrate (z.B. 48 kHz) über 75  BNC-Kabel verteilt. DAD-Hardware unterstützt Word Clock in und aus für die Integration in Werkssynchronisationssysteme. Wortuhrverbindungen erfordern 75  Beenden am Endgerät in der Kette. Siehe: _Kapitel 9, Abschnitt 9.5_.
 
 ---
 

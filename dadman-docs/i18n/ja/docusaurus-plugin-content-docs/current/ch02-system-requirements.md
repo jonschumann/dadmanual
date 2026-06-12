@@ -1,9 +1,7 @@
 ---
-id: ch02システム要件
 title: "第 2 章 — システム要件"
 sidebar_label: "Ch. 2 — システム要件"
 sidebar_position: 4
-slug: /system-requirements
 ---
 
 # 第 2 章 — システム要件とパッケージ内容

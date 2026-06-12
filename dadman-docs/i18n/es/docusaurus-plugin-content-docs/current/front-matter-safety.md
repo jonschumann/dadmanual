@@ -1,9 +1,7 @@
 ---
-id: seguridad frontal
 title: "Material delantero y seguridad"
 sidebar_label: "FM — Material delantero y seguridad"
 sidebar_position: 2
-slug: /front-matter-safety
 ---
 
 # Front Matter — Avisos de seguridad y cumplimiento

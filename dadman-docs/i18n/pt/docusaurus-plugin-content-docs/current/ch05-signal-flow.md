@@ -1,9 +1,7 @@
 ---
-id: ch05-fluxo sinal-fluxo
 title: "Capítulo 5 — Fluxo de Sinal & Arquitetura"
 sidebar_label: "Cara. 5 — Sinal Fluxo"
 sidebar_position: 7
-slug: /sinal-fluxo
 ---
 
 # Capítulo 5 — Fluxo de Sinal & Arquitetura

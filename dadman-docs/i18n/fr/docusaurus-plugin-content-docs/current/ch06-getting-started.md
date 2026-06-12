@@ -1,9 +1,7 @@
 ---
-id: ch06-getting-started
 title: "Chapitre 6 — Pour commencer"
 sidebar_label: "Ch. 6 — Pour commencer"
 sidebar_position: 8
-slug: /getting-started
 ---
 
 # Chapitre 6 — Pour commencer
@@ -64,7 +62,7 @@ _[Placeholder: capture d'écran annotée — fenêtre principale DADman montrant
 
 ### La liste des périphériques
 
-Ouvrez la liste des périphériques via **Paramètres > Liste des périphériques** ou **文<unk> L** (macOS) / **Ctrl+Maj+L** (Windows). La liste des périphériques montre toutes les unités découvertes par DADman sur le réseau, avec leur nom, leur ID d'unité, leur adresse IP et leur version de firmware. Faire un clic droit sur une unité dans la liste des périphériques donne accès aux paramètres réseau, à la mise à jour du microprogramme, à la réinitialisation d'usine, au clonage et à la déconnexion.
+Ouvrez la liste des périphériques via **Paramètres > Liste des périphériques** ou **文 L** (macOS) / **Ctrl+Maj+L** (Windows). La liste des périphériques montre toutes les unités découvertes par DADman sur le réseau, avec leur nom, leur ID d'unité, leur adresse IP et leur version de firmware. Faire un clic droit sur une unité dans la liste des périphériques donne accès aux paramètres réseau, à la mise à jour du microprogramme, à la réinitialisation d'usine, au clonage et à la déconnexion.
 
 ### Types de fichiers
 
@@ -109,7 +107,7 @@ Si aucune unité n'apparaît après 30 secondes:
 - Sur Windows, confirmez que votre pare-feu ne bloque pas DADman. Ajouter une exception de pare-feu si nécessaire.
 - Voir [Chapitre 9 — Dépannage, Section 9.2 — Problèmes de réseau et de connectivité] pour un tableau complet du diagnostic.
 
-> **ASTUCE :** Utilisez **Paramètres > Liste des Périphériques** ou **Ω<unk> L** (macOS) / **Ctrl+Maj+L** (Windows) pour ouvrir la liste des Périphériques directement si elle n'est pas visible.
+> **ASTUCE :** Utilisez **Paramètres > Liste des Périphériques** ou **Ω L** (macOS) / **Ctrl+Maj+L** (Windows) pour ouvrir la liste des Périphériques directement si elle n'est pas visible.
 
 ---
 
@@ -164,7 +162,7 @@ Référence complète : [Chapitre 7, Section 7.3 — Horloge et synchronisation]
 
 _[Placeholder: screenshot — onglet AD avec deux canaux micro configurés, Signal LED lit]_
 
-> **Astuce :** Avec un canal sélectionné, utilisez les touches fléchées **<unk> /文** pour ajuster le gain par incréments de 0,1 dB. Ajouter **Maj** pour une résolution encore plus fine. Ceci est plus précis que le glissement de souris (pas de 0,5 dB).
+> **Astuce :** Avec un canal sélectionné, utilisez les touches fléchées ** /文** pour ajuster le gain par incréments de 0,1 dB. Ajouter **Maj** pour une résolution encore plus fine. Ceci est plus précis que le glissement de souris (pas de 0,5 dB).
 
 Référence complète : [Chapitre 7, Section 7.4 — Gain et gestion du niveau]
 
@@ -242,7 +240,7 @@ Si vous utilisez le contrôleur de moniteur DADman (PRO\|MON), vous avez besoin 
 
 **Pour charger un profil existant :**
 
-1. **Fichier > Ouvrir Profil…** (macOS : **<unk> 文O** / Fenêtres : **Ctrl+Alt+O**)
+1. **Fichier > Ouvrir Profil…** (macOS : ** 文O** / Fenêtres : **Ctrl+Alt+O**)
 2. Sélectionnez votre fichier `.dmprof`.
 
 **Pour créer un nouveau profil :**
@@ -250,7 +248,7 @@ Si vous utilisez le contrôleur de moniteur DADman (PRO\|MON), vous avez besoin 
 1. **Paramètres > Profil Monitor** pour ouvrir l'éditeur.
 2. Cliquez avec le bouton droit de la souris sur \*\*Sources \*\* → **Ajouter une nouvelle source** → assigner des entrées depuis votre routage.
 3. Clic droit **Sorties** → **Ajouter un nouvel ensemble de sorties** → assigner des sorties analogiques pour chaque configuration du haut-parleur.
-4. **Fichier > Enregistrer le profil sous…** (macOS : **<unk> 文<unk> S** / Fenêtres : **Ctrl+Alt+Shift+S**)
+4. **Fichier > Enregistrer le profil sous…** (macOS : ** 文 S** / Fenêtres : **Ctrl+Alt+Shift+S**)
 
 **Résultat attendu :** L'onglet **Mon** montre le sélecteur de la source, les boutons de sortie du haut-parleur, et **Ref**, **Dim**, et **Cut**.
 
@@ -276,12 +274,12 @@ Si votre pièce a été calibrée acoustiquement:
 
 > **PRÉCAUTION :** Les paramètres des unités sont stockés dans le matériel. Une réinitialisation d'usine ou une mise à jour du firmware les effacera. Le fichier `.dms` sur votre ordinateur est la seule sauvegarde.
 
-1. **Fichier > Enregistrer sous…** (macOS : **文<unk> S** / Fenêtres : **Ctrl+Maj+S**)
+1. **Fichier > Enregistrer sous…** (macOS : **文 S** / Fenêtres : **Ctrl+Maj+S**)
 2. Utilisez un nom de fichier descriptif : `StudioA_AXCenter_2026-06.dms`
 3. Enregistrer dans un emplacement qui est sauvegardé régulièrement.
 
 Si vous avez un profil de moniteur, enregistrez-le séparément :
-**Fichier > Enregistrer le profil…** (macOS: **<unk> <unk> <unk> S** / Windows: **Ctrl+Alt+Maj+S**)
+**Fichier > Enregistrer le profil…** (macOS: **   S** / Windows: **Ctrl+Alt+Maj+S**)
 
 > **ASTUCE :** Activez **Ouvrir le dernier fichier au démarrage** dans **DADman > Préférences** (macOS) ou **Paramètres > Options** (Windows) pour restaurer cette configuration automatiquement à chaque lancement. Recommandé pour les installations permanentes.
 
@@ -321,7 +319,7 @@ Tous les curseurs de gain, de niveau et de fader de DADman prennent en charge le
 | **Glisser** (sans modificateur)                                    | Résolution normale — environ 0,5 dB par pixel                                    |
 | **Maj + Glisser**                                                                     | Précision augmentée — environ 0,1 dB par pixel                                   |
 | Touches fléchées \*\* / \*\* (focus du curseur)                    | Étapes de 0,1 dB                                                                 |
-| **Shift + <unk> /文**                                                                  | Étapes fines (0,01 dB)                                        |
+| **Shift +  /文**                                                                  | Étapes fines (0,01 dB)                                        |
 | **Ctrl** (Windows) / **Cmd** (macOS) **+ clic** | Rétablir la valeur par défaut                                                    |
 | **Alt** (Windows) / **Option** (macOS)          | Par canal seulement — contourne Mic Gain Group, ajuste le canal sélectionné seul |
 | **Alt/Option + Maj**                                                                  | Réglage par canal                                                                |
@@ -331,18 +329,18 @@ Tous les curseurs de gain, de niveau et de fader de DADman prennent en charge le
 | Action                                                                            | macOS               | Fenêtres       |
 | --------------------------------------------------------------------------------- | ------------------- | -------------- |
 | **Fichier**                                                                       |                     |                |
-| Ouvrir le fichier de paramètres                                                   | <unk> O             | Ctrl+O         |
-| Enregistrer le fichier de paramètres                                              | <unk> S             | Ctrl+S         |
-| Enregistrer le fichier de paramètres comme…                                       | <unk> <unk> S       | Ctrl+Maj+S     |
-| Ouvrir le profil du moniteur                                                      | <unk> <unk> O       | Ctrl+Alt+O     |
-| Profil du moniteur d'importation                                                  | <unk> <unk> I       | Ctrl+Alt+I     |
-| Enregistrer le profil du moniteur                                                 | <unk> <unk> S       | Ctrl+Alt+S     |
-| Enregistrer le profil du moniteur comme…                                          | <unk> <unk> <unk> S | Ctrl+Alt+Maj+S |
-| Fermer le profil du moniteur                                                      | <unk> <unk> W       | Ctrl+Alt+W     |
+| Ouvrir le fichier de paramètres                                                   |  O             | Ctrl+O         |
+| Enregistrer le fichier de paramètres                                              |  S             | Ctrl+S         |
+| Enregistrer le fichier de paramètres comme…                                       |   S       | Ctrl+Maj+S     |
+| Ouvrir le profil du moniteur                                                      |   O       | Ctrl+Alt+O     |
+| Profil du moniteur d'importation                                                  |   I       | Ctrl+Alt+I     |
+| Enregistrer le profil du moniteur                                                 |   S       | Ctrl+Alt+S     |
+| Enregistrer le profil du moniteur comme…                                          |    S | Ctrl+Alt+Maj+S |
+| Fermer le profil du moniteur                                                      |   W       | Ctrl+Alt+W     |
 | **Voir**                                                                          |                     |                |
 | Afficher la fenêtre principale (depuis le mode barre de menus) | ⌘⇧1                 | —              |
-| Ouvrir la liste des périphériques                                                 | <unk> <unk> L       | Ctrl+Maj+L     |
-| Ouvrir l'éditeur de profil du moniteur                                            | <unk> M             | Ctrl+Maj+M     |
+| Ouvrir la liste des périphériques                                                 |   L       | Ctrl+Maj+L     |
+| Ouvrir l'éditeur de profil du moniteur                                            |  M             | Ctrl+Maj+M     |
 | Ouvrir Préférences / Options                                                      | ⌘,                  | Ctrl+,         |
 
 ### Raccourcis de la matrice de routage

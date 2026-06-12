@@ -1,9 +1,7 @@
 ---
-id: ch02-system-krav
 title: "Kapitel 2 — Systemkrav"
 sidebar_label: "Ch. 2 — Systemkrav"
 sidebar_position: 4
-slug: /systemkrav
 ---
 
 # Kapitel 2 — Systemkrav Og pakkeindhold

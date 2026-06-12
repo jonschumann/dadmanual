@@ -1,9 +1,7 @@
 ---
-id: フロントマター安全
 title: "フロント材料・安全"
 sidebar_label: "FM — フロントマター & 安全"
 sidebar_position: 2
-slug: /front matter-safe
 ---
 
 # フロントマター — 安全通知とコンプライアンス

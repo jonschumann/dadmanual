@@ -1,9 +1,7 @@
 ---
-id: appendices
 title: "Annexes"
 sidebar_label: "Annexes"
 sidebar_position: 13
-slug: /appendices
 ---
 
 # Annexes
@@ -58,7 +56,7 @@ Cette annexe fournit des spécifications techniques complètes pour tous les mat
 | THD+N (pondéré)          | < −100 dB @ −3 dBFS                                         |
 | Traverser                                   | < -110 dB                                                                |
 | Charger l'impédance                         | 18 – 600 Ω                                                                                        |
-| Impédance de sortie                         | < 1 <unk> <unk>                                                          |
+| Impédance de sortie                         | < 1                                                            |
 | Niveau de sortie max                        | Ajustable -80 à +19 dBu (pas de 0,1 dB)                                        |
 | latence de conversion @ 96 kHz | 450 μs (filtre à haute rétractation) / 150 μs (délai court) |
 
@@ -836,7 +834,7 @@ Les notes de version complètes, y compris les journaux détaillés des changeme
 
 **Nouveau dans DADman :**
 
-_Modes de la barre de menu et de la zone de notification :_ DADman peut maintenant s'exécuter en arrière-plan avec une présence minimale sur le bureau. macOS : trois modes d'affichage — Dock uniquement, barre de menus et Dock, et barre de menu uniquement (masque depuis le Dock; Restaurer avec la commande <unk> 1 ou en lançant DADman à nouveau). Windows: Mode de la barre d'état système ajouté - clic gauche pour afficher/masquer; clic droit pour Afficher/Masquer/Quitter les options.
+_Modes de la barre de menu et de la zone de notification :_ DADman peut maintenant s'exécuter en arrière-plan avec une présence minimale sur le bureau. macOS : trois modes d'affichage — Dock uniquement, barre de menus et Dock, et barre de menu uniquement (masque depuis le Dock; Restaurer avec la commande  1 ou en lançant DADman à nouveau). Windows: Mode de la barre d'état système ajouté - clic gauche pour afficher/masquer; clic droit pour Afficher/Masquer/Quitter les options.
 
 _Mode RAW de Talkback :_ Un nouveau mode de talkback dans lequel talkback n'est actif que lorsque le bouton est maintenu et se termine lorsqu'il est relâché (pousser-parler). Le mode précédent de bascule ou de loquet reste disponible. Le mode RAW s'applique au matériel MOM et au contrôle du panneau avant MTRX Studio. Les surfaces EuCon utilisent toujours le mode activer/latch.
 
@@ -850,17 +848,17 @@ _Gestion des fichiers:_ Les fichiers `.dms` et `.dmprof` peuvent maintenant êtr
 
 | Action                                | macOS               | Fenêtres       |
 | ------------------------------------- | ------------------- | -------------- |
-| Fichier > Ouvrir…                     | <unk> O             | Ctrl+O         |
-| Fichier > Enregistrer                 | <unk> S             | Ctrl+S         |
-| Fichier > Enregistrer sous…           | <unk> <unk> S       | Ctrl+Maj+S     |
-| Fichier > Ouvrir le profil…           | <unk> <unk> O       | Ctrl+Alt+O     |
-| Fichier > Importer le profil…         | <unk> <unk> I       | Ctrl+Alt+I     |
-| Fichier > Enregistrer le profil       | <unk> <unk> S       | Ctrl+Alt+S     |
-| Fichier > Enregistrer le profil sous… | <unk> <unk> <unk> S | Ctrl+Alt+Maj+S |
-| Fichier > Fermer le profil            | <unk> <unk> W       | Ctrl+Alt+W     |
+| Fichier > Ouvrir…                     |  O             | Ctrl+O         |
+| Fichier > Enregistrer                 |  S             | Ctrl+S         |
+| Fichier > Enregistrer sous…           |   S       | Ctrl+Maj+S     |
+| Fichier > Ouvrir le profil…           |   O       | Ctrl+Alt+O     |
+| Fichier > Importer le profil…         |   I       | Ctrl+Alt+I     |
+| Fichier > Enregistrer le profil       |   S       | Ctrl+Alt+S     |
+| Fichier > Enregistrer le profil sous… |    S | Ctrl+Alt+Maj+S |
+| Fichier > Fermer le profil            |   W       | Ctrl+Alt+W     |
 | Afficher la fenêtre principale        | ⌘⇧1                 | —              |
-| Liste des périphériques               | <unk> <unk> L       | Ctrl+Maj+L     |
-| Profil du moniteur                    | <unk> M             | Ctrl+Maj+M     |
+| Liste des périphériques               |   L       | Ctrl+Maj+L     |
+| Profil du moniteur                    |  M             | Ctrl+Maj+M     |
 | Paramètres / Options                  | ⌘,                  | Ctrl+,         |
 
 **Corrections de bugs :**
@@ -1261,7 +1259,7 @@ Une matrice pliée personnalisée dans un profil de moniteur DADman qui roule un
 Directive européenne 2012/19/UE régissant la collecte, le recyclage et l'élimination des équipements électriques et électroniques. Le matériel de la technologie DAD / NTP porte le symbole WEEE (bobine de roues croisées), indiquant qu'il ne doit pas être éliminé dans des déchets ménagers non triés. Voir: _Chapitre 10, Section 10.8_ et _Front Matter, Section FM.8_.
 
 **Horloge de mot**
-Un signal de synchronisation à ondes carrées utilisé pour verrouiller progressivement l'équipement audio numérique à une référence de fréquence d'échantillonnage partagée. L'horloge de mot est distribuée à la fréquence d'échantillonnage (par exemple, 48 kHz) de plus de 75 €), câbles BNC. Le matériel DAD prend en charge Word Clock in et out pour une intégration dans les systèmes de synchronisation des installations. Les connexions d'horloge à mot requièrent une terminaison de 75 <unk> , au dispositif final de la chaîne. Voir : _Chapitre 9, Section 9.5_.
+Un signal de synchronisation à ondes carrées utilisé pour verrouiller progressivement l'équipement audio numérique à une référence de fréquence d'échantillonnage partagée. L'horloge de mot est distribuée à la fréquence d'échantillonnage (par exemple, 48 kHz) de plus de 75 €), câbles BNC. Le matériel DAD prend en charge Word Clock in et out pour une intégration dans les systèmes de synchronisation des installations. Les connexions d'horloge à mot requièrent une terminaison de 75  , au dispositif final de la chaîne. Voir : _Chapitre 9, Section 9.5_.
 
 ---
 

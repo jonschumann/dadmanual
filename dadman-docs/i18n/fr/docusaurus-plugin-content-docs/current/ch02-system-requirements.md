@@ -1,9 +1,7 @@
 ---
-id: ch02-pré-requis du système
 title: "Chapitre 2 — Configuration requise"
 sidebar_label: "Ch. 2 — Exigences système"
 sidebar_position: 4
-slug: /fr/system-requirements
 ---
 
 # Chapitre 2 — Configuration requise et contenu des paquets

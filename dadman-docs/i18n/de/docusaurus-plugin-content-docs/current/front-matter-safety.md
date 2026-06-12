@@ -1,9 +1,7 @@
 ---
-id: front-matter-Sicherheit
 title: "Frontfrage & Sicherheit"
 sidebar_label: "FM — Front-Matter & Sicherheit"
 sidebar_position: 2
-slug: /front-matter-safety
 ---
 
 # Frontfrage — Sicherheitshinweise und Compliance

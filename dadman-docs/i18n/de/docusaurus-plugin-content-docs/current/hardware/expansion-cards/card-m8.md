@@ -53,7 +53,7 @@ Für Kondensatormikrofone stehen pro Kanal 48 V Phantomleistung zur Verfügung.
 | -------------------------------------- | -------------- | -------------------------------------------------------- |
 | Phantomleistung                        | 48 V           | Wechselbar pro Kanal                                     |
 | Input-Impedanz                         | 3 kg           |                                                          |
-| EIN (A-gewichtet)   | −131 dBu       | Bei 0 <unk> Quelle (gekürzte Eingabe) |
+| EIN (A-gewichtet)   | −131 dBu       | Bei 0  Quelle (gekürzte Eingabe) |
 | Analog-Verstärkungsbereich             | −3 bis +45 dB  | Relay-basierte 3 dB-Schritte                             |
 | Digitale Verstärkung                   | 0 bis +39 dB   | Zusätzlicher digitaler Gewinn                            |
 | Gesamte DADman Gain Reichweite         | −18 bis +72 dB |                                                          |

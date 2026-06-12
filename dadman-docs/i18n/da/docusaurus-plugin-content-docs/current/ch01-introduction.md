@@ -1,9 +1,7 @@
 ---
-id: ch01-introduktion
 title: "Kapitel 1 — Indledning & Produktoversigt"
 sidebar_label: "Ch. 1 — Indledning"
 sidebar_position: 3
-slug: /introduktion
 ---
 
 # Kapitel 1 — Indledning & Produktoversigt

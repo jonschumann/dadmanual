@@ -1,9 +1,7 @@
 ---
-id: ch09-solução de problemas
 title: "Capítulo 9 — Solução de problemas"
 sidebar_label: "Cara. 9 — Solução de problemas"
 sidebar_position: 11
-slug: /solução de problemas
 ---
 
 # Capítulo 9 — Solução de problemas

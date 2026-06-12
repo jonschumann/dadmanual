@@ -1,9 +1,7 @@
 ---
-id: ch10-maintenance
 title: "Chapter 10 — Maintenance"
 sidebar_label: "Ch. 10 — Maintenance"
 sidebar_position: 12
-slug: /maintenance
 ---
 
 # Chapter 10 — Maintenance

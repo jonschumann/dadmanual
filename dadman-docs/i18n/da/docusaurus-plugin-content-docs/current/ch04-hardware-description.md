@@ -1,9 +1,7 @@
 ---
-id: ch04-hardware-beskrivelse
 title: "Kapitel 4 — Hardwarebeskrivelse"
 sidebar_label: "Ch. 4 — Hardwarebeskrivelse"
 sidebar_position: 6
-slug: /hardware-beskrivelse
 ---
 
 # Kapitel 4 — Hardwarebeskrivelse

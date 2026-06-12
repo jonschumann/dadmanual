@@ -1,9 +1,7 @@
 ---
-id: apéndices
 title: "Apéndices"
 sidebar_label: "Apéndices"
 sidebar_position: 13
-slug: /apéndices
 ---
 
 # Apéndices

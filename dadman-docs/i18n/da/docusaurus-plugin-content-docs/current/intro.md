@@ -1,9 +1,7 @@
 ---
-id: Introduktion
 title: Om Denne Manual
 sidebar_label: Om Denne Manual
 sidebar_position: 1
-slug: /
 ---
 
 # DADman Brugermanual

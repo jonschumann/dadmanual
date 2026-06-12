@@ -1,9 +1,7 @@
 ---
-id: ch08-erweiterte Funktionen
 title: "Kapitel 8 — Erweiterte Funktionen"
 sidebar_label: "Ch. 8 — Erweiterte Funktionen"
 sidebar_position: 10
-slug: /fortgeschrittene Funktionen
 ---
 
 # Kapitel 8 — Erweiterte Funktionen
@@ -52,7 +50,7 @@ Ein Monitorprofil ist völlig getrennt von der Einstellungsdatei (`.dms`). Die g
 
 ### 8.1.2 Öffnen des Monitorprofil-Editors
 
-Öffnen Sie den Monitor Profile Editor über **Einstellungen > Monitor Profil** (macOS: **<unk> <unk> M** / Windows: **Strg+Umschalt+M**).
+Öffnen Sie den Monitor Profile Editor über **Einstellungen > Monitor Profil** (macOS: **  M** / Windows: **Strg+Umschalt+M**).
 
 Der Editor hat fünf Tabs: **Quellen**, **Outputs**, **Fold Downs**, **Delay** und **MOM**.
 
@@ -195,7 +193,7 @@ Halte **Alt** (Windows) oder **Option** (macOS) gedrückt, während du den Gewin
 | Aktion                                                            | Mit Alt/Option                               |
 | ----------------------------------------------------------------- | -------------------------------------------- |
 | Maustaste auf Gain Slider ziehen                                  | Nur ausgewählten Kanal anpassen              |
-| <unk> /<unk> Tastatur (Gain Slider ausgewählt) | Nur ausgewählten Kanal anpassen              |
+|  / Tastatur (Gain Slider ausgewählt) | Nur ausgewählten Kanal anpassen              |
 | Klicken Sie auf Gain Value Feld unter Slider                      | Nur ausgewählten Kanal anpassen              |
 | Click Mute                                                        | Nur für den ausgewählten Kanal Mutes/Unmutes |
 
@@ -451,7 +449,7 @@ DADman kann so konfiguriert werden, dass seine Präsenz auf dem macOS-Desktop mi
 
 - Klicken Sie auf das DADman Menüleistensymbol → \*\*Anzeigen \*\*
 - Doppelklicke im Finder auf eine `.dms` oder `.dmprof` Datei
-- Drücke **<unk> <unk> 1**
+- Drücke **  1**
 - DADman erneut von Anwendungen starten
 
 > **HINWEIS:** Nur in der Menüleiste, wenn DADman nach dem Ändern der Einstellung immer noch im Dock erscheint, mit der rechten Maustaste auf das Dock-Symbol → **Optionen > Im Dock** halten und deaktivieren.
@@ -673,11 +671,11 @@ Eine typische Dolby Atmos-Überwachungskette:
 
 ```
 Pro Tools (Atmos session)
-      <unk> (DADLink / MADI / Dante)
+       (DADLink / MADI / Dante)
 Dolby Renderer (e. ., Dolby Atmos Mastering Suite / Renderer)
-      <unk> (Lautsprecherfeeds — bis 9. .6 oder darüber hinaus)
+       (Lautsprecherfeeds — bis 9. .6 oder darüber hinaus)
 DADman Hardware (DA Ausgänge)
-      <unk> (analog)
+       (analog)
 Lautsprecherverstärker und Lautsprecher
 ```
 

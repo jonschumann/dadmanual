@@ -1,9 +1,7 @@
 ---
-id: características avanzadas de ch08-
 title: "Capítulo 8 — Características avanzadas"
 sidebar_label: "Ch. 8 — Características avanzadas"
 sidebar_position: 10
-slug: /advanced-features
 ---
 
 # Capítulo 8 — Características avanzadas

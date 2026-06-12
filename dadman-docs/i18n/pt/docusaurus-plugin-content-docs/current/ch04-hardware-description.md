@@ -1,9 +1,7 @@
 ---
-id: ch04-hardware-description
 title: "Capítulo 4 - Descrição de Hardware"
 sidebar_label: "Cara. 4 - Descrição de Hardware"
 sidebar_position: 6
-slug: /hardware-description
 ---
 
 # Capítulo 4 - Descrição de Hardware

@@ -1,5 +1,4 @@
 ---
-id: ch09-troubleshooting
 title: "Chapter 9 — Troubleshooting"
 sidebar_label: "Ch. 9 — Troubleshooting"
 sidebar_position: 11

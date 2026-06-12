@@ -1,9 +1,7 @@
 ---
-id: ch05-flux de signal
 title: "Chapitre 5 — Flux de signaux et architecture"
 sidebar_label: "Ch. 5 — Flux de signal"
 sidebar_position: 7
-slug: /fr-fr/signal-flow
 ---
 
 # Chapitre 5 — Flux de signaux et architecture
