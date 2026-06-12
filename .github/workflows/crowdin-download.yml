@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: hardware-manuals
 
       - name: Download translations and create PR
         uses: crowdin/github-action@v2

@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: hardware-manuals
 
       - name: Upload sources
         uses: crowdin/github-action@v2
