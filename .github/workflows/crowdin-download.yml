@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: hardware-manuals
+          fetch-depth: 0   # fetch all branches so Crowdin action can access main
 
       - name: Download translations and create PR
         uses: crowdin/github-action@v2
