@@ -2,22 +2,11 @@
 # DADman User Manual — Crowdin Configuration
 # ─────────────────────────────────────────────────────────────────────────────
 #
-# Setup steps (one-time):
-#   1. Create a project at crowdin.com
-#   2. Replace YOUR_PROJECT_ID below with the numeric project ID
-#   3. In Crowdin project settings:
-#      • Add target languages: de, fr, ja, es-MX, ko, da
-#      • Language mapping: map es-MX → "es" (Docusaurus locale code)
-#      • Enable DeepL integration for machine translation pre-fill
-#      • Import this file's Glossary CSV (localization/terminology-glossary.csv)
-#   4. Add CROWDIN_PERSONAL_TOKEN to GitHub repository Secrets
-#   5. Install the Crowdin GitHub App on the repo (crowdin.com/github-integration)
-#
 # How it works:
-#   • Source (English) Markdown files are pulled from GitHub automatically
-#   • Translators work in Crowdin's editor with DeepL-assisted suggestions
-#   • When a translation reaches 100%, Crowdin opens a PR to push i18n/ files
-#   • The standard deploy.yml CI build picks up the new translations
+#   • Source (English) Markdown files are uploaded automatically on push
+#   • Translators work in Crowdin's editor with MT-assisted suggestions
+#   • Download workflow pulls translations and opens a PR against hardware-manuals
+#   • Merging the PR triggers deploy.yml → site rebuilds with translations
 # ─────────────────────────────────────────────────────────────────────────────
 
 project_id_env: CROWDIN_PROJECT_ID
@@ -28,52 +17,49 @@ base_url: "https://api.crowdin.com"
 
 preserve_hierarchy: true
 
-# Explicit mapping → Docusaurus locale directory names (de, fr, ja, es, ko, da).
-# Prevents "shared language code" warnings when Crowdin uses region variants
-# internally (e.g. es-ES and es-MX both map to our single "es" locale).
+# language_mapping overrides what %locale% outputs for each Crowdin language code.
+# This ensures the downloaded translation paths use our exact Docusaurus locale
+# directory names (de, fr, ja, es, ko, da) regardless of how Crowdin stores them
+# internally (e.g. es-ES, es-MX → both written as "es").
 language_mapping:
-  - crowdin_language_code: de
-    custom_code: de
-  - crowdin_language_code: de-AT
-    custom_code: de
-  - crowdin_language_code: de-CH
-    custom_code: de
-  - crowdin_language_code: fr
-    custom_code: fr
-  - crowdin_language_code: fr-CA
-    custom_code: fr
-  - crowdin_language_code: fr-CH
-    custom_code: fr
-  - crowdin_language_code: ja
-    custom_code: ja
-  - crowdin_language_code: es-ES
-    custom_code: es
-  - crowdin_language_code: es-MX
-    custom_code: es
-  - crowdin_language_code: ko
-    custom_code: ko
-  - crowdin_language_code: da
-    custom_code: da
+  de:
+    locale: de
+  de-AT:
+    locale: de
+  de-CH:
+    locale: de
+  fr:
+    locale: fr
+  fr-CA:
+    locale: fr
+  fr-CH:
+    locale: fr
+  ja:
+    locale: ja
+  es-ES:
+    locale: es
+  es-MX:
+    locale: es
+  ko:
+    locale: ko
+  da:
+    locale: da
 
 files:
   # ── Documentation content ────────────────────────────────────────────────
   # Source Markdown in docs/ maps to i18n/<locale>/docusaurus-plugin-content-docs/
-  # %custom_code% resolves to the explicit codes in language_mapping above,
-  # matching the Docusaurus locale directory names exactly.
+  # %locale% resolves using the language_mapping overrides above.
   - source: /docs/**/*.md
-    translation: /i18n/%custom_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
+    translation: /i18n/%locale%/docusaurus-plugin-content-docs/current/**/%original_file_name%
     excluded_target_languages:
       - en  # English is the source; do not write back to docs/
 
   # ── Docusaurus UI strings ────────────────────────────────────────────────
-  # Run `npm run write-translations -- --locale en` once to generate these
-  # source JSON files, then add them to git before configuring Crowdin.
-
   - source: /i18n/en/docusaurus-theme-classic/navbar.json
-    translation: /i18n/%custom_code%/docusaurus-theme-classic/navbar.json
+    translation: /i18n/%locale%/docusaurus-theme-classic/navbar.json
 
   - source: /i18n/en/docusaurus-theme-classic/footer.json
-    translation: /i18n/%custom_code%/docusaurus-theme-classic/footer.json
+    translation: /i18n/%locale%/docusaurus-theme-classic/footer.json
 
   - source: /i18n/en/docusaurus-plugin-content-docs/current.json
-    translation: /i18n/%custom_code%/docusaurus-plugin-content-docs/current.json
+    translation: /i18n/%locale%/docusaurus-plugin-content-docs/current.json
