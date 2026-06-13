@@ -4,7 +4,10 @@
 #   1. Open Dockge → http://10.10.1.24:5001
 #   2. Click the dadman-docs stack → Edit → paste this file → Deploy
 #
-#   Before deploying, create the env file via SSH:
+#   Source configs live at: /mnt/flash/configs/dadman-docs/
+#   Dockge runs the stack from: /mnt/.ix-apps/app_mounts/dockge/stacks/dadman-docs/
+#
+#   Before deploying, create the env file in the Dockge working directory:
 #     ssh root@10.10.1.24
 #     nano /mnt/.ix-apps/app_mounts/dockge/stacks/dadman-docs/corrections-dashboard.env
 #     (fill in GITHUB_TOKEN and ANTHROPIC_API_KEY, then save)
