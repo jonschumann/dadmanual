@@ -501,8 +501,8 @@ The strip displays one section per Thunder\|Core unit with routing presets confi
 | **File > Close Profile** | ⌥⌘W | Ctrl+Alt+W |
 | Open / activate main window | ⌘⇧1 | — |
 | Open Device List | ⌘⇧L | Ctrl+Shift+L |
-| Open Monitor Profile | ⌘⇧M | *TBC* |
-| Open Routing Presets *(ControlPack firmware required)* | ⌘⇧R | Ctrl+Shift+M |
+| Open Monitor Profile | ⌘⇧M | Ctrl+Shift+M |
+| Open Routing Presets *(ControlPack firmware required)* | ⌘⇧R | Ctrl+Shift+R |
 | Open Settings / Options | ⌘, | Ctrl+, |
 
 > **NOTE:** These shortcuts were introduced in DADman v5.7.0. Earlier versions do not support keyboard shortcuts for file and window operations. The Routing Presets shortcut requires the firmware version that introduced Control\|Pack.
