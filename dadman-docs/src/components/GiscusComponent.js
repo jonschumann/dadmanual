@@ -20,7 +20,7 @@ const GISCUS_CONFIG = {
   repo: 'jonschumann/dadmanual',
   repoId: 'R_kgDOS13crw',
   category: 'General',
-  categoryId: 'CATEGORY_ID_PLACEHOLDER',
+  categoryId: 'DIC_kwDOS13cr84C_EiM',
   mapping: 'pathname',       // each page gets its own discussion thread
   strict: '0',
   reactionsEnabled: '1',
