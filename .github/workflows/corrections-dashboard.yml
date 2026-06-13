@@ -1,0 +1,32 @@
+name: Build & push corrections-dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dadman-docs/tools/corrections-dashboard/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_PAT }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: dadman-docs/tools/corrections-dashboard
+          push: true
+          tags: ghcr.io/jonschumann/corrections-dashboard:latest
