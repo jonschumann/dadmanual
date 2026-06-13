@@ -2,13 +2,12 @@
 #
 # Deploy instructions:
 #   1. Open Dockge → http://10.10.1.24:5001
-#   2. Click "+ Compose" → name the stack "dadman-docs"
-#   3. Paste this file content and click Deploy
-#      OR via SSH: ssh root@10.10.1.24
-#        mkdir -p /mnt/flash/configs/dadman-docs
-#        cd /mnt/flash/configs/dadman-docs
-#        cp corrections-dashboard.env.example corrections-dashboard.env  # then fill in secrets
-#        docker compose up -d
+#   2. Click the dadman-docs stack → Edit → paste this file → Deploy
+#
+#   Before deploying, create the env file via SSH:
+#     ssh root@10.10.1.24
+#     nano /mnt/.ix-apps/app_mounts/dockge/stacks/dadman-docs/corrections-dashboard.env
+#     (fill in GITHUB_TOKEN and ANTHROPIC_API_KEY, then save)
 #
 # Cloudflare Tunnel routing:
 #   In Zero Trust → Networks → Tunnels → your tunnel → Public Hostnames:
