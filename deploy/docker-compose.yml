@@ -12,8 +12,8 @@
 #
 # Cloudflare Tunnel routing:
 #   In Zero Trust → Networks → Tunnels → your tunnel → Public Hostnames:
-#     docs        → HTTP  localhost:8095   (docs site)
-#     corrections → HTTP  localhost:3001   (corrections dashboard)
+#     docs        → HTTP  10.10.1.24:8095   (docs site)
+#     corrections → HTTP  10.10.1.24:3001   (corrections dashboard)
 #
 # Before first deploy:
 #   Create corrections-dashboard.env from .env.example and fill in:
