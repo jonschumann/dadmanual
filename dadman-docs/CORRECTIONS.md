@@ -22,7 +22,7 @@ Add a new entry under **Open Corrections** using the template below. You can als
 
 ## Open Corrections
 
-*No open corrections yet. Add entries here as errors are found.*
+*No open corrections.*
 
 ---
 
@@ -30,4 +30,5 @@ Add a new entry under **Open Corrections** using the template below. You can als
 
 | Date fixed | Product | Section | Summary |
 |------------|---------|---------|---------|
-| — | — | — | — |
+| 2026-06-13 | DADman software | §7.6.2 Making and Removing Connections (`docs/ch07-operation.md`) | Ctrl/Cmd+click on an *active* crosspoint unpatches from that point onwards — missing from both §7.6.2 and §7.10.2 tables. Source: Giscus comment on `/operation` page. |
+| 2026-06-13 | DADman software | §7.10.3 Keyboard Shortcuts (`docs/ch07-operation.md`) | Routing Presets shortcut (⌘⇧R / Ctrl+Shift+M) was unlisted; Ctrl+Shift+M was incorrectly assigned to "Open Monitor Profile" on Windows. Windows shortcut for Monitor Profile marked TBC. ControlPack firmware requirement noted. Source: Giscus comment on `/operation` page. |

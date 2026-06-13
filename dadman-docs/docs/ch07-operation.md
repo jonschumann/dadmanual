@@ -310,7 +310,8 @@ In both panels, **inputs are displayed as rows on the left** and **outputs are d
 |--------|--------|
 | **Single click** on a crosspoint | Connects that input to that output (or disconnects if already connected) |
 | **Shift + click** on a crosspoint | Connects the clicked channel and the next consecutive channel simultaneously (one stereo pair) |
-| **Ctrl / Cmd + click** on a crosspoint | Connects a complete diagonal — maps inputs to their same-numbered outputs from the clicked point |
+| **Ctrl / Cmd + click** on an *inactive* crosspoint | Connects a complete diagonal — maps inputs to their same-numbered outputs from the clicked point onwards |
+| **Ctrl / Cmd + click** on an *active* crosspoint | Unpatches that crosspoint and all subsequent crosspoints in the diagonal |
 
 A connected crosspoint is shown as a **filled blue square**.
 
@@ -483,7 +484,8 @@ The strip displays one section per Thunder\|Core unit with routing presets confi
 |--------|--------|
 | Single click on crosspoint | Connect / disconnect |
 | **Shift** + click | Connect two consecutive channels (one stereo pair) |
-| **Ctrl / Cmd** + click | Connect a complete diagonal (same-numbered I/O from this point) |
+| **Ctrl / Cmd** + click on an *inactive* crosspoint | Connect a complete diagonal — same-numbered I/O from this point onwards |
+| **Ctrl / Cmd** + click on an *active* crosspoint | Unpatch that crosspoint and all subsequent ones in the diagonal |
 
 ### 7.10.3 Keyboard Shortcuts *(v5.7.0 and later)*
 
@@ -499,10 +501,11 @@ The strip displays one section per Thunder\|Core unit with routing presets confi
 | **File > Close Profile** | ⌥⌘W | Ctrl+Alt+W |
 | Open / activate main window | ⌘⇧1 | — |
 | Open Device List | ⌘⇧L | Ctrl+Shift+L |
-| Open Monitor Profile | ⌘⇧M | Ctrl+Shift+M |
+| Open Monitor Profile | ⌘⇧M | *TBC* |
+| Open Routing Presets *(ControlPack firmware required)* | ⌘⇧R | Ctrl+Shift+M |
 | Open Settings / Options | ⌘, | Ctrl+, |
 
-> **NOTE:** These shortcuts were introduced in DADman v5.7.0. Earlier versions do not support keyboard shortcuts for file and window operations.
+> **NOTE:** These shortcuts were introduced in DADman v5.7.0. Earlier versions do not support keyboard shortcuts for file and window operations. The Routing Presets shortcut requires the firmware version that introduced Control\|Pack.
 
 ---
 
