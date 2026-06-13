@@ -31,6 +31,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/operation` page
 - **Found:** 2026-06-13
 
+### DADman §7.6.2 — Clarify Ctrl/Cmd+click behavior on activated crosspoints
+- **File:** `docs/ch07-operation.md`
+- **Section:** §7.6.2
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Ctrl/Cmd+click on an activated crosspoint unpatches that point and all following points
+- **Original comment:** Reg #7.6.2 - if Ctrl/Cmd+click is on an activated crosspoint, that point and all that follow will be unpatched.
+- **Source:** Giscus comment on `/operation` page
+- **Found:** 2026-06-13
+
 ---
 
 ## Fixed Corrections
