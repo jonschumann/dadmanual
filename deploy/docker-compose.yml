@@ -15,7 +15,7 @@
 # Cloudflare Tunnel routing:
 #   In Zero Trust → Networks → Tunnels → your tunnel → Public Hostnames:
 #     docs        → HTTP  10.10.1.24:8095   (docs site)
-#     corrections → HTTP  10.10.1.24:3001   (corrections dashboard)
+#     corrections → HTTP  10.10.1.24:3002   (corrections dashboard)
 #
 # Before first deploy:
 #   Create corrections-dashboard.env from .env.example and fill in:
@@ -39,7 +39,7 @@ services:
     container_name: corrections-dashboard
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "3002:3001"
     env_file:
       - corrections-dashboard.env
     volumes:
