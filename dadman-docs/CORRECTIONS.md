@@ -40,6 +40,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/operation` page
 - **Found:** 2026-06-13
 
+### DADman §7.10.3 — Add keyboard shortcut for Routing Presets with firmware requirement note.
+- **File:** `docs/ch07-operation.md`
+- **Section:** §7.10.3
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Routing Presets keyboard shortcut: ⌘⇧R (Mac) / Ctrl+Shift+R (Win). Requires firmware with ControlPack.
+- **Original comment:** Reg #7.10.3 - The keyboard shortcut for Routing Presets is ⌘⇧R (Mac) and Ctrl+Shift+M (Win) (Requires the firmware that introduced ControlPack.)
+- **Source:** Giscus comment on `/operation` page
+- **Found:** 2026-06-13
+
 ---
 
 ## Fixed Corrections
