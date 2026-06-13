@@ -22,7 +22,14 @@ Add a new entry under **Open Corrections** using the template below. You can als
 
 ## Open Corrections
 
-*No open corrections.*
+### DADman — — Correct keyboard shortcut for Win: Ctrl+Shift+R instead of another key
+- **File:** `docs/ch07-operation.md`
+- **Section:** —
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Ctrl+Shift+R (Win) for the referenced function; Monitor Profiles remain Ctrl+Shift+M (Win)
+- **Original comment:** No. Typo - It's Ctrl+Shift+R (Win), Monitor Profiles are still Ctrl+Shift+M (Win)
+- **Source:** Giscus comment on `/operation` page
+- **Found:** 2026-06-13
 
 ---
 
