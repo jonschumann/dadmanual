@@ -4,7 +4,7 @@
   "collapsible": true,
   "collapsed": true,
   "link": {
-    "type": "generated-index",
-    "description": "Hardware manual for the Digital Audio Denmark AX32."
+    "type": "doc",
+    "id": "hardware/ax32/index"
   }
 }

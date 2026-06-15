@@ -4,7 +4,7 @@
   "collapsible": true,
   "collapsed": true,
   "link": {
-    "type": "generated-index",
-    "description": "Hardware manual for the Digital Audio Denmark MOM."
+    "type": "doc",
+    "id": "hardware/mom/index"
   }
 }
