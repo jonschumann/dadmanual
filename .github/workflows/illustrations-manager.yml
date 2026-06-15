@@ -2,7 +2,7 @@ name: Build & push illustrations-manager
 
 on:
   push:
-    branches: [main]
+    branches: [main, hardware-manuals]
     paths:
       - 'dadman-docs/tools/illustrations-manager/**'
   workflow_dispatch:
