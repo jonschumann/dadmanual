@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Illustrations Manager — DADman Manual</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f1117;
+      --surface:   #1a1d27;
+      --surface2:  #242736;
+      --border:    #2e3148;
+      --accent:    #5b8af5;
+      --accent-dim:#3a5cbf;
+      --success:   #34c77b;
+      --warning:   #f5a623;
+      --danger:    #e05252;
+      --text:      #dde1f0;
+      --text-dim:  #7b82a0;
+      --tag-blue:  #1e3a6e;
+      --tag-blue-t:#5b8af5;
+      --tag-green: #1a4434;
+      --tag-green-t:#34c77b;
+      --tag-orange:#4a3010;
+      --tag-orange-t:#f5a623;
+      --radius:    8px;
+      --font:      -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono:      'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 14px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    h1 { font-size: 16px; font-weight: 600; }
+    h1 span { color: var(--text-dim); font-weight: 400; }
+
+    .header-right { display: flex; align-items: center; gap: 10px; }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--text-dim);
+    }
+    .status-dot.ok { background: var(--success); }
+    .status-dot.err { background: var(--danger); }
+    #status-text { color: var(--text-dim); font-size: 12px; }
+
+    /* ── Tabs ── */
+    .tabs {
+      display: flex;
+      gap: 2px;
+      padding: 16px 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .tab {
+      padding: 8px 18px;
+      border-radius: var(--radius) var(--radius) 0 0;
+      cursor: pointer;
+      color: var(--text-dim);
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      border-bottom: none;
+      background: transparent;
+      transition: color 0.15s, background 0.15s;
+      user-select: none;
+    }
+    .tab:hover { color: var(--text); background: var(--surface2); }
+    .tab.active {
+      color: var(--text);
+      background: var(--surface);
+      border-color: var(--border);
+      border-bottom-color: var(--surface);
+      margin-bottom: -1px;
+    }
+    .tab .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 18px; height: 18px;
+      border-radius: 9px;
+      background: var(--surface2);
+      color: var(--text-dim);
+      font-size: 11px;
+      padding: 0 5px;
+      margin-left: 6px;
+    }
+    .tab.active .badge { background: var(--accent-dim); color: #fff; }
+
+    /* ── Main content ── */
+    .content { padding: 20px 24px; max-width: 1100px; }
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    /* ── Toolbar row ── */
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .btn:hover { background: var(--surface); border-color: var(--accent); }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn.primary:hover { background: var(--accent-dim); border-color: var(--accent-dim); }
+    .spinner { display: none; }
+    .btn.loading .spinner { display: inline-block; }
+    .btn.loading .btn-label { display: none; }
+
+    .scan-note { color: var(--text-dim); font-size: 12px; }
+
+    /* ── Section header ── */
+    .section-header {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      padding: 12px 0 6px;
+      border-top: 1px solid var(--border);
+      margin-top: 12px;
+    }
+    .section-header:first-child { border-top: none; margin-top: 0; }
+
+    /* ── Illustration item card ── */
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+      background: var(--surface);
+      transition: border-color 0.15s;
+    }
+    .item.done { opacity: 0.5; }
+    .item.done .filename { text-decoration: line-through; }
+
+    .item-info { flex: 1; min-width: 0; }
+    .filename {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      background: var(--tag-blue);
+      padding: 2px 7px;
+      border-radius: 4px;
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 4px;
+    }
+    .item-desc { color: var(--text); font-size: 13px; }
+    .item-refs {
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .ref-tag {
+      font-size: 11px;
+      color: var(--text-dim);
+      background: var(--surface2);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-family: var(--mono);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
+    .section-tag {
+      font-size: 11px;
+      color: var(--tag-orange-t);
+      background: var(--tag-orange);
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-top: 4px;
+      display: inline-block;
+    }
+    .added-tag {
+      font-size: 11px;
+      color: var(--success);
+      margin-top: 4px;
+      display: inline-block;
+    }
+
+    /* ── Drop zone ── */
+    .drop-zone {
+      flex-shrink: 0;
+      width: 140px;
+      min-height: 60px;
+      border: 1.5px dashed var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 8px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      text-align: center;
+      position: relative;
+    }
+    .drop-zone:hover,
+    .drop-zone.drag-over {
+      border-color: var(--accent);
+      background: rgba(91, 138, 245, 0.08);
+    }
+    .drop-zone.uploading {
+      border-color: var(--warning);
+      background: rgba(245, 166, 35, 0.08);
+    }
+    .drop-zone.upload-ok {
+      border-color: var(--success);
+      background: rgba(52, 199, 123, 0.08);
+    }
+    .drop-zone.upload-err {
+      border-color: var(--danger);
+      background: rgba(224, 82, 82, 0.08);
+    }
+    .drop-icon { font-size: 20px; }
+    .drop-label { font-size: 11px; color: var(--text-dim); line-height: 1.3; }
+    .drop-zone input[type=file] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+    }
+
+    /* ── Custom upload panel ── */
+    .custom-upload {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: var(--surface);
+      margin-bottom: 20px;
+    }
+    .custom-upload h3 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .upload-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+    .field { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 180px; }
+    .field label { font-size: 12px; color: var(--text-dim); }
+    .field input[type=text] {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      padding: 7px 10px;
+      font-size: 13px;
+      font-family: var(--mono);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .field input[type=text]:focus { border-color: var(--accent); }
+
+    .drop-target-large {
+      flex: 2; min-width: 200px;
+      height: 70px;
+      border: 1.5px dashed var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: border-color 0.15s, background 0.15s;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    .drop-target-large:hover,
+    .drop-target-large.drag-over {
+      border-color: var(--accent);
+      background: rgba(91, 138, 245, 0.08);
+      color: var(--text);
+    }
+    .drop-target-large.uploading { border-color: var(--warning); }
+    .drop-target-large.upload-ok { border-color: var(--success); }
+    .drop-target-large input[type=file] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+    }
+
+    /* ── Empty states ── */
+    .empty {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--text-dim);
+    }
+    .empty .icon { font-size: 36px; margin-bottom: 10px; }
+    .empty h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+
+    /* ── Add planned form ── */
+    .add-form {
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-top: 16px;
+    }
+    .add-form h3 {
+      font-size: 13px; font-weight: 600; margin-bottom: 12px; color: var(--text-dim);
+    }
+    .add-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    /* ── Toast ── */
+    #toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .toast {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      font-size: 13px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      animation: slide-in 0.2s ease;
+      max-width: 340px;
+    }
+    .toast.success { border-left: 3px solid var(--success); }
+    .toast.error   { border-left: 3px solid var(--danger); }
+    .toast.info    { border-left: 3px solid var(--accent); }
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Loading skeleton ── */
+    .skeleton {
+      background: linear-gradient(90deg, var(--surface) 25%, var(--surface2) 50%, var(--surface) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: var(--radius);
+      height: 60px;
+      margin-bottom: 8px;
+    }
+    @keyframes shimmer {
+      from { background-position: 200% 0; }
+      to   { background-position: -200% 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo">🖼</div>
+    <h1>Illustrations Manager <span>— DADman Manual</span></h1>
+  </div>
+  <div class="header-right">
+    <div class="status-dot" id="status-dot"></div>
+    <span id="status-text">Connecting…</span>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" data-tab="missing" onclick="switchTab('missing')">
+    Missing References <span class="badge" id="badge-missing">…</span>
+  </div>
+  <div class="tab" data-tab="planned" onclick="switchTab('planned')">
+    Planned Illustrations <span class="badge" id="badge-planned">…</span>
+  </div>
+  <div class="tab" data-tab="upload" onclick="switchTab('upload')">
+    Upload
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- ── Missing References Panel ── -->
+  <div class="panel active" id="panel-missing">
+    <div class="toolbar">
+      <button class="btn primary" id="btn-scan" onclick="scanMissing(false)">
+        <span class="spinner">⟳</span>
+        <span class="btn-label">🔍 Scan Repo</span>
+      </button>
+      <button class="btn" id="btn-refresh" onclick="scanMissing(true)">
+        ↺ Force Refresh
+      </button>
+      <span class="scan-note" id="scan-note"></span>
+    </div>
+    <div id="missing-list">
+      <div class="empty">
+        <div class="icon">🔍</div>
+        <h3>Ready to scan</h3>
+        <p>Click "Scan Repo" to check which image files are referenced in the manual but missing from static/img/.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Planned Illustrations Panel ── -->
+  <div class="panel" id="panel-planned">
+    <div class="toolbar">
+      <button class="btn" onclick="loadPlanned()">↺ Refresh</button>
+      <span class="scan-note">From <code>ILLUSTRATIONS.md</code> in the repo</span>
+    </div>
+    <div id="planned-list">
+      <div class="skeleton"></div>
+      <div class="skeleton" style="height:50px"></div>
+      <div class="skeleton" style="height:70px"></div>
+    </div>
+
+    <div class="add-form">
+      <h3>➕ Add a Planned Illustration</h3>
+      <div class="add-row">
+        <div class="field" style="flex:1.5">
+          <label>Filename (use naming convention)</label>
+          <input type="text" id="add-filename" placeholder="ch07-routing-matrix.png" />
+        </div>
+        <div class="field" style="flex:3">
+          <label>Description</label>
+          <input type="text" id="add-desc" placeholder="Routing matrix with an active multi-source patch" />
+        </div>
+        <button class="btn primary" onclick="addPlanned()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Upload Panel ── -->
+  <div class="panel" id="panel-upload">
+    <div class="custom-upload">
+      <h3>Upload an image to static/img/</h3>
+      <p style="color:var(--text-dim);font-size:12px;margin-bottom:14px;">
+        Use the naming convention: <code style="color:var(--accent)">ch{01–10}-descriptor.ext</code>
+        for software chapters, <code style="color:var(--accent)">hw-{device}-descriptor.ext</code>
+        for hardware, <code style="color:var(--accent)">app-{a–h}-descriptor.ext</code> for appendices.
+        The file will be committed to the repo and CI will rebuild the docs site.
+      </p>
+      <div class="upload-row">
+        <div class="field">
+          <label>Target filename in static/img/</label>
+          <input type="text" id="custom-filename" placeholder="ch07-routing-matrix.png" />
+        </div>
+        <div class="field" style="flex:0;min-width:0">
+          <label>Mark planned item done</label>
+          <label style="display:flex;align-items:center;gap:6px;padding-top:9px;cursor:pointer;">
+            <input type="checkbox" id="custom-mark-done" checked />
+            <span style="font-size:12px;color:var(--text-dim)">Yes</span>
+          </label>
+        </div>
+        <div class="drop-target-large" id="custom-drop"
+             ondragover="onDragOver(event,'custom-drop')"
+             ondragleave="onDragLeave('custom-drop')"
+             ondrop="onDropCustom(event)">
+          📂 Drop image here or click to browse
+          <input type="file" id="custom-file-input" accept="image/*"
+                 onchange="onFilePickedCustom(this)" />
+        </div>
+        <button class="btn primary" onclick="uploadCustom()">Upload</button>
+      </div>
+      <div id="custom-status" style="margin-top:10px;font-size:12px;color:var(--text-dim)"></div>
+    </div>
+
+    <div style="color:var(--text-dim);font-size:13px;line-height:1.8;border:1px solid var(--border);border-radius:var(--radius);padding:16px;background:var(--surface)">
+      <strong style="color:var(--text);display:block;margin-bottom:8px;">📐 Naming Convention</strong>
+      <code style="color:var(--accent)">ch{N}-{descriptor}.{ext}</code> — Software manual chapters (ch01–ch10)<br>
+      &nbsp;&nbsp;e.g. <code>ch05-signal-flow-overview.png</code>, <code>ch07-routing-matrix.png</code><br><br>
+      <code style="color:var(--accent)">hw-{device}-{descriptor}.{ext}</code> — Hardware manuals<br>
+      &nbsp;&nbsp;e.g. <code>hw-ax64-rear-connections.jpg</code>, <code>hw-ax-center-block-diagram.png</code><br><br>
+      <code style="color:var(--accent)">app-{letter}-{descriptor}.{ext}</code> — Appendices<br>
+      &nbsp;&nbsp;e.g. <code>app-b-signal-flow-block.png</code><br><br>
+      <strong style="color:var(--text)">Supported formats:</strong> JPG, PNG, GIF, WebP, SVG, AVIF<br>
+      <strong style="color:var(--text)">Branch:</strong> <span id="branch-label">hardware-manuals</span>
+    </div>
+  </div>
+
+</div><!-- /content -->
+
+<div id="toast-container"></div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let pendingCustomFile = null;
+let currentTab = 'missing';
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+function toast(msg, type = 'info', duration = 4000) {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.textContent = msg;
+  document.getElementById('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), duration);
+}
+
+// ── Tab switching ─────────────────────────────────────────────────────────────
+function switchTab(name) {
+  currentTab = name;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === `panel-${name}`));
+  if (name === 'planned' && document.getElementById('planned-list').children.length <= 3) {
+    loadPlanned();
+  }
+}
+
+// ── Status check ──────────────────────────────────────────────────────────────
+async function checkStatus() {
+  try {
+    const r = await fetch('/api/status');
+    const s = await r.json();
+    const dot = document.getElementById('status-dot');
+    const txt = document.getElementById('status-text');
+    if (s.githubConfigured) {
+      dot.className = 'status-dot ok';
+      txt.textContent = `${s.owner}/${s.repo} @ ${s.branch}`;
+      document.getElementById('branch-label').textContent = s.branch;
+    } else {
+      dot.className = 'status-dot err';
+      txt.textContent = 'GITHUB_TOKEN not set';
+    }
+  } catch {
+    document.getElementById('status-dot').className = 'status-dot err';
+    document.getElementById('status-text').textContent = 'Server unreachable';
+  }
+}
+
+// ── Missing References ────────────────────────────────────────────────────────
+async function scanMissing(forceRefresh = false) {
+  const btn = document.getElementById('btn-scan');
+  const note = document.getElementById('scan-note');
+  btn.classList.add('loading');
+  btn.disabled = true;
+  note.textContent = 'Scanning repo… this may take 20–30 seconds';
+
+  try {
+    const url = '/api/missing' + (forceRefresh ? '?refresh=1' : '');
+    const r = await fetch(url);
+    const result = await r.json();
+    if (result.error) { toast(result.error, 'error'); return; }
+
+    const { data, cached, age, scanning } = result;
+
+    if (scanning && !data.length) {
+      note.textContent = 'Scan in progress — try again in a moment';
+      return;
+    }
+
+    note.textContent = cached
+      ? `Cached result (${age}s old) — click ↺ Force Refresh to re-scan`
+      : `Scan complete · ${data.length} missing`;
+
+    document.getElementById('badge-missing').textContent = data.length;
+    renderMissingList(data);
+  } catch (e) {
+    toast('Scan failed: ' + e.message, 'error');
+  } finally {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+  }
+}
+
+function renderMissingList(items) {
+  const el = document.getElementById('missing-list');
+  if (!items.length) {
+    el.innerHTML = `<div class="empty">
+      <div class="icon">✅</div>
+      <h3>All image references are satisfied</h3>
+      <p>Every <code>![...](/img/...)</code> reference in the docs has a matching file in static/img/.</p>
+    </div>`;
+    return;
+  }
+
+  el.innerHTML = items.map(item => `
+    <div class="item" id="item-missing-${CSS.escape(item.filename)}">
+      <div class="item-info">
+        <div class="filename">${esc(item.filename)}</div>
+        <div class="item-refs">
+          ${item.refs.map(r => `<span class="ref-tag" title="${esc(r.file)}">${esc(shortPath(r.file))}${r.alt ? ' · ' + esc(r.alt) : ''}</span>`).join('')}
+        </div>
+      </div>
+      <div class="drop-zone" id="dz-missing-${CSS.escape(item.filename)}"
+           ondragover="onDragOver(event,'dz-missing-${CSS.escape(item.filename)}')"
+           ondragleave="onDragLeave('dz-missing-${CSS.escape(item.filename)}')"
+           ondrop="onDropItem(event,'${esc(item.filename)}','dz-missing-${CSS.escape(item.filename)}')">
+        <div class="drop-icon">📂</div>
+        <div class="drop-label">Drop or click<br>to upload</div>
+        <input type="file" accept="image/*"
+               onchange="onFilePicked(this,'${esc(item.filename)}','dz-missing-${CSS.escape(item.filename)}')" />
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── Planned Illustrations ─────────────────────────────────────────────────────
+async function loadPlanned() {
+  const el = document.getElementById('planned-list');
+  el.innerHTML = '<div class="skeleton"></div><div class="skeleton" style="height:50px"></div>';
+
+  try {
+    const r = await fetch('/api/planned');
+    const items = await r.json();
+    if (items.error) { toast(items.error, 'error'); return; }
+    document.getElementById('badge-planned').textContent = items.filter(i => !i.done).length;
+    renderPlannedList(items);
+  } catch (e) {
+    toast('Failed to load planned: ' + e.message, 'error');
+  }
+}
+
+function renderPlannedList(items) {
+  const el = document.getElementById('planned-list');
+  if (!items.length) {
+    el.innerHTML = `<div class="empty">
+      <div class="icon">📋</div>
+      <h3>No planned illustrations yet</h3>
+      <p>Use the form below to add illustrations you plan to create.</p>
+    </div>`;
+    return;
+  }
+
+  // Group by section
+  const bySect = {};
+  for (const item of items) {
+    const s = item.section || 'General';
+    if (!bySect[s]) bySect[s] = [];
+    bySect[s].push(item);
+  }
+
+  let html = '';
+  for (const [section, sectItems] of Object.entries(bySect)) {
+    html += `<div class="section-header">${esc(section)}</div>`;
+    for (const item of sectItems) {
+      const dzId = `dz-planned-${CSS.escape(item.filename)}`;
+      html += `
+        <div class="item ${item.done ? 'done' : ''}" id="item-planned-${CSS.escape(item.filename)}">
+          <div class="item-info">
+            <div class="filename">${esc(item.filename)}</div>
+            <div class="item-desc">${esc(item.description)}</div>
+            ${item.done
+              ? `<div class="added-tag">✅ Added ${item.addedDate || ''}</div>`
+              : ''}
+          </div>
+          ${!item.done ? `
+          <div class="drop-zone" id="${dzId}"
+               ondragover="onDragOver(event,'${dzId}')"
+               ondragleave="onDragLeave('${dzId}')"
+               ondrop="onDropItem(event,'${esc(item.filename)}','${dzId}')">
+            <div class="drop-icon">📂</div>
+            <div class="drop-label">Drop or click<br>to upload</div>
+            <input type="file" accept="image/*"
+                   onchange="onFilePicked(this,'${esc(item.filename)}','${dzId}')" />
+          </div>` : ''}
+        </div>`;
+    }
+  }
+  el.innerHTML = html;
+}
+
+async function addPlanned() {
+  const filename = document.getElementById('add-filename').value.trim();
+  const description = document.getElementById('add-desc').value.trim();
+  if (!filename || !description) { toast('Enter filename and description', 'error'); return; }
+
+  try {
+    const r = await fetch('/api/planned/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename, description }),
+    });
+    const data = await r.json();
+    if (data.error) throw new Error(data.error);
+    document.getElementById('add-filename').value = '';
+    document.getElementById('add-desc').value = '';
+    toast(`Added ${filename} to ILLUSTRATIONS.md`, 'success');
+    await loadPlanned();
+  } catch (e) {
+    toast('Failed: ' + e.message, 'error');
+  }
+}
+
+// ── Drag & Drop ───────────────────────────────────────────────────────────────
+function onDragOver(e, dzId) {
+  e.preventDefault();
+  document.getElementById(dzId)?.classList.add('drag-over');
+}
+function onDragLeave(dzId) {
+  document.getElementById(dzId)?.classList.remove('drag-over');
+}
+
+function onDropItem(e, filename, dzId) {
+  e.preventDefault();
+  const dz = document.getElementById(dzId);
+  dz?.classList.remove('drag-over');
+  const file = e.dataTransfer?.files?.[0];
+  if (!file) return;
+  uploadFile(file, filename, dzId);
+}
+
+function onFilePicked(input, filename, dzId) {
+  const file = input.files?.[0];
+  if (!file) return;
+  uploadFile(file, filename, dzId);
+}
+
+// ── Custom upload ─────────────────────────────────────────────────────────────
+function onDropCustom(e) {
+  e.preventDefault();
+  document.getElementById('custom-drop').classList.remove('drag-over');
+  const file = e.dataTransfer?.files?.[0];
+  if (!file) return;
+  pendingCustomFile = file;
+  document.getElementById('custom-status').textContent = `📎 Ready: ${file.name} (${formatSize(file.size)})`;
+  // Auto-fill filename if empty
+  if (!document.getElementById('custom-filename').value) {
+    document.getElementById('custom-filename').value = file.name;
+  }
+}
+
+function onFilePickedCustom(input) {
+  const file = input.files?.[0];
+  if (!file) return;
+  pendingCustomFile = file;
+  document.getElementById('custom-status').textContent = `📎 Ready: ${file.name} (${formatSize(file.size)})`;
+  if (!document.getElementById('custom-filename').value) {
+    document.getElementById('custom-filename').value = file.name;
+  }
+}
+
+async function uploadCustom() {
+  const filename = document.getElementById('custom-filename').value.trim();
+  const markDone = document.getElementById('custom-mark-done').checked;
+  if (!pendingCustomFile) { toast('Drop or pick a file first', 'error'); return; }
+  if (!filename) { toast('Enter a target filename', 'error'); return; }
+
+  const dz = document.getElementById('custom-drop');
+  dz.classList.add('uploading');
+  document.getElementById('custom-status').textContent = 'Uploading…';
+
+  try {
+    await uploadFile(pendingCustomFile, filename, 'custom-drop', markDone);
+    document.getElementById('custom-filename').value = '';
+    document.getElementById('custom-status').textContent = `✅ ${filename} committed to repo`;
+    pendingCustomFile = null;
+  } catch {
+    document.getElementById('custom-status').textContent = `❌ Upload failed`;
+    dz.classList.remove('uploading');
+    dz.classList.add('upload-err');
+    setTimeout(() => dz.classList.remove('upload-err'), 3000);
+  }
+}
+
+// ── Core upload function ──────────────────────────────────────────────────────
+async function uploadFile(file, targetFilename, dzId, markDone = true) {
+  const dz = document.getElementById(dzId);
+  if (dz) {
+    dz.classList.remove('drag-over', 'upload-ok', 'upload-err');
+    dz.classList.add('uploading');
+    dz.querySelector('.drop-label').textContent = 'Uploading…';
+  }
+
+  try {
+    const base64 = await fileToBase64(file);
+
+    const r = await fetch('/api/upload', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename: targetFilename, content: base64, markDone }),
+    });
+    const data = await r.json();
+    if (data.error) throw new Error(data.error);
+
+    if (dz) {
+      dz.classList.remove('uploading');
+      dz.classList.add('upload-ok');
+      dz.querySelector('.drop-icon').textContent = '✅';
+      dz.querySelector('.drop-label').textContent = 'Uploaded!';
+    }
+
+    toast(`✅ ${targetFilename} committed to repo`, 'success', 5000);
+
+    // Mark the parent item as done visually
+    const item = document.getElementById(`item-missing-${CSS.escape(targetFilename)}`)
+               || document.getElementById(`item-planned-${CSS.escape(targetFilename)}`);
+    if (item) {
+      item.classList.add('done');
+      item.style.opacity = '0.5';
+    }
+  } catch (e) {
+    if (dz) {
+      dz.classList.remove('uploading');
+      dz.classList.add('upload-err');
+      dz.querySelector('.drop-icon').textContent = '❌';
+      dz.querySelector('.drop-label').textContent = 'Failed';
+      setTimeout(() => {
+        dz.classList.remove('upload-err');
+        dz.querySelector('.drop-icon').textContent = '📂';
+        dz.querySelector('.drop-label').textContent = 'Drop or click\nto upload';
+      }, 4000);
+    }
+    toast(`Upload failed: ${e.message}`, 'error', 6000);
+    throw e;
+  }
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result); // data:image/...;base64,XXXX
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function formatSize(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / 1024 / 1024).toFixed(1) + ' MB';
+}
+
+function shortPath(path) {
+  const parts = path.split('/');
+  return parts.slice(-2).join('/');
+}
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+checkStatus();
+loadPlanned();
+</script>
+</body>
+</html>

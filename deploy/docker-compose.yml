@@ -14,12 +14,15 @@
 #
 # Cloudflare Tunnel routing:
 #   In Zero Trust → Networks → Tunnels → your tunnel → Public Hostnames:
-#     docs        → HTTP  10.10.1.24:8095   (docs site)
-#     corrections → HTTP  10.10.1.24:3002   (corrections dashboard)
+#     docs          → HTTP  10.10.1.24:8095   (docs site)
+#     corrections   → HTTP  10.10.1.24:3002   (corrections dashboard)
+#     illustrations → HTTP  10.10.1.24:3003   (illustrations manager)
 #
 # Before first deploy:
 #   Create corrections-dashboard.env from .env.example and fill in:
 #     GITHUB_TOKEN, ANTHROPIC_API_KEY
+#   Create illustrations-manager.env from .env.example and fill in:
+#     GITHUB_TOKEN
 
 services:
   dadman-docs:
@@ -46,6 +49,18 @@ services:
       - corrections-data:/app/data
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
+
+  illustrations-manager:
+    image: ghcr.io/jonschumann/illustrations-manager:latest
+    container_name: illustrations-manager
+    restart: unless-stopped
+    ports:
+      - "3003:3001"
+    env_file:
+      - illustrations-manager.env
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    # No persistent volume needed — all state lives in GitHub
 
 volumes:
   corrections-data:

@@ -1,0 +1,51 @@
+name: Build & push illustrations-manager
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dadman-docs/tools/illustrations-manager/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: dadman-docs/tools/illustrations-manager
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/illustrations-manager:latest
+            ghcr.io/${{ github.repository_owner }}/illustrations-manager:${{ github.sha }}
+          platforms: linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Make package public
+        env:
+          GH_TOKEN: ${{ secrets.GHCR_PAT }}
+        run: |
+          gh api \
+            --method PATCH \
+            -H "Accept: application/vnd.github+json" \
+            /user/packages/container/illustrations-manager \
+            -f visibility=public \
+            2>/dev/null || echo "Package visibility unchanged"
