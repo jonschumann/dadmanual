@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
+![Penta 721S — front panel](/img/panel-penta721s-front-clean.png)
+
 > **Product:** Digital Audio Denmark Penta 721s
 
 ---

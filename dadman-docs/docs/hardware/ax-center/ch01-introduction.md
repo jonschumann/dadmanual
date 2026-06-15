@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
+![AX Center — front panel](/img/panel-ax-center-front-clean.png)
+
 > **Product:** Digital Audio Denmark AX Center
 
 ---

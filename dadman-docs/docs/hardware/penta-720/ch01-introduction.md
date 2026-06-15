@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
+![Penta 720 — front panel](/img/panel-penta720-clean.png)
+
 > **Product:** Digital Audio Denmark Penta 720
 
 ---

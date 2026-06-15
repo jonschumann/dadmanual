@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
+![AX64 — front panel](/img/panel-ax64-front-clean.png)
+
 > **Product:** Digital Audio Denmark AX64
 
 ---

@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
+![Core 256 — front](/img/panel-core256-front-clean.png)
+
 > **Product:** Digital Audio Denmark Core 256
 
 ---

@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
+![MOM — overview](/img/panel-mom-clean.png)
+
 > **Product:** Digital Audio Denmark MOM
 
 ---

@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Chapter 1 — Introduction
 
+![AX32 — front panel](/img/panel-ax32-front-clean.png)
+
 > **Product:** Digital Audio Denmark AX32  
 > **SKU:** AX32-BASE2
 
