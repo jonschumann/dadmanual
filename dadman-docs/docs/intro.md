@@ -7,6 +7,8 @@ slug: /
 
 # DADman User Manual
 
+![DADman software interface](/img/dadman-hero.jpg)
+
 **Software version:** DADman v5.8.2 build 2  
 **Published:** June 2026  
 **Maintained by:** NTP Technology A/S / Digital Audio Denmark
