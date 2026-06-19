@@ -10,7 +10,7 @@ slug: /installation
 > **Document:** DADman User Manual  
 > **Software version covered:** DADman v5.8.1.6  
 > **TB3 Driver version covered:** Latest — see Download Centre at digitalaudiosupport.com  
-> **Chapter status:** Draft v0.1 — Pending technical review by DAD engineering  
+> **Chapter status:** Draft v0.1a — Pending technical review by DAD engineering  
 > **Last updated:** June 2026
 
 ---
