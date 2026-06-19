@@ -85,6 +85,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/operation` page
 - **Found:** 2026-06-13
 
+### DADman §7.1.2 — Clarify that device state is maintained in memory, not loaded from DADman.
+- **File:** `docs/ch07-operation.md`
+- **Section:** §7.1.2
+- **Wrong:** (not quoted by commenter)
+- **Correct:** The device maintains its last state directly in memory and activates it when the device comes online. No loading from DADman is required.
+- **Original comment:** Reg #7.1.2 - Technically, the device doesn't load the last state from DADman. It is maintained directly in memory on device and will be active as soon as the device is on-line. No loading needed. This clarification is important to avoid confusion about saving vs. not saving.
+- **Source:** Giscus comment on `/operation` page
+- **Found:** 2026-06-13
+
 ---
 
 ## Fixed Corrections
