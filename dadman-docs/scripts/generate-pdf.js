@@ -148,7 +148,7 @@ const PRINT_CSS = `
   article {
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 4px !important;
+    padding: 0 !important;
   }
   .container { max-width: none !important; padding: 0 !important; }
   .col { padding: 0 !important; }
@@ -184,7 +184,7 @@ const localeLabel = LOCALE !== 'en' ? ` · ${LOCALE_LABELS[LOCALE] || LOCALE}` :
 const HEADER_HTML = `
   <div style="
     font-size: 9px; font-family: Helvetica, Arial, sans-serif;
-    width: 100%; padding: 5px 20mm;
+    width: 100%; padding: 4px 18mm; box-sizing: border-box;
     display: flex; justify-content: space-between; align-items: center;
     border-bottom: 0.5pt solid #cccccc; color: #444444;
   ">
@@ -195,7 +195,7 @@ const HEADER_HTML = `
 const FOOTER_HTML = `
   <div style="
     font-size: 8px; font-family: Helvetica, Arial, sans-serif;
-    width: 100%; padding: 4px 20mm;
+    width: 100%; padding: 4px 18mm; box-sizing: border-box;
     display: flex; justify-content: space-between; align-items: center;
     color: #888888;
   ">
@@ -240,10 +240,10 @@ async function main() {
         format: 'A4',
         printBackground: true,
         margin: {
-          top:    '22mm',
-          right:  '15mm',
-          bottom: '20mm',
-          left:   '20mm',
+          top:    '20mm',
+          right:  '18mm',
+          bottom: '18mm',
+          left:   '18mm',
         },
         displayHeaderFooter: true,
         headerTemplate: HEADER_HTML,
