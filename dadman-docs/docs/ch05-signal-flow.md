@@ -121,7 +121,7 @@ Some audio formats carry fewer channels at higher sample rates. The table below 
 
 ## Cross-References
 
-- **Chapter 1 — Introduction:** Compatible hardware list; hardware families overview
+- **Chapter 1 — Introduction:** Compatible Hardware List; hardware families overview
 - **Chapter 3 — Installation:** Installing DADman and configuring the network
 - **Chapter 4 — Hardware Description:** Front and rear panel connectors; physical I/O
 - **Chapter 7 — Operation:** Conf tab reference for clock source and sample rate settings
