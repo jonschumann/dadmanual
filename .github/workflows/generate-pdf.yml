@@ -2,6 +2,11 @@ name: Generate PDF
 
 on:
   workflow_dispatch:
+    inputs:
+      section:
+        description: 'Which manual: software, or a hardware folder (ax-center, core-256, ax64, ax32, mom, penta-720, penta-721s, expansion-cards)'
+        required: false
+        default: 'software'
 
 jobs:
   pdf:
@@ -48,11 +53,11 @@ jobs:
 
       - name: Generate the PDF
         working-directory: dadman-docs
-        run: node scripts/generate-pdf.js --base-url http://localhost:3000 --locale en
+        run: node scripts/generate-pdf.js --base-url http://localhost:3000 --locale en --section "${{ inputs.section || 'software' }}"
 
       - name: Upload the PDF
         uses: actions/upload-artifact@v4
         with:
-          name: dadman-user-manual-pdf
+          name: dadman-pdf-${{ inputs.section || 'software' }}
           path: dadman-docs/*.pdf
           if-no-files-found: error
