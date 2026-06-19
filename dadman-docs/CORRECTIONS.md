@@ -67,6 +67,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
 - **Found:** 2026-06-15
 
+### DADman §7.10.3 — Add keyboard shortcut for Routing Presets (⌘⇧R Mac, Ctrl+Shift+M Win)
+- **File:** `docs/ch07-operation.md`
+- **Section:** §7.10.3
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Section 7.10.3 should document that the keyboard shortcut for Routing Presets is ⌘⇧R on Mac and Ctrl+Shift+M on Windows (requires firmware with ControlPack).
+- **Original comment:** Reg #7.10.3 - The keyboard shortcut for Routing Presets is ⌘⇧R (Mac) and Ctrl+Shift+M (Win) (Requires the firmware that introduced ControlPack.)
+- **Source:** Giscus comment on `/operation` page
+- **Found:** 2026-06-13
+
 ---
 
 ## Fixed Corrections
