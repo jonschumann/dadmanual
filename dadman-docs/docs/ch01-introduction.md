@@ -226,3 +226,4 @@ Email: info@digitalaudio.dk
 *— Routing matrix capacities for AX32, AX64, Core 256, AX24, Penta 720, Penta 721s*  
 *— Confirmation of AX24 connection method*  
 *— Introduction text for About DAD / NTP Technology section*
+<!-- studio phase-2 save test (safe to delete) -->
