@@ -76,6 +76,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/operation` page
 - **Found:** 2026-06-13
 
+### DADman — — Keyboard shortcut for Monitor Profiles is incorrect on Windows.
+- **File:** `docs/ch07-operation.md`
+- **Section:** —
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Monitor Profiles keyboard shortcut (Win): Ctrl+Shift+M. Separate shortcut Ctrl+Shift+R also exists.
+- **Original comment:** No. Typo - It's Ctrl+Shift+R (Win), Monitor Profiles are still Ctrl+Shift+M (Win)
+- **Source:** Giscus comment on `/operation` page
+- **Found:** 2026-06-13
+
 ---
 
 ## Fixed Corrections
