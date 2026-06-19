@@ -5,10 +5,12 @@ on:
 
 jobs:
   pdf:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: hardware-manuals
 
       - name: Set up Node 20
         uses: actions/setup-node@v4
