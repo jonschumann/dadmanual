@@ -60,21 +60,41 @@ const LOCALE_LABELS = {
 // With routeBasePath: '/', docs are at the root of the built site.
 // All locales are built to root when using --locale <code> in Docusaurus.
 
-const DOC_PAGES = [
-  '/intro',
-  '/front-matter-safety',
-  '/ch01-introduction',
-  '/ch02-system-requirements',
-  '/ch03-installation',
-  '/ch04-hardware-description',
-  '/ch05-signal-flow',
-  '/ch06-getting-started',
-  '/ch07-operation',
-  '/ch08-advanced-features',
-  '/ch09-troubleshooting',
-  '/ch10-maintenance',
-  '/appendices',
+const DOCS_DIR = path.join(__dirname, '..', 'docs');
+
+// Files in reading order. The actual URL comes from each file's slug: frontmatter
+// (falling back to the filename route), so this stays correct even if slugs change.
+const DOC_FILES = [
+  'intro.md',
+  'front-matter-safety.md',
+  'ch01-introduction.md',
+  'ch02-system-requirements.md',
+  'ch03-installation.md',
+  'ch04-hardware-description.md',
+  'ch05-signal-flow.md',
+  'ch06-getting-started.md',
+  'ch07-operation.md',
+  'ch08-advanced-features.md',
+  'ch09-troubleshooting.md',
+  'ch10-maintenance.md',
+  'appendices.md',
 ];
+
+function slugForFile(file) {
+  try {
+    const s = fs.readFileSync(path.join(DOCS_DIR, file), 'utf8');
+    const close = s.indexOf('---', 3);
+    const fm = s.startsWith('---') && close !== -1 ? s.slice(3, close) : '';
+    const m = fm.match(/^\s*slug:\s*(.+?)\s*$/m);
+    let slug = m ? m[1].trim().replace(/^[\'"]|[\'"]$/g, '') : '/' + file.replace(/\.mdx?$/, '');
+    if (!slug.startsWith('/')) slug = '/' + slug;
+    return slug;
+  } catch (e) {
+    return '/' + file.replace(/\.mdx?$/, '');
+  }
+}
+
+const DOC_PAGES = DOC_FILES.map(slugForFile);
 
 // ── Print CSS — injected before capturing each page ──────────────────────────
 // Removes site chrome (navbar, sidebar, TOC, pagination) and sets print-safe
