@@ -34,7 +34,8 @@ const getArg = (name) => {
 const PKG      = require('../package.json');
 const TODAY    = new Date().toISOString().split('T')[0];
 
-const OUTPUT    = getArg('output')    || `DADman-User-Manual-${PKG.version}-${TODAY}-en.pdf`;
+const SECTION   = getArg('section')   || 'software';
+const OUTPUT    = getArg('output')    || `DADman-${SECTION === 'software' ? 'User-Manual' : SECTION + '-Hardware-Manual'}-${PKG.version}-${TODAY}-en.pdf`;
 const VERSION   = getArg('version')   || PKG.version;
 const DATE      = getArg('date')      || TODAY;
 const LOCALE    = getArg('locale')    || 'en';
@@ -62,39 +63,59 @@ const LOCALE_LABELS = {
 
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
 
-// Files in reading order. The actual URL comes from each file's slug: frontmatter
-// (falling back to the filename route), so this stays correct even if slugs change.
-const DOC_FILES = [
-  'intro.md',
-  'front-matter-safety.md',
-  'ch01-introduction.md',
-  'ch02-system-requirements.md',
-  'ch03-installation.md',
-  'ch04-hardware-description.md',
-  'ch05-signal-flow.md',
-  'ch06-getting-started.md',
-  'ch07-operation.md',
-  'ch08-advanced-features.md',
-  'ch09-troubleshooting.md',
-  'ch10-maintenance.md',
-  'appendices.md',
-];
-
-function slugForFile(file) {
-  try {
-    const s = fs.readFileSync(path.join(DOCS_DIR, file), 'utf8');
-    const close = s.indexOf('---', 3);
-    const fm = s.startsWith('---') && close !== -1 ? s.slice(3, close) : '';
-    const m = fm.match(/^\s*slug:\s*(.+?)\s*$/m);
-    let slug = m ? m[1].trim().replace(/^[\'"]|[\'"]$/g, '') : '/' + file.replace(/\.mdx?$/, '');
-    if (!slug.startsWith('/')) slug = '/' + slug;
-    return slug;
-  } catch (e) {
-    return '/' + file.replace(/\.mdx?$/, '');
-  }
+// ── Page discovery ────────────────────────────────────────────────────────────
+// SECTION = 'software' (the software manual) or a hardware product folder name
+// (e.g. 'ax32'). URL comes from each page's slug: frontmatter when present, else
+// the default route from the file path. Stays correct as content changes.
+function readFrontmatter(absPath) {
+  let s = '';
+  try { s = fs.readFileSync(absPath, 'utf8'); } catch (e) { return ''; }
+  if (!s.startsWith('---')) return '';
+  const close = s.indexOf('---', 3);
+  return close === -1 ? '' : s.slice(3, close);
 }
-
-const DOC_PAGES = DOC_FILES.map(slugForFile);
+function fmField(fm, name) {
+  for (const line of fm.split('\n')) {
+    const t = line.trim();
+    if (t.startsWith(name + ':')) {
+      let v = t.slice(name.length + 1).trim();
+      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
+      return v;
+    }
+  }
+  return null;
+}
+function stripExt(p) { if (p.endsWith('.mdx')) return p.slice(0,-4); if (p.endsWith('.md')) return p.slice(0,-3); return p; }
+function routeFor(relFromDocs, fm) {
+  const slug = fmField(fm, 'slug');
+  if (slug) return slug.startsWith('/') ? slug : '/' + slug;
+  let r = stripExt(relFromDocs);
+  if (r === 'index') return '/';
+  if (r.endsWith('/index')) r = r.slice(0, -('/index'.length));
+  return '/' + r;
+}
+const SOFTWARE_FILES = [
+  'intro.md', 'front-matter-safety.md',
+  'ch01-introduction.md', 'ch02-system-requirements.md', 'ch03-installation.md',
+  'ch04-hardware-description.md', 'ch05-signal-flow.md', 'ch06-getting-started.md',
+  'ch07-operation.md', 'ch08-advanced-features.md', 'ch09-troubleshooting.md',
+  'ch10-maintenance.md', 'appendices.md',
+];
+function softwarePages() { return SOFTWARE_FILES.map((f) => routeFor(f, readFrontmatter(path.join(DOCS_DIR, f)))); }
+function productPages(product) {
+  const dir = path.join(DOCS_DIR, 'hardware', product);
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
+  const items = files.map((f) => {
+    const fm = readFrontmatter(path.join(dir, f));
+    const isIndex = (f === 'index.md' || f === 'index.mdx');
+    const posStr = fmField(fm, 'sidebar_position');
+    const pos = isIndex ? -1 : (posStr ? parseInt(posStr, 10) : 999);
+    return { route: routeFor('hardware/' + product + '/' + f, fm), pos, file: f };
+  });
+  items.sort((a, b) => (a.pos - b.pos) || a.file.localeCompare(b.file));
+  return items.map((i) => i.route);
+}
+const DOC_PAGES = SECTION === 'software' ? softwarePages() : productPages(SECTION);
 
 // ── Print CSS — injected before capturing each page ──────────────────────────
 // Removes site chrome (navbar, sidebar, TOC, pagination) and sets print-safe
@@ -121,7 +142,7 @@ const PRINT_CSS = `
   article {
     max-width: none !important;
     margin: 0 !important;
-    padding: 0 4px !important;
+    padding: 0 !important;
   }
   .container { max-width: none !important; padding: 0 !important; }
   .col { padding: 0 !important; }
@@ -157,7 +178,7 @@ const localeLabel = LOCALE !== 'en' ? ` · ${LOCALE_LABELS[LOCALE] || LOCALE}` :
 const HEADER_HTML = `
   <div style="
     font-size: 9px; font-family: Helvetica, Arial, sans-serif;
-    width: 100%; padding: 5px 20mm;
+    width: 100%; padding: 4px 18mm; box-sizing: border-box;
     display: flex; justify-content: space-between; align-items: center;
     border-bottom: 0.5pt solid #cccccc; color: #444444;
   ">
@@ -168,7 +189,7 @@ const HEADER_HTML = `
 const FOOTER_HTML = `
   <div style="
     font-size: 8px; font-family: Helvetica, Arial, sans-serif;
-    width: 100%; padding: 4px 20mm;
+    width: 100%; padding: 4px 18mm; box-sizing: border-box;
     display: flex; justify-content: space-between; align-items: center;
     color: #888888;
   ">
@@ -213,10 +234,10 @@ async function main() {
         format: 'A4',
         printBackground: true,
         margin: {
-          top:    '22mm',
-          right:  '15mm',
-          bottom: '20mm',
-          left:   '20mm',
+          top:    '20mm',
+          right:  '18mm',
+          bottom: '18mm',
+          left:   '18mm',
         },
         displayHeaderFooter: true,
         headerTemplate: HEADER_HTML,
