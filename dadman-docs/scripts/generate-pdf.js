@@ -135,17 +135,19 @@ const PRINT_CSS = `
     display: none !important;
   }
 
-  /* ── Full-width content ── */
-  .main-wrapper,
-  .docMainContainer,
-  .docPage,
-  article {
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  /* ── Print layout: fill the page width and align with the page margins. ──
+     Clears Infima's negative .row margin and the 75% doc-column cap (the cap
+     leaves room for the on-page TOC, which the PDF doesn't have). */
+  .main-wrapper, .docMainContainer, .docRoot, .docPage,
+  article, .theme-doc-markdown, .markdown,
+  [class*="docItemContainer"] {
+    max-width: none !important; margin: 0 !important; padding: 0 !important;
   }
-  .container { max-width: none !important; padding: 0 !important; }
-  .col { padding: 0 !important; }
+  .container, .container-fluid { max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  .row { margin: 0 !important; }
+  .col, [class*="docItemCol"] {
+    max-width: 100% !important; flex-basis: 100% !important; margin: 0 !important; padding: 0 !important;
+  }
 
   /* ── Typography ── */
   body { font-size: 13px !important; line-height: 1.5 !important; }
