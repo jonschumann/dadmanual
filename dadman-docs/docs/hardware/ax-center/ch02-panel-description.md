@@ -28,8 +28,8 @@ sidebar_position: 3
 | 8 | **Mic** | LED indicator | Lit when the input is configured as a microphone input | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#D946EF'}}></span> |
 | 9 | **Inst** | LED indicator | Lit when the input is configured as a high-impedance instrument input | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#F43F5E'}}></span> |
 | 10 | **Mic/Inst 2** | Combo XLR/TRS (locking) | Mic/line/instrument input, channel 2. Same specification as channel 1. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#DC2626'}}></span> |
-| 11 | **HP 1** | 6.35 mm TRS jack | Headphone output 1. Level controlled via DADman or MOM. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#9333EA'}}></span> |
-| 12 | **HP 2** | 6.35 mm TRS jack | Headphone output 2. Level controlled via DADman or MOM. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#9333EA'}}></span> |
+| 11 | **HP 1** | 6.35 mm TRS jack | Headphone output 1. Level controlled via DADman or MOM. Includes a Short Delay setting for minimizing monitoring latency. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#9333EA'}}></span> |
+| 12 | **HP 2** | 6.35 mm TRS jack | Headphone output 2. Level controlled via DADman or MOM. Includes a Short Delay setting for minimizing monitoring latency. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#9333EA'}}></span> |
 
 ---
 
@@ -53,9 +53,9 @@ sidebar_position: 3
 | 11 | **ADAT IN 1 / 2** | 2× TOSLINK (optical) | ADAT Lightpipe inputs. Same channel count as ADAT outputs. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#0D9488'}}></span> |
 | 12 | **MONITOR 1** | 2× TRS 6.35 mm (L/R) | Balanced stereo monitor output 1. Level controlled via DADman or MOM. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#DC2626'}}></span> |
 | 13 | **MONITOR 2** | 2× TRS 6.35 mm (L/R) | Balanced stereo monitor output 2. Level controlled via DADman or MOM. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#DC2626'}}></span> |
-| 14 | **SLOT 1 / SLOT 2** | 2× expansion slot (DB25) | Analogue I/O expansion slots. Each slot accepts a DAD expansion card providing 8 channels of A/D, D/A, or digital I/O. Card type and channel assignment is configured in DADman. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#CA8A04'}}></span> |
+| 14 | **SLOT 1 / SLOT 2** | 2× expansion slot (DB25) | Expansion card slots. Each slot accepts any DAD expansion card from the family — providing 8 channels of A/D, D/A, or digital I/O, not limited to analogue cards. Card type and channel assignment is configured in DADman. | <span style={{display:'inline-block',width:'10px',height:'10px',borderRadius:'50%',margin:'0 6px',background:'#CA8A04'}}></span> |
 
-> **NOTICE — Thunderbolt cable requirement:** The Thunderbolt 3 connection requires a cable rated to 20 Gbps or higher. Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably. Use the cable supplied with the unit or a certified Thunderbolt 3 / Thunderbolt 4 cable.
+> **NOTICE — Thunderbolt cable requirement:** The Thunderbolt 3 connection requires a cable rated to 20 Gbps or higher. <u>_Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably._</u> Use the cable supplied with the unit or a certified Thunderbolt 3 / Thunderbolt 4 cable.
 
 > **NOTICE — Word clock termination:** The WC/VBB IN port must be terminated (75 Ω) when the AX Center is the last device in a word clock chain. The termination switch is located adjacent to the BNC connector.
 

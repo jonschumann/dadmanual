@@ -90,6 +90,8 @@ DADman can be configured to **automatically load the last used settings file** a
 
 To enable or disable auto-load: **DADman > Preferences** (macOS) or **Settings > Options** (Windows), then **Open last file at startup**.
 
+> **NOTE:** "Auto-load" above refers only to DADman's own settings file, not the connected hardware's operating state. Each unit maintains its last configuration directly in its own memory and applies it immediately when the unit powers on — no settings need to be loaded from DADman for the device to resume normal operation. DADman's auto-load setting only controls whether DADman *re-pushes* a stored `.dms` file to already-running units when the application itself launches.
+
 ### 7.1.3 File Menu Reference
 
 | Menu item | Action |
