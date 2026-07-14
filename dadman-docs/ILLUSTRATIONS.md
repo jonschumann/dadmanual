@@ -42,7 +42,7 @@ directly into the repo — each upload is auto-committed and the checkbox update
 
 - [ ] `ch06-device-panel-overview.png` — DADman main window with device panel annotated: device name, status indicator, sample rate, clock source
 - [x] `ch06-routing-matrix-empty.png` — Empty routing matrix before any sources are connected — shows the grid layout *(added 2026-07-14)*
-- [ ] `ch06-first-patch.png` — Routing matrix with a simple first patch applied: two inputs connected to two outputs
+- [x] `ch06-first-patch.png` — Routing matrix with a simple first patch applied: two inputs connected to two outputs *(added 2026-07-14)*
 - [ ] `ch06-monitor-profile-new.png` — New Monitor Profile dialog with fields for name, speaker configuration, and output assignment
 - [ ] `ch06-output-trim-controls.png` — Output Trim section of the monitor controller showing level knobs and channel labels
 
