@@ -2,7 +2,12 @@ name: Deploy dadman-docs
 
 on:
   push:
-    branches: [main, hardware-manuals]
+    # hardware-manuals is the sole deploy source. main only receives automated
+    # CORRECTIONS.md commits from the corrections-dashboard and is frequently
+    # behind hardware-manuals in actual content — deploying from it would
+    # silently roll back the live site. Do not add main back here without
+    # also fixing that divergence.
+    branches: [hardware-manuals]
     paths:
       - "dadman-docs/**"
       - ".github/workflows/deploy.yml"
