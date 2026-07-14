@@ -25,7 +25,7 @@ directly into the repo — each upload is auto-committed and the checkbox update
 
 ### Chapter 3 — Installation
 
-- [ ] `ch03-installer-welcome.png` — DADman installer welcome screen (macOS or Windows)
+- [x] `ch03-installer-welcome.png` — DADman installer welcome screen (macOS or Windows) *(added 2026-07-14)*
 - [ ] `ch03-installer-complete.png` — DADman installer completion screen confirming successful install
 - [ ] `ch03-first-launch.png` — DADman at first launch with no hardware connected (empty device panel)
 - [ ] `ch03-thunderbolt-device-discovered.png` — DADman with a newly discovered AX Center or Core 256 shown in the device list
