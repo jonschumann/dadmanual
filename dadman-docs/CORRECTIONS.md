@@ -130,6 +130,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
 - **Found:** 2026-06-15
 
+### ax-center — — Clarify that expansion slots accept any DAD expansion card, not just analogue cards.
+- **File:** `docs/hardware/ax-center/ch02-hardware-description.md`
+- **Section:** —
+- **Wrong:** two analogue expansion card slots
+- **Correct:** expansion card slots that accept any DAD expansion card from the family
+- **Original comment:** "two analogue expansion card slots" isn't true - It is expansion card slots that accept any DAD expansion card from the family
+- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
+- **Found:** 2026-07-14
+
 ---
 
 ## Fixed Corrections
