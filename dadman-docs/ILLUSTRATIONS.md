@@ -48,7 +48,7 @@ directly into the repo — each upload is auto-committed and the checkbox update
 
 ### Chapter 7 — Operation
 
-- [ ] `ch07-routing-matrix-full.png` — Routing matrix with a multi-source, multi-destination patch showing multiple active crosspoints
+- [x] `ch07-routing-matrix-full.png` — Routing matrix with a multi-source, multi-destination patch showing multiple active crosspoints *(added 2026-07-14)*
 - [ ] `ch07-routing-matrix-drag.png` — Routing matrix during a drag operation: user adding a new connection between a source and destination
 - [ ] `ch07-spq-equaliser.png` — SPQ parametric EQ panel with a 3-band curve applied (boost at 80 Hz, cut at 2 kHz, boost at 12 kHz)
 - [ ] `ch07-spq-dynamics.png` — SPQ dynamics section: compressor with threshold, ratio, attack, release, gain controls visible
