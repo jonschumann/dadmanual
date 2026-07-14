@@ -22,122 +22,7 @@ Add a new entry under **Open Corrections** using the template below. You can als
 
 ## Open Corrections
 
-### DADman — — Correct keyboard shortcut for Win: Ctrl+Shift+R instead of another key
-- **File:** `docs/ch07-operation.md`
-- **Section:** —
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Ctrl+Shift+R (Win) for the referenced function; Monitor Profiles remain Ctrl+Shift+M (Win)
-- **Original comment:** No. Typo - It's Ctrl+Shift+R (Win), Monitor Profiles are still Ctrl+Shift+M (Win)
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### DADman §7.6.2 — Clarify Ctrl/Cmd+click behavior on activated crosspoints
-- **File:** `docs/ch07-operation.md`
-- **Section:** §7.6.2
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Ctrl/Cmd+click on an activated crosspoint unpatches that point and all following points
-- **Original comment:** Reg #7.6.2 - if Ctrl/Cmd+click is on an activated crosspoint, that point and all that follow will be unpatched.
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### DADman §7.10.3 — Add keyboard shortcut for Routing Presets with firmware requirement note.
-- **File:** `docs/ch07-operation.md`
-- **Section:** §7.10.3
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Routing Presets keyboard shortcut: ⌘⇧R (Mac) / Ctrl+Shift+R (Win). Requires firmware with ControlPack.
-- **Original comment:** Reg #7.10.3 - The keyboard shortcut for Routing Presets is ⌘⇧R (Mac) and Ctrl+Shift+M (Win) (Requires the firmware that introduced ControlPack.)
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### DADman §7.1.2 — Clarify device state maintenance mechanism
-- **File:** `docs/ch07-operation.md`
-- **Section:** §7.1.2
-- **Wrong:** (not quoted by commenter)
-- **Correct:** The device maintains its last state directly in memory and activates it immediately when the device comes online. No loading from DADman is required.
-- **Original comment:** Reg #7.1.2 - Technically, the device doesn't load the last state from DADman. It is maintained directly in memory on device and will be active as soon as the device is on-line. No loading needed. This clarification is important to avoid confusion about saving vs. not saving.
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### ax-center 2.1 — Add information about Headphones Short Delay setting for latency minimization.
-- **File:** `docs/hardware/ax-center/ch02-panel-description.md`
-- **Section:** 2.1
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Headphones have a Short Delay setting for minimizing latency.
-- **Original comment:** Reg #2.1 - Headphones have a Short Delay setting for minimizing latency.
-- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
-- **Found:** 2026-06-15
-
-### DADman §7.10.3 — Add keyboard shortcut for Routing Presets (⌘⇧R Mac, Ctrl+Shift+M Win)
-- **File:** `docs/ch07-operation.md`
-- **Section:** §7.10.3
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Section 7.10.3 should document that the keyboard shortcut for Routing Presets is ⌘⇧R on Mac and Ctrl+Shift+M on Windows (requires firmware with ControlPack).
-- **Original comment:** Reg #7.10.3 - The keyboard shortcut for Routing Presets is ⌘⇧R (Mac) and Ctrl+Shift+M (Win) (Requires the firmware that introduced ControlPack.)
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### DADman — — Keyboard shortcut for Monitor Profiles is incorrect on Windows.
-- **File:** `docs/ch07-operation.md`
-- **Section:** —
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Monitor Profiles keyboard shortcut (Win): Ctrl+Shift+M. Separate shortcut Ctrl+Shift+R also exists.
-- **Original comment:** No. Typo - It's Ctrl+Shift+R (Win), Monitor Profiles are still Ctrl+Shift+M (Win)
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### DADman §7.1.2 — Clarify that device state is maintained in memory, not loaded from DADman.
-- **File:** `docs/ch07-operation.md`
-- **Section:** §7.1.2
-- **Wrong:** (not quoted by commenter)
-- **Correct:** The device maintains its last state directly in memory and activates it when the device comes online. No loading from DADman is required.
-- **Original comment:** Reg #7.1.2 - Technically, the device doesn't load the last state from DADman. It is maintained directly in memory on device and will be active as soon as the device is on-line. No loading needed. This clarification is important to avoid confusion about saving vs. not saving.
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### DADman §7.6.2 — Clarify Ctrl/Cmd+click behavior on activated crosspoints
-- **File:** `docs/ch07-operation.md`
-- **Section:** §7.6.2
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Ctrl/Cmd+click on an activated crosspoint unpatches that point and all following points.
-- **Original comment:** Reg #7.6.2 - if Ctrl/Cmd+click is on an activated crosspoint, that point and all that follow will be unpatched.
-- **Source:** Giscus comment on `/operation` page
-- **Found:** 2026-06-13
-
-### ax-center §2.2 — Format USB-C/Thunderbolt 3 warning text with italics and underline.
-- **File:** `docs/hardware/ax-center/ch02-panel-description.md`
-- **Section:** §2.2
-- **Wrong:** Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably
-- **Correct:** <u>_Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably_</u>
-- **Original comment:** #2.2 - "Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably" should be italicized and underlined.
-- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
-- **Found:** 2026-06-19
-
-### ax-center §2.2 — Format warning text with italics and underline
-- **File:** `docs/hardware/ax-center/ch02-panel-description.md`
-- **Section:** §2.2
-- **Wrong:** Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably
-- **Correct:** <u>_Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably_</u>
-- **Original comment:** #2.2 - "Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably" should be italicized and underlined.
-- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
-- **Found:** 2026-06-19
-
-### ax-center 2.1 — Add information about headphones short delay setting for latency minimization.
-- **File:** `docs/hardware/ax-center/ch02-panel-description.md`
-- **Section:** 2.1
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Headphones have a Short Delay setting for minimizing latency.
-- **Original comment:** Reg #2.1 - Headphones have a Short Delay setting for minimizing latency.
-- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
-- **Found:** 2026-06-15
-
-### ax-center — — Clarify that expansion slots accept any DAD expansion card, not just analogue cards.
-- **File:** `docs/hardware/ax-center/ch02-hardware-description.md`
-- **Section:** —
-- **Wrong:** two analogue expansion card slots
-- **Correct:** expansion card slots that accept any DAD expansion card from the family
-- **Original comment:** "two analogue expansion card slots" isn't true - It is expansion card slots that accept any DAD expansion card from the family
-- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
-- **Found:** 2026-07-14
+*No open corrections.*
 
 ---
 
@@ -147,3 +32,11 @@ Add a new entry under **Open Corrections** using the template below. You can als
 |------------|---------|---------|---------|
 | 2026-06-13 | DADman software | §7.6.2 Making and Removing Connections (`docs/ch07-operation.md`) | Ctrl/Cmd+click on an *active* crosspoint unpatches from that point onwards — missing from both §7.6.2 and §7.10.2 tables. Source: Giscus comment on `/operation` page. |
 | 2026-06-13 | DADman software | §7.10.3 Keyboard Shortcuts (`docs/ch07-operation.md`) | Routing Presets shortcut was missing: ⌘⇧R (Mac) / Ctrl+Shift+R (Win). Monitor Profile Windows shortcut (Ctrl+Shift+M) confirmed correct and retained. ControlPack firmware requirement noted. Source: Giscus comment + reply on `/operation` page. |
+| 2026-07-14 | DADman software | §7.1.2 Startup and Auto-Load (`docs/ch07-operation.md`) | Added clarifying note: connected units maintain their last state in their own memory and resume immediately on power-on — DADman's "auto-load" setting only controls whether DADman re-pushes a `.dms` file to already-running units at launch, it is not required for the device to retain state. Source: Giscus comment on `/operation` page. |
+| 2026-07-14 | AX Center | §2.1 Front Panel (`docs/hardware/ax-center/ch02-panel-description.md`) | HP 1 / HP 2 rows now note the Short Delay setting for minimizing monitoring latency. Source: Giscus comment on `/hardware/ax-center/ch02-panel-description` page. |
+| 2026-07-14 | AX Center | §2.2 Rear Panel (`docs/hardware/ax-center/ch02-panel-description.md`) | Thunderbolt cable requirement notice: "Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably" is now italicized and underlined. Source: Giscus comment on `/hardware/ax-center/ch02-panel-description` page. |
+| 2026-07-14 | AX Center | §2.2 Rear Panel — SLOT 1/SLOT 2 (`docs/hardware/ax-center/ch02-panel-description.md`) | Corrected "Analogue I/O expansion slots" — slots accept any DAD expansion card from the family, not just analogue cards. Source: Giscus comment on `/hardware/ax-center/ch02-panel-description` page. |
+
+---
+
+*Note: this log was reconciled 2026-07-14 against the actual manual content on the `hardware-manuals` branch (the sole deploy source — see repo `.github/workflows/deploy.yml`). Several entries above had been duplicated by the corrections-dashboard (the same Giscus thread parsed multiple times as comment + reply) and two were already fixed in an earlier session but the fix had only ever reached `hardware-manuals`, not `main`, so they lingered here as "open." All are now resolved and reflected on `hardware-manuals`.*
