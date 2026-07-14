@@ -112,6 +112,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
 - **Found:** 2026-06-19
 
+### ax-center §2.2 — Format warning text with italics and underline
+- **File:** `docs/hardware/ax-center/ch02-panel-description.md`
+- **Section:** §2.2
+- **Wrong:** Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably
+- **Correct:** <u>_Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably_</u>
+- **Original comment:** #2.2 - "Standard USB-C cables are not rated for Thunderbolt 3 speeds and will not work reliably" should be italicized and underlined.
+- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
+- **Found:** 2026-06-19
+
 ---
 
 ## Fixed Corrections
