@@ -14,7 +14,7 @@ sidebar_position: 2
 
 ## 1.1 Product Overview
 
-The AX Center is a 1U rackmount Thunderbolt 3 audio interface and the primary I/O hub in the Thunder|Core family. It provides front-panel mic/instrument inputs, dual headphone outputs, stereo monitor outputs, MADI I/O, ADAT I/O, word clock I/O, two analogue expansion card slots, and dual Thunderbolt 3 ports.
+The AX Center is a 1U rackmount Thunderbolt 3 audio interface and the primary I/O hub in the Thunder|Core family. It provides front-panel mic/instrument inputs, dual headphone outputs, stereo monitor outputs, MADI I/O, ADAT I/O, word clock I/O, two expansion card slots (accepting any DAD expansion card from the family, not limited to analogue cards), and dual Thunderbolt 3 ports.
 
 **Connection to host:** Thunderbolt 3
 **Form factor:** 1U rackmount
