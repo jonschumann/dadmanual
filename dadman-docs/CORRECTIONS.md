@@ -121,6 +121,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
 - **Found:** 2026-06-19
 
+### ax-center 2.1 — Add information about headphones short delay setting for latency minimization.
+- **File:** `docs/hardware/ax-center/ch02-panel-description.md`
+- **Section:** 2.1
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Headphones have a Short Delay setting for minimizing latency.
+- **Original comment:** Reg #2.1 - Headphones have a Short Delay setting for minimizing latency.
+- **Source:** Giscus comment on `/hardware/ax-center/ch02-panel-description` page
+- **Found:** 2026-06-15
+
 ---
 
 ## Fixed Corrections
