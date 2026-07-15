@@ -2,7 +2,10 @@ name: Build & push illustrations-manager
 
 on:
   push:
-    branches: [main, hardware-manuals]
+    # hardware-manuals only — see .github/workflows/deploy.yml for why main is
+    # excluded (main only gets automated CORRECTIONS.md commits and drifts
+    # stale; a push there previously caused a duplicate build/deploy race).
+    branches: [hardware-manuals]
     paths:
       - 'dadman-docs/tools/illustrations-manager/**'
       - '.github/workflows/illustrations-manager.yml'
