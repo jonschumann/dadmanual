@@ -22,7 +22,14 @@ Add a new entry under **Open Corrections** using the template below. You can als
 
 ## Open Corrections
 
-*No open corrections.*
+### DADman 10.1 — Change '256 in / 256 out' to '256 In/Out' for consistency.
+- **File:** `docs/ch10-specifications.md`
+- **Section:** 10.1
+- **Wrong:** 256 in / 256 out
+- **Correct:** 256 In/Out
+- **Original comment:** 10.1 - Don't do 256 in / 256 out. Just do 256 In/Out
+- **Source:** Giscus comment on `/hardware/ax-center/ch10-specifications` page
+- **Found:** 2026-07-15
 
 ---
 
