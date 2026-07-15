@@ -86,6 +86,20 @@ async function ghGetTree() {
   return tree.tree || [];
 }
 
+// Short-lived shared cache for the recursive tree — avoids refetching the
+// whole repo tree on every single thumbnail request (N+1 problem) while
+// still picking up new commits within a few minutes.
+let treeCache = null;
+let treeCacheTime = 0;
+async function getCachedTree(forceRefresh = false) {
+  if (!forceRefresh && treeCache && Date.now() - treeCacheTime < CACHE_TTL_MS) {
+    return treeCache;
+  }
+  treeCache = await ghGetTree();
+  treeCacheTime = Date.now();
+  return treeCache;
+}
+
 /** Get a blob by SHA (raw content) */
 async function ghGetBlob(sha) {
   const res = await ghFetch(
@@ -170,7 +184,7 @@ async function scanMarkdownRefs(tree) {
 
 /** Compute which referenced images are missing from static/img/ */
 async function computeMissingRefs() {
-  const [tree, staticImages] = await Promise.all([ghGetTree(), listStaticImages()]);
+  const [tree, staticImages] = await Promise.all([getCachedTree(), listStaticImages()]);
   const allRefs = await scanMarkdownRefs(tree);
   const imageSet = new Set(staticImages);
 
@@ -309,10 +323,13 @@ function formatBytes(bytes) {
 
 /** Compute every image currently in static/img/, with usage, dimensions, and an advisory note. */
 async function computeCurrentImages() {
-  const tree = await ghGetTree();
+  const tree = await getCachedTree();
 
   const imgNodes = tree.filter(
-    node => node.type === 'blob' && node.path.startsWith(STATIC_IMG_PATH + '/')
+    node =>
+      node.type === 'blob' &&
+      node.path.startsWith(STATIC_IMG_PATH + '/') &&
+      ALLOWED_EXTENSIONS.has(extname(node.path).toLowerCase())
   );
 
   const allRefs = await scanMarkdownRefs(tree);
@@ -577,9 +594,11 @@ app.post('/api/upload', async (req, res) => {
       }
     }
 
-    // Invalidate caches so the missing list and current-illustrations list update
+    // Invalidate caches so the missing list, current-illustrations list, and
+    // thumbnail proxy (which resolves blob shas from the tree) all update
     scanCache = null;
     currentCache = null;
+    treeCache = null;
 
     res.json({ ok: true, filename, updated: !!sha });
   } catch (err) {
@@ -656,6 +675,13 @@ app.get('/api/current', async (req, res) => {
 
 // GET /api/image-content/:filename — proxies the raw image bytes from GitHub
 // so the browser can render a thumbnail without needing repo visibility/auth.
+//
+// Uses the Git Blobs API (via the tree's blob sha), NOT the Contents API —
+// the Contents API silently returns empty content for any file over ~1MB
+// (confirmed directly: a 1.4MB file came back with content_len 0, encoding
+// "none", and only a download_url). Most panel photos in this repo are
+// well over 1MB, so that bug affected most thumbnails. Blobs API has no
+// such limit (up to 100MB).
 app.get('/api/image-content/:filename', async (req, res) => {
   if (!GITHUB_TOKEN) {
     return res.status(503).json({ error: 'GITHUB_TOKEN not configured' });
@@ -665,15 +691,21 @@ app.get('/api/image-content/:filename', async (req, res) => {
     return res.status(400).json({ error: 'Invalid filename' });
   }
   try {
-    const file = await ghGetFile(`${STATIC_IMG_PATH}/${filename}`);
-    if (!file) return res.status(404).json({ error: 'Not found' });
+    const tree = await getCachedTree();
+    const node = tree.find(
+      n => n.type === 'blob' && n.path === `${STATIC_IMG_PATH}/${filename}`
+    );
+    if (!node) return res.status(404).json({ error: 'Not found' });
+
+    const blob = await ghGetBlob(node.sha);
     const ext = extname(filename).toLowerCase();
     const mime = MIME_BY_EXT[ext] || 'application/octet-stream';
-    const buf = Buffer.from(file.content, 'base64');
+    const buf = Buffer.from(blob.content, blob.encoding || 'base64');
     res.set('Content-Type', mime);
     res.set('Cache-Control', 'public, max-age=300');
     res.send(buf);
   } catch (err) {
+    console.error('Thumbnail proxy error:', err);
     res.status(500).json({ error: err.message });
   }
 });
