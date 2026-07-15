@@ -291,7 +291,10 @@ The output level fader sets the **analogue output level corresponding to 0 dBFS 
 
 The **Con** tab displays the routing crosspoint matrix — the complete signal routing engine of the connected hardware. Every input can be routed to any output, and any number of outputs can receive the same input simultaneously.
 
-*[Placeholder: annotated Con tab screenshot showing overview matrix (left), detailed matrix (right), and input/output status indicators]*
+![Routing matrix with a multi-source, multi-destination patch](/img/ch07-routing-matrix-full.png)
+*The Con tab routing matrix with multiple active crosspoints connecting several inputs to several outputs.*
+
+*[Placeholder: annotated Con tab screenshot showing overview matrix (left), detailed matrix (right), and input/output status indicators — callout version still needed]*
 
 ### 7.6.1 Matrix Layout
 

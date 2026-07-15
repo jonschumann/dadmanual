@@ -173,6 +173,10 @@ Full reference: [Chapter 7, Section 7.4 — Gain and Level Management]
 
 1. Click the **Con** tab.
 2. The routing matrix displays **inputs as rows** on the left and **outputs as columns** across the top.
+
+![Empty routing matrix](/img/ch06-routing-matrix-empty.png)
+*The routing matrix grid before any sources are connected.*
+
 3. Click the crosspoint at the intersection of an input row and output column to connect them. A **filled blue square** confirms the connection.
 
 | Action | Shortcut |
@@ -184,7 +188,8 @@ Full reference: [Chapter 7, Section 7.4 — Gain and Level Management]
 
 **Expected result:** Blue squares appear at each connected crosspoint. The output column header shows a blue indicator confirming the output is patched.
 
-*[Placeholder: screenshot — Con tab with crosspoints connected showing overview and detail matrix]*
+![Routing matrix with a first patch applied](/img/ch06-first-patch.png)
+*A simple first patch: two inputs connected to two outputs.*
 
 > **NOTE:** The number of inputs and outputs shown in the matrix reflects your hardware configuration and current sample rate. At higher sample rates, some formats (MADI, ADAT) carry fewer channels — the matrix adjusts automatically.
 
@@ -247,6 +252,9 @@ If you are using DADman's monitor controller (PRO\|MON), you need a Monitor Prof
 3. Right-click **Outputs** → **Add New Output Set** → assign analogue outputs for each speaker configuration.
 4. **File > Save Profile As…** (macOS: **⌥⌘⇧S** / Windows: **Ctrl+Alt+Shift+S**)
 
+![New Monitor Profile dialog](/img/ch06-monitor-profile-new.png)
+*The New Monitor Profile dialog: name, speaker configuration, and output assignment fields.*
+
 **Expected result:** The **Mon** tab shows the source selector, speaker output buttons, main level fader, and **Ref**, **Dim**, and **Cut** controls.
 
 *[Placeholder: screenshot — Mon tab with a monitor profile loaded]*
@@ -262,6 +270,9 @@ If your room has been acoustically calibrated:
 1. Using test tones and a calibrated SPL meter, set the main level fader in the **Mon** tab to your target reference SPL (85 dB SPL is standard for most broadcast and post-production environments).
 2. In **Settings > Monitor Profile**, record this level as the **Reference Level** for the active speaker set.
 3. During sessions, press **Ref** in the **Mon** tab to instantly return to the calibrated level.
+
+![Output Trim controls](/img/ch06-output-trim-controls.png)
+*The Output Trim section of the monitor controller — level knobs and channel labels for each speaker output.*
 
 > **TIP:** Multiple speaker output sets can share the same physical outputs but have different trim offsets — creating named "85 dB SPL" and "75 dB SPL" presets you can switch between without recalibrating.
 

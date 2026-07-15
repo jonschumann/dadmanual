@@ -90,6 +90,10 @@ If you are using DADman with an Avid MTRX, MTRX II, or MTRX Studio:
 **Before you begin:** Ensure you are logged in to an account with Administrator privileges. Quit any audio applications that may be running.
 
 1. Locate the downloaded DADman installer file (`.pkg` format) and double-click it to launch the installer.
+
+![DADman installer welcome screen](/img/ch03-installer-welcome.png)
+*The DADman installer welcome screen.*
+
 2. Read the licence agreement and click **Continue**, then **Agree** to accept.
 3. Click **Install**. When prompted, enter your Administrator password and click **Install Software**.
 4. Click **Close** when installation completes.
