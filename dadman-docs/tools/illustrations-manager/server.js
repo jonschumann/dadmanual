@@ -190,6 +190,34 @@ async function computeMissingRefs() {
   );
 }
 
+/** Compute every image currently in static/img/, with its usage (if any) and size. */
+async function computeCurrentImages() {
+  const tree = await ghGetTree();
+
+  const imgNodes = tree.filter(
+    node => node.type === 'blob' && node.path.startsWith(STATIC_IMG_PATH + '/')
+  );
+
+  const allRefs = await scanMarkdownRefs(tree);
+  const usageByFilename = new Map();
+  for (const ref of allRefs) {
+    if (!usageByFilename.has(ref.filename)) usageByFilename.set(ref.filename, []);
+    usageByFilename.get(ref.filename).push({ file: ref.file, alt: ref.alt });
+  }
+
+  const items = imgNodes.map(node => {
+    const filename = node.path.slice(STATIC_IMG_PATH.length + 1);
+    return {
+      filename,
+      sizeBytes: node.size ?? null,
+      usedIn: usageByFilename.get(filename) || [],
+    };
+  });
+
+  items.sort((a, b) => a.filename.localeCompare(b.filename));
+  return items;
+}
+
 // ── ILLUSTRATIONS.md parsing ──────────────────────────────────────────────────
 
 // Format: - [ ] `filename.ext` — Description
@@ -281,6 +309,32 @@ async function getCachedScan(forceRefresh = false) {
     scanInProgress = false;
   }
 }
+
+let currentCache = null;
+let currentCacheTime = 0;
+let currentInProgress = false;
+
+async function getCachedCurrent(forceRefresh = false) {
+  if (!forceRefresh && currentCache && Date.now() - currentCacheTime < CACHE_TTL_MS) {
+    return { data: currentCache, cached: true, age: Math.round((Date.now() - currentCacheTime) / 1000) };
+  }
+  if (currentInProgress) {
+    return { data: currentCache || [], cached: true, scanning: true };
+  }
+  currentInProgress = true;
+  try {
+    currentCache = await computeCurrentImages();
+    currentCacheTime = Date.now();
+    return { data: currentCache, cached: false, age: 0 };
+  } finally {
+    currentInProgress = false;
+  }
+}
+
+const MIME_BY_EXT = {
+  '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png',
+  '.gif': 'image/gif', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.avif': 'image/avif',
+};
 
 // ── Express app ───────────────────────────────────────────────────────────────
 
@@ -379,8 +433,9 @@ app.post('/api/upload', async (req, res) => {
       }
     }
 
-    // Invalidate the scan cache so the missing list updates
+    // Invalidate caches so the missing list and current-illustrations list update
     scanCache = null;
+    currentCache = null;
 
     res.json({ ok: true, filename, updated: !!sha });
   } catch (err) {
@@ -435,6 +490,45 @@ app.get('/api/images', async (_req, res) => {
   try {
     const images = await listStaticImages();
     res.json(images);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET /api/current[?refresh=1] — every image in static/img/ with usage info,
+// so the UI can show what's already live and offer an in-place Replace.
+app.get('/api/current', async (req, res) => {
+  if (!GITHUB_TOKEN) {
+    return res.status(503).json({ error: 'GITHUB_TOKEN not configured' });
+  }
+  try {
+    const result = await getCachedCurrent(req.query.refresh === '1');
+    res.json(result);
+  } catch (err) {
+    console.error('Current scan error:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET /api/image-content/:filename — proxies the raw image bytes from GitHub
+// so the browser can render a thumbnail without needing repo visibility/auth.
+app.get('/api/image-content/:filename', async (req, res) => {
+  if (!GITHUB_TOKEN) {
+    return res.status(503).json({ error: 'GITHUB_TOKEN not configured' });
+  }
+  const { filename } = req.params;
+  if (!/^[a-z0-9][a-z0-9\-_.]*[a-z0-9]$/i.test(filename)) {
+    return res.status(400).json({ error: 'Invalid filename' });
+  }
+  try {
+    const file = await ghGetFile(`${STATIC_IMG_PATH}/${filename}`);
+    if (!file) return res.status(404).json({ error: 'Not found' });
+    const ext = extname(filename).toLowerCase();
+    const mime = MIME_BY_EXT[ext] || 'application/octet-stream';
+    const buf = Buffer.from(file.content, 'base64');
+    res.set('Content-Type', mime);
+    res.set('Cache-Control', 'public, max-age=300');
+    res.send(buf);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

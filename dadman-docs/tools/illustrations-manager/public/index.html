@@ -378,6 +378,68 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* ── Current illustrations grid ── */
+    .thumb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .thumb-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.15s;
+    }
+    .thumb-card.unused { border-color: var(--tag-orange-t); }
+    .thumb-preview {
+      position: relative;
+      width: 100%;
+      height: 130px;
+      background: repeating-conic-gradient(var(--surface2) 0% 25%, var(--bg) 0% 50%) 50% / 16px 16px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .thumb-preview img {
+      max-width: 100%; max-height: 100%; object-fit: contain;
+    }
+    .thumb-body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .thumb-size { font-size: 11px; color: var(--text-dim); }
+    .unused-tag {
+      font-size: 11px;
+      color: var(--tag-orange-t);
+      background: var(--tag-orange);
+      padding: 1px 6px;
+      border-radius: 3px;
+      display: inline-block;
+      width: fit-content;
+    }
+    .thumb-replace {
+      margin-top: auto;
+      border: 1.5px dashed var(--border);
+      border-radius: 6px;
+      padding: 8px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-dim);
+      cursor: pointer;
+      position: relative;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .thumb-replace:hover, .thumb-replace.drag-over {
+      border-color: var(--accent);
+      background: rgba(91, 138, 245, 0.08);
+      color: var(--text);
+    }
+    .thumb-replace.uploading { border-color: var(--warning); }
+    .thumb-replace.upload-ok { border-color: var(--success); }
+    .thumb-replace.upload-err { border-color: var(--danger); }
+    .thumb-replace input[type=file] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+    }
+
     /* ── Loading skeleton ── */
     .skeleton {
       background: linear-gradient(90deg, var(--surface) 25%, var(--surface2) 50%, var(--surface) 75%);
@@ -412,6 +474,9 @@
   </div>
   <div class="tab" data-tab="planned" onclick="switchTab('planned')">
     Planned Illustrations <span class="badge" id="badge-planned">…</span>
+  </div>
+  <div class="tab" data-tab="current" onclick="switchTab('current')">
+    Current Illustrations <span class="badge" id="badge-current">…</span>
   </div>
   <div class="tab" data-tab="upload" onclick="switchTab('upload')">
     Upload
@@ -465,6 +530,27 @@
           <input type="text" id="add-desc" placeholder="Routing matrix with an active multi-source patch" />
         </div>
         <button class="btn primary" onclick="addPlanned()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Current Illustrations Panel ── -->
+  <div class="panel" id="panel-current">
+    <div class="toolbar">
+      <button class="btn primary" id="btn-current-scan" onclick="loadCurrent(false)">
+        <span class="spinner">⟳</span>
+        <span class="btn-label">🔍 Load Current</span>
+      </button>
+      <button class="btn" id="btn-current-refresh" onclick="loadCurrent(true)">
+        ↺ Force Refresh
+      </button>
+      <span class="scan-note" id="current-note"></span>
+    </div>
+    <div id="current-list">
+      <div class="empty">
+        <div class="icon">🖼</div>
+        <h3>Every illustration currently in the manual</h3>
+        <p>Click "Load Current" to see everything in static/img/, where each is used, and drop a new file on any card to replace it in place.</p>
       </div>
     </div>
   </div>
@@ -542,6 +628,9 @@ function switchTab(name) {
   document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === `panel-${name}`));
   if (name === 'planned' && document.getElementById('planned-list').children.length <= 3) {
     loadPlanned();
+  }
+  if (name === 'current' && !document.getElementById('current-list').dataset.loaded) {
+    loadCurrent(false);
   }
 }
 
@@ -717,6 +806,140 @@ async function addPlanned() {
     await loadPlanned();
   } catch (e) {
     toast('Failed: ' + e.message, 'error');
+  }
+}
+
+// ── Current Illustrations ─────────────────────────────────────────────────────
+async function loadCurrent(forceRefresh = false) {
+  const btn = document.getElementById('btn-current-scan');
+  const note = document.getElementById('current-note');
+  btn.classList.add('loading');
+  btn.disabled = true;
+  note.textContent = 'Loading static/img/ and cross-referencing docs… this may take 20–30 seconds';
+
+  try {
+    const url = '/api/current' + (forceRefresh ? '?refresh=1' : '');
+    const r = await fetch(url);
+    const result = await r.json();
+    if (result.error) { toast(result.error, 'error'); return; }
+
+    const { data, cached, age, scanning } = result;
+
+    if (scanning && !data.length) {
+      note.textContent = 'Scan in progress — try again in a moment';
+      return;
+    }
+
+    note.textContent = cached
+      ? `Cached result (${age}s old) — click ↺ Force Refresh to re-scan`
+      : `Loaded · ${data.length} image${data.length === 1 ? '' : 's'} · ${data.filter(i => !i.usedIn.length).length} unused`;
+
+    document.getElementById('badge-current').textContent = data.length;
+    document.getElementById('current-list').dataset.loaded = '1';
+    renderCurrentList(data);
+  } catch (e) {
+    toast('Load failed: ' + e.message, 'error');
+  } finally {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+  }
+}
+
+function renderCurrentList(items) {
+  const el = document.getElementById('current-list');
+  if (!items.length) {
+    el.innerHTML = `<div class="empty">
+      <div class="icon">🖼</div>
+      <h3>No images in static/img/ yet</h3>
+      <p>Upload one from the Upload tab to get started.</p>
+    </div>`;
+    return;
+  }
+
+  el.innerHTML = `<div class="thumb-grid">` + items.map(item => {
+    const dzId = `dz-current-${CSS.escape(item.filename)}`;
+    const unused = !item.usedIn.length;
+    return `
+      <div class="thumb-card ${unused ? 'unused' : ''}">
+        <div class="thumb-preview">
+          <img src="/api/image-content/${encodeURIComponent(item.filename)}" alt="${esc(item.filename)}" loading="lazy" />
+        </div>
+        <div class="thumb-body">
+          <div class="filename">${esc(item.filename)}</div>
+          ${item.sizeBytes != null ? `<div class="thumb-size">${formatSize(item.sizeBytes)}</div>` : ''}
+          ${unused
+            ? `<div class="unused-tag">⚠️ Not used in any page</div>`
+            : `<div class="item-refs">${item.usedIn.map(r => `<span class="ref-tag" title="${esc(r.file)}">${esc(shortPath(r.file))}</span>`).join('')}</div>`}
+          <div class="thumb-replace" id="${dzId}"
+               ondragover="onDragOver(event,'${dzId}')"
+               ondragleave="onDragLeave('${dzId}')"
+               ondrop="onDropReplace(event,'${esc(item.filename)}','${dzId}')">
+            🔄 Drop or click to replace
+            <input type="file" accept="image/*"
+                   onchange="onFilePickedReplace(this,'${esc(item.filename)}','${dzId}')" />
+          </div>
+        </div>
+      </div>`;
+  }).join('') + `</div>`;
+}
+
+function onDropReplace(e, filename, dzId) {
+  e.preventDefault();
+  const dz = document.getElementById(dzId);
+  dz?.classList.remove('drag-over');
+  const file = e.dataTransfer?.files?.[0];
+  if (!file) return;
+  replaceImage(file, filename, dzId);
+}
+
+function onFilePickedReplace(input, filename, dzId) {
+  const file = input.files?.[0];
+  if (!file) return;
+  replaceImage(file, filename, dzId);
+}
+
+async function replaceImage(file, filename, dzId) {
+  const dz = document.getElementById(dzId);
+  const card = dz?.closest('.thumb-card');
+  const label = dz?.firstChild;
+
+  dz?.classList.remove('drag-over', 'upload-ok', 'upload-err');
+  dz?.classList.add('uploading');
+  if (dz) dz.childNodes[0].textContent = 'Replacing…';
+
+  try {
+    const base64 = await fileToBase64(file);
+    const r = await fetch('/api/upload', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename, content: base64, markDone: true }),
+    });
+    const data = await r.json();
+    if (data.error) throw new Error(data.error);
+
+    dz?.classList.remove('uploading');
+    dz?.classList.add('upload-ok');
+    if (dz) dz.childNodes[0].textContent = '✅ Replaced';
+
+    // Bust the cache on the thumbnail so the new image shows immediately
+    const img = card?.querySelector('.thumb-preview img');
+    if (img) img.src = `/api/image-content/${encodeURIComponent(filename)}?t=${Date.now()}`;
+
+    toast(`✅ ${filename} replaced and committed to repo`, 'success', 5000);
+
+    setTimeout(() => {
+      dz?.classList.remove('upload-ok');
+      if (dz) dz.childNodes[0].textContent = '🔄 Drop or click to replace';
+    }, 3000);
+  } catch (e) {
+    dz?.classList.remove('uploading');
+    dz?.classList.add('upload-err');
+    if (dz) dz.childNodes[0].textContent = '❌ Failed — try again';
+    toast(`Replace failed: ${e.message}`, 'error', 6000);
+    setTimeout(() => {
+      dz?.classList.remove('upload-err');
+      if (dz) dz.childNodes[0].textContent = '🔄 Drop or click to replace';
+    }, 4000);
   }
 }
 
