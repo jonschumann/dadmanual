@@ -31,6 +31,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/hardware/ax-center/ch10-specifications` page
 - **Found:** 2026-07-15
 
+### ax-center §1.1 — Clarify Thunderbolt connectors are single pass-through, not true dual
+- **File:** `docs/hardware/ax-center/ch01-introduction.md`
+- **Section:** §1.1
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Thunderbolt connectors on ThunderCore units are single connections with pass-through capability, not true dual Thunderbolt connections
+- **Original comment:** 1.1 These Thunderbolt connectors are not true dual Thunderbolt, but a single connection with a pass-through. This is an important distinction that needs to be corrected and/or noted throughout the manuals for ThunderCore units.
+- **Source:** Giscus comment on `/hardware/ax-center/ch01-introduction` page
+- **Found:** 2026-07-15
+
 ---
 
 ## Fixed Corrections
