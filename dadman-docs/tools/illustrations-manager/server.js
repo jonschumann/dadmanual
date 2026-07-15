@@ -190,7 +190,124 @@ async function computeMissingRefs() {
   );
 }
 
-/** Compute every image currently in static/img/, with its usage (if any) and size. */
+// ── Image dimension probing (pure buffer parsing — no image-processing deps) ──
+
+function getPngDimensions(buf) {
+  if (buf.length < 24 || buf.readUInt32BE(0) !== 0x89504e47) return null;
+  return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+}
+
+function getGifDimensions(buf) {
+  if (buf.length < 10) return null;
+  const sig = buf.toString('ascii', 0, 6);
+  if (sig !== 'GIF87a' && sig !== 'GIF89a') return null;
+  return { width: buf.readUInt16LE(6), height: buf.readUInt16LE(8) };
+}
+
+function getJpegDimensions(buf) {
+  if (buf.length < 4 || buf[0] !== 0xff || buf[1] !== 0xd8) return null;
+  let offset = 2;
+  while (offset + 9 < buf.length) {
+    if (buf[offset] !== 0xff) { offset++; continue; }
+    const marker = buf[offset + 1];
+    if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+      return { height: buf.readUInt16BE(offset + 5), width: buf.readUInt16BE(offset + 7) };
+    }
+    if (marker === 0xd8 || (marker >= 0xd0 && marker <= 0xd9)) { offset += 2; continue; }
+    const length = buf.readUInt16BE(offset + 2);
+    if (length < 2) break;
+    offset += 2 + length;
+  }
+  return null;
+}
+
+function getWebpDimensions(buf) {
+  if (buf.length < 30) return null;
+  if (buf.toString('ascii', 0, 4) !== 'RIFF' || buf.toString('ascii', 8, 12) !== 'WEBP') return null;
+  const fmt = buf.toString('ascii', 12, 16);
+  if (fmt === 'VP8 ') {
+    return { width: buf.readUInt16LE(26) & 0x3fff, height: buf.readUInt16LE(28) & 0x3fff };
+  }
+  if (fmt === 'VP8L') {
+    const b0 = buf[21], b1 = buf[22], b2 = buf[23], b3 = buf[24];
+    return {
+      width: 1 + (((b1 & 0x3f) << 8) | b0),
+      height: 1 + (((b3 & 0xf) << 10) | (b2 << 2) | ((b1 & 0xc0) >> 6)),
+    };
+  }
+  if (fmt === 'VP8X') {
+    return {
+      width: 1 + (buf[24] | (buf[25] << 8) | (buf[26] << 16)),
+      height: 1 + (buf[27] | (buf[28] << 8) | (buf[29] << 16)),
+    };
+  }
+  return null;
+}
+
+function getSvgDimensions(buf) {
+  const text = buf.toString('utf8', 0, Math.min(buf.length, 4000));
+  const tagMatch = text.match(/<svg\b[^>]*>/i);
+  if (!tagMatch) return null;
+  const tag = tagMatch[0];
+  const w = tag.match(/\bwidth="([\d.]+)/i);
+  const h = tag.match(/\bheight="([\d.]+)/i);
+  if (w && h) return { width: Math.round(parseFloat(w[1])), height: Math.round(parseFloat(h[1])), vector: true };
+  const vb = tag.match(/\bviewBox="[\d.\-]+\s+[\d.\-]+\s+([\d.]+)\s+([\d.]+)/i);
+  if (vb) return { width: Math.round(parseFloat(vb[1])), height: Math.round(parseFloat(vb[2])), vector: true };
+  return { vector: true };
+}
+
+function getImageDimensions(filename, buf) {
+  const ext = extname(filename).toLowerCase();
+  try {
+    if (ext === '.png') return getPngDimensions(buf);
+    if (ext === '.gif') return getGifDimensions(buf);
+    if (ext === '.jpg' || ext === '.jpeg') return getJpegDimensions(buf);
+    if (ext === '.webp') return getWebpDimensions(buf);
+    if (ext === '.svg') return getSvgDimensions(buf);
+  } catch {
+    return null;
+  }
+  return null; // avif and anything else — dimensions unavailable, not fatal
+}
+
+/** Build one conservative, single-line suggestion — or null if nothing stands out. */
+function buildRecommendation({ ext, filename, width, height, sizeBytes, vector }) {
+  if (vector) {
+    if (sizeBytes && sizeBytes > 500 * 1024) {
+      return `Large for an SVG (${formatBytes(sizeBytes)}) — check for embedded raster images or excessive path detail.`;
+    }
+    return null;
+  }
+
+  const looksLikeDiagram = /block-diagram|mechanical|pinout|drawing|schematic|topology/i.test(filename);
+  if (looksLikeDiagram && ext !== '.svg') {
+    return 'This looks like a technical diagram — a vector file (SVG) would likely render more crisply, especially in the PDF export.';
+  }
+
+  if (width && height) {
+    if (width < 900 && height < 900) {
+      return `Resolution is ${width}×${height}px — could be higher, especially if this needs to fill a page width in the PDF export.`;
+    }
+    if (sizeBytes) {
+      const megapixels = (width * height) / 1_000_000;
+      const bytesPerMP = megapixels > 0 ? sizeBytes / megapixels : 0;
+      if (ext !== '.jpg' && ext !== '.jpeg' && bytesPerMP > 3_000_000) {
+        return 'File is large relative to its resolution — consider re-exporting as a more compressed PNG or WebP.';
+      }
+    }
+  }
+
+  return null;
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / 1024 / 1024).toFixed(1) + ' MB';
+}
+
+/** Compute every image currently in static/img/, with usage, dimensions, and an advisory note. */
 async function computeCurrentImages() {
   const tree = await ghGetTree();
 
@@ -205,14 +322,41 @@ async function computeCurrentImages() {
     usageByFilename.get(ref.filename).push({ file: ref.file, alt: ref.alt });
   }
 
-  const items = imgNodes.map(node => {
-    const filename = node.path.slice(STATIC_IMG_PATH.length + 1);
-    return {
-      filename,
-      sizeBytes: node.size ?? null,
-      usedIn: usageByFilename.get(filename) || [],
-    };
-  });
+  const items = [];
+  // Batch blob fetches — images are bigger payloads than markdown, so keep batches small.
+  for (let i = 0; i < imgNodes.length; i += 5) {
+    const batch = imgNodes.slice(i, i + 5);
+    const results = await Promise.allSettled(
+      batch.map(async node => {
+        const filename = node.path.slice(STATIC_IMG_PATH.length + 1);
+        const ext = extname(filename).toLowerCase();
+        let dims = null;
+        try {
+          const blob = await ghGetBlob(node.sha);
+          const buf = Buffer.from(blob.content, 'base64');
+          dims = getImageDimensions(filename, buf);
+        } catch (e) {
+          console.warn(`Could not probe dimensions for ${filename}:`, e.message);
+        }
+        const sizeBytes = node.size ?? null;
+        return {
+          filename,
+          format: ext.replace('.', '').toUpperCase() || 'UNKNOWN',
+          sizeBytes,
+          width: dims?.width ?? null,
+          height: dims?.height ?? null,
+          vector: !!dims?.vector,
+          usedIn: usageByFilename.get(filename) || [],
+          recommendation: buildRecommendation({
+            ext, filename, width: dims?.width, height: dims?.height, sizeBytes, vector: dims?.vector,
+          }),
+        };
+      })
+    );
+    for (const r of results) {
+      if (r.status === 'fulfilled') items.push(r.value);
+    }
+  }
 
   items.sort((a, b) => a.filename.localeCompare(b.filename));
   return items;

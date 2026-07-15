@@ -406,7 +406,25 @@
       max-width: 100%; max-height: 100%; object-fit: contain;
     }
     .thumb-body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-    .thumb-size { font-size: 11px; color: var(--text-dim); }
+    .thumb-meta { font-size: 11px; color: var(--text-dim); display: flex; gap: 6px; flex-wrap: wrap; }
+    .thumb-meta .format-tag {
+      font-family: var(--mono);
+      color: var(--accent);
+      background: var(--tag-blue);
+      padding: 0 5px;
+      border-radius: 3px;
+    }
+    .thumb-recommendation {
+      font-size: 11px;
+      color: var(--tag-orange-t);
+      background: var(--tag-orange);
+      border-radius: 6px;
+      padding: 6px 8px;
+      line-height: 1.4;
+      display: flex;
+      gap: 5px;
+    }
+    .thumb-recommendation .icon { flex-shrink: 0; }
     .unused-tag {
       font-size: 11px;
       color: var(--tag-orange-t);
@@ -866,10 +884,17 @@ function renderCurrentList(items) {
         </div>
         <div class="thumb-body">
           <div class="filename">${esc(item.filename)}</div>
-          ${item.sizeBytes != null ? `<div class="thumb-size">${formatSize(item.sizeBytes)}</div>` : ''}
+          <div class="thumb-meta">
+            <span class="format-tag">${esc(item.format)}${item.vector ? ' · vector' : ''}</span>
+            ${item.width && item.height ? `<span>${item.width}×${item.height}px</span>` : ''}
+            ${item.sizeBytes != null ? `<span>${formatSize(item.sizeBytes)}</span>` : ''}
+          </div>
           ${unused
             ? `<div class="unused-tag">⚠️ Not used in any page</div>`
             : `<div class="item-refs">${item.usedIn.map(r => `<span class="ref-tag" title="${esc(r.file)}">${esc(shortPath(r.file))}</span>`).join('')}</div>`}
+          ${item.recommendation
+            ? `<div class="thumb-recommendation"><span class="icon">💡</span><span>${esc(item.recommendation)}</span></div>`
+            : ''}
           <div class="thumb-replace" id="${dzId}"
                ondragover="onDragOver(event,'${dzId}')"
                ondragleave="onDragLeave('${dzId}')"
@@ -927,10 +952,9 @@ async function replaceImage(file, filename, dzId) {
 
     toast(`✅ ${filename} replaced and committed to repo`, 'success', 5000);
 
-    setTimeout(() => {
-      dz?.classList.remove('upload-ok');
-      if (dz) dz.childNodes[0].textContent = '🔄 Drop or click to replace';
-    }, 3000);
+    // Metadata (dimensions/size/recommendation) belongs to the new file — re-fetch
+    // and re-render the whole grid rather than letting the card show stale numbers.
+    setTimeout(() => loadCurrent(true), 1500);
   } catch (e) {
     dz?.classList.remove('uploading');
     dz?.classList.add('upload-err');
