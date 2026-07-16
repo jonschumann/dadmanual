@@ -330,6 +330,10 @@ Once DADman and (if applicable) the Thunderbolt 3 driver are installed and the n
 
 1. Launch **DADman** from your Applications folder (macOS) or Start menu (Windows).
 2. Wait up to 30 seconds for device discovery to complete.
+
+![DADman at first launch with an empty device panel](/img/ch03-first-launch.png)
+*DADman immediately after launch, before any hardware has been discovered. The Device List remains empty until discovery completes.*
+
 3. Confirm that your hardware unit(s) appear in the **Device List** at the top of the DADman window.
 4. Confirm that the unit's current firmware version is displayed and matches your expectations.
 
