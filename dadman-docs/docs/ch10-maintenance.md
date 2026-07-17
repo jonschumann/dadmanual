@@ -116,9 +116,11 @@ The current firmware versions for each hardware family at the time of publicatio
 
 Dante firmware (for Dante modules and IPCore hardware in DAD units) is updated separately from the main board firmware, using the **Dante Updater** tool within **Dante Controller** — not via DADman.
 
+Updating the Dante firmware to the current release also enables **ST 2110-30** and **AES67** compatibility on AX32, Penta, and Thunder\|Core units. A video walkthrough of the procedure below is available on the DAD support portal: [How to Update Dante Firmware](https://www.digitalaudiosupport.com/how-to-update-dante-firmware/).
+
 ### 10.3.1 Requirements
 
-- **Dante Controller** must be installed on the computer. Download from [audinate.com](https://www.audinate.com).
+- **Dante Controller** must be installed on the computer (installing Dante Controller also installs **Dante Updater**). Download from [getdante.com](https://www.getdante.com/resources/software-downloads/).
 - The DAD unit must be connected to the Dante network and visible in Dante Controller.
 - Download the appropriate Dante firmware file (`.dnt`) from the DAD support portal. Dante firmware files are bundled with each DADman software release.
 

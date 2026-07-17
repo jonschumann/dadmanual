@@ -45,7 +45,7 @@ This copies DADman version, connected device list, OS version, and Thunderbolt d
 | No units appear in Device List after launching DADman | Unit not powered on | Power on the unit; confirm the front panel **Ready** LED is solid green |
 | | Unit not on the same Ethernet network | Connect unit and computer to the same switch or via direct cable; confirm cable is Cat5e or Cat6 |
 | | Unit and computer on different subnets | Set computer network interface to the same subnet as the unit (e.g., both `192.168.1.x`). Check unit IP via its front panel display |
-| | macOS Sequoia (v15): OS-level discovery issue | Log out of the macOS user account and log back in. Thunderbolt connections are unaffected. See [Section 9.3] and [Ch. 3, Section 3.7] |
+| | macOS Sequoia (v15): OS-level discovery issue | Log out of the macOS user account and log back in. Thunderbolt connections are unaffected. See [Section 9.3] and [Ch. 3, Section 3.6.3] |
 | | Windows: firewall blocking DADman | Add a firewall exception for DADman. With BitDefender, update to v5.7.2 or later |
 | Unit appears in Device List but shows as disconnected | Ethernet cable disconnected or faulty | Check cable at both ends; replace if damaged |
 | | Unit rebooting (e.g., after firmware update) | Wait up to 60 seconds; confirm Ready LED is solid green |
@@ -109,9 +109,9 @@ This copies DADman version, connected device list, OS version, and Thunderbolt d
 | Symptom | Probable cause | Remedy |
 |---------|---------------|--------|
 | Unit not appearing in macOS Audio MIDI Setup | System extension not allowed | Open **System Settings > Privacy & Security**; allow the extension from Digital Audio Denmark / NTP Technology A/S; restart |
-| | macOS Sequoia: tightened accessory security | Set **System Settings > Privacy & Security > Accessories** to **Automatically allow** or **Always Allow**. See [Ch. 3, Section 3.7] |
+| | macOS Sequoia: tightened accessory security | Set **System Settings > Privacy & Security > Accessories** to **Automatically allow** or **Always Allow**. See [Ch. 3, Section 3.6] *(current procedure per DAD Technical Support Bulletin, January 2026 — supersedes the March 2025 guidance)* |
 | | Driver not installed | Install the DAD Thunderbolt 3 driver from [digitalaudiosupport.com](https://www.digitalaudiosupport.com) |
-| | Old driver version conflicting with macOS update | Remove old `DADDriverSetup.app` (drag to Trash; approve removal), then reinstall the latest driver |
+| | Old driver version conflicting with macOS update | Remove old `DADDriverSetup.app` (drag to Trash; approve removal), then reinstall the latest driver. On macOS Sequoia and later this removal step is **required** — installing over an existing driver will not function; see [Ch. 3, Section 3.6.2] |
 | Device appears in Audio MIDI Setup with no channels | Sample rate or channel count mismatch | Open **DADDriverSetup** and verify Sample Rate and Channels settings match your DAW's expected format |
 | Windows ASIO: **Missed IRs** counter non-zero | System interrupt contention | Increase ASIO Buffer Size (512 or 1024 samples); close unnecessary background applications; disable Wi-Fi |
 | Windows ASIO: High **PCIe Load** | Too many channels configured | Reduce Channels setting in ASIO driver configuration |
