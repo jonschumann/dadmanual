@@ -1,2 +1,7 @@
 Research/Competitor_References/
-Research/Competitor_References/
+.DS_Store
+_to_delete/
+_migration_backup_*
+*.env
+repair.pack
+local-objects.txt
