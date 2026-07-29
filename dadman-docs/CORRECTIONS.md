@@ -40,6 +40,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/hardware/ax-center/ch01-introduction` page
 - **Found:** 2026-07-15
 
+### ax-center 1.3 — Box contents list incorrectly includes IEC cable.
+- **File:** `docs/hardware/ax-center/ch01-introduction.md`
+- **Section:** 1.3
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Update box contents to list: Device, Thunderbolt Cable, Warranty Card (remove IEC cable).
+- **Original comment:** 1.3 - There is no IEC cable in the box.  It’s: Device Thunderbolt Cable Warranty Card
+- **Source:** Giscus comment on `/hardware/ax-center/ch01-introduction` page
+- **Found:** 2026-07-15
+
 ---
 
 ## Fixed Corrections
