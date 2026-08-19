@@ -26,7 +26,7 @@ slug: /introduction
 | 1.6 | How to use this manual | All users |
 | 1.7 | About DAD / NTP Technology | All users |
 
-> **NOTE — Scope of this manual:** This manual is written for users of DAD (Digital Audio Denmark) hardware. All worked examples, screenshots, and procedures use DAD products — Primarily the AX Center, Core 256, and AX64 — as the reference platform. Avid MTRX, MTRX II, and MTRX Studio are OEM products that use DADman software and are functionally identical from a DADman control perspective; the procedures in this manual apply equally to those products. Avid-hardware-specific topics (iLok, Pro Tools integration, Avid Master Account downloads) are noted where relevant but are not the focus of this document.
+> **NOTE — Scope of this manual:** This manual is written for users of DAD (Digital Audio Denmark) hardware. All worked examples, screenshots, and procedures use DAD products — primarily the AX Center, Core 256, and AX64 — as the reference platform. Avid MTRX, MTRX II, and MTRX Studio are OEM products that use DADman software and are functionally identical from a DADman control perspective; the procedures in this manual apply equally to those products. Avid-hardware-specific topics (iLok, Pro Tools integration, Avid Master Account downloads) are noted where relevant but are not the focus of this document.
 
 ---
 
