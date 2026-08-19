@@ -22,7 +22,14 @@ Add a new entry under **Open Corrections** using the template below. You can als
 
 ## Open Corrections
 
-*No open corrections.*
+### penta-720 §1.1 — Hyphenation of "rack mount"
+- **File:** `docs/hardware/penta-720/ch01-introduction.md` (term appears across most product manuals)
+- **Section:** §1.1 Product Overview
+- **Wrong:** "rackmount"
+- **Correct:** "rack mount" or "rack-mount" — needs a house-style decision, then applying consistently across all product manuals rather than penta-720 alone
+- **Original comment:** rack mount is spelled wrong. It isn't one word.
+- **Source:** Giscus comment on `/hardware/penta-720/` page (approved 2026-08-19; written to `main` by the dashboard before the branch-target fix, migrated here)
+- **Found:** 2026-08-19
 
 ---
 
