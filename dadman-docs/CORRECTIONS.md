@@ -49,6 +49,15 @@ Add a new entry under **Open Corrections** using the template below. You can als
 - **Source:** Giscus comment on `/hardware/ax-center/ch01-introduction` page
 - **Found:** 2026-07-15
 
+### penta-720 — — Fix hyphenation of 'rack mount' terminology.
+- **File:** `docs/hardware/penta-720/ch01-introduction.md`
+- **Section:** —
+- **Wrong:** (not quoted by commenter)
+- **Correct:** Change 'rackmount' to 'rack mount' or 'rack-mount'
+- **Original comment:** rack mount is spelled wrong. It isn't one word.
+- **Source:** Giscus comment on `/hardware/penta-720/` page
+- **Found:** 2026-08-19
+
 ---
 
 ## Fixed Corrections
