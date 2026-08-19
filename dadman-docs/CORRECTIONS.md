@@ -22,41 +22,7 @@ Add a new entry under **Open Corrections** using the template below. You can als
 
 ## Open Corrections
 
-### DADman 10.1 — Change '256 in / 256 out' to '256 In/Out' for consistency.
-- **File:** `docs/ch10-specifications.md`
-- **Section:** 10.1
-- **Wrong:** 256 in / 256 out
-- **Correct:** 256 In/Out
-- **Original comment:** 10.1 - Don't do 256 in / 256 out. Just do 256 In/Out
-- **Source:** Giscus comment on `/hardware/ax-center/ch10-specifications` page
-- **Found:** 2026-07-15
-
-### ax-center §1.1 — Clarify Thunderbolt connectors are single pass-through, not true dual
-- **File:** `docs/hardware/ax-center/ch01-introduction.md`
-- **Section:** §1.1
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Thunderbolt connectors on ThunderCore units are single connections with pass-through capability, not true dual Thunderbolt connections
-- **Original comment:** 1.1 These Thunderbolt connectors are not true dual Thunderbolt, but a single connection with a pass-through. This is an important distinction that needs to be corrected and/or noted throughout the manuals for ThunderCore units.
-- **Source:** Giscus comment on `/hardware/ax-center/ch01-introduction` page
-- **Found:** 2026-07-15
-
-### ax-center 1.3 — Box contents list incorrectly includes IEC cable.
-- **File:** `docs/hardware/ax-center/ch01-introduction.md`
-- **Section:** 1.3
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Update box contents to list: Device, Thunderbolt Cable, Warranty Card (remove IEC cable).
-- **Original comment:** 1.3 - There is no IEC cable in the box.  It’s: Device Thunderbolt Cable Warranty Card
-- **Source:** Giscus comment on `/hardware/ax-center/ch01-introduction` page
-- **Found:** 2026-07-15
-
-### penta-720 — — Fix hyphenation of 'rack mount' terminology.
-- **File:** `docs/hardware/penta-720/ch01-introduction.md`
-- **Section:** —
-- **Wrong:** (not quoted by commenter)
-- **Correct:** Change 'rackmount' to 'rack mount' or 'rack-mount'
-- **Original comment:** rack mount is spelled wrong. It isn't one word.
-- **Source:** Giscus comment on `/hardware/penta-720/` page
-- **Found:** 2026-08-19
+*No open corrections — see the `hardware-manuals` branch.*
 
 ---
 
@@ -74,3 +40,7 @@ Add a new entry under **Open Corrections** using the template below. You can als
 ---
 
 *Note: this log was reconciled 2026-07-14 against the actual manual content on the `hardware-manuals` branch (the sole deploy source — see repo `.github/workflows/deploy.yml`). Several entries above had been duplicated by the corrections-dashboard (the same Giscus thread parsed multiple times as comment + reply) and two were already fixed in an earlier session but the fix had only ever reached `hardware-manuals`, not `main`, so they lingered here as "open." All are now resolved and reflected on `hardware-manuals`.*
+
+---
+
+*Note (2026-08-19): this branch is **not** the corrections queue. The dashboard had been reading and writing `CORRECTIONS.md` through the GitHub contents API with no branch argument, so it used the repo default branch (`main`) instead of `hardware-manuals` — the sole authoring and deploy branch — and four approved corrections accumulated here unseen. Three (AX Center §1.1, §1.3, §10.1) are applied in PR #24; the fourth (penta-720 rack-mount hyphenation) was migrated to the live queue in PR #27. The dashboard now targets `hardware-manuals` explicitly (PR #25). The authoritative log lives on `hardware-manuals` — do not re-open entries here.*
