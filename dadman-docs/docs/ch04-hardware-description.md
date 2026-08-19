@@ -33,7 +33,7 @@ slug: /hardware-description
 
 ### 4.1.1 Overview
 
-The AX Center is a 1U rack-mount Thunderbolt audio interface in the Thunder\|Core product family. It provides two mic/line/instrument inputs and stereo monitor outputs directly on the front panel, with MADI, ADAT, word clock, analogue expansion slots, and dual Thunderbolt 3 ports on the rear. All routing, gain, monitoring, and configuration is performed via DADman over Ethernet. The AX Center also hosts the MOM (Monitor Operating Module) when used as a desktop monitor controller system — the MOM connects to the AX Center via USB-C.
+The AX Center is a 1U rack-mount Thunderbolt audio interface in the Thunder\|Core product family. It provides two mic/line/instrument inputs and stereo monitor outputs directly on the front panel, with MADI, ADAT, word clock, analogue expansion slots, and two Thunderbolt 3 ports on the rear. The two ports form a single Thunderbolt connection with pass-through — they are not two independent Thunderbolt connections, so the port count does not double the available Thunderbolt bandwidth or channel count. All routing, gain, monitoring, and configuration is performed via DADman over Ethernet. The AX Center also hosts the MOM (Monitor Operating Module) when used as a desktop monitor controller system — the MOM connects to the AX Center via USB-C.
 
 ### 4.1.2 Panel Overview
 
