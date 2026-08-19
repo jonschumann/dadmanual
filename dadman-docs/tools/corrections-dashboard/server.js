@@ -24,7 +24,12 @@ const {
   GITHUB_OWNER       = 'jonschumann',
   GITHUB_REPO        = 'dadmanual',
   ANTHROPIC_API_KEY,
-  CORRECTIONS_PATH   = 'CORRECTIONS.md',   // path inside the repo
+  CORRECTIONS_PATH   = 'dadman-docs/CORRECTIONS.md', // path inside the repo
+  // Branch that CORRECTIONS.md is read from and written to. MUST be the
+  // authoring/deploy branch — the GitHub contents API silently defaults to the
+  // repo default branch (main), which is not deployed, and corrections written
+  // there never reach the manual.
+  TARGET_BRANCH      = 'hardware-manuals',
   DATA_DIR           = join(__dirname, 'data'),
   PORT               = 3001,
   POLL_INTERVAL_MINS = '10',
@@ -151,7 +156,8 @@ async function fetchDiscussions() {
 }
 
 async function getFileOnGitHub(path) {
-  const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
+  const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`
+    + `?ref=${encodeURIComponent(TARGET_BRANCH)}`;
   const res = await fetch(url, {
     headers: { Authorization: `bearer ${GITHUB_TOKEN}` },
   });
@@ -171,6 +177,7 @@ async function putFileOnGitHub(path, content, sha, message) {
       message,
       content: Buffer.from(content).toString('base64'),
       sha,
+      branch: TARGET_BRANCH,
     }),
   });
   if (!res.ok) {
@@ -276,7 +283,7 @@ function buildCorrectionsEntry(correction) {
 
 async function appendToCorrectionsFile(correction) {
   const file = await getFileOnGitHub(CORRECTIONS_PATH);
-  if (!file) throw new Error('CORRECTIONS.md not found in repo');
+  if (!file) throw new Error(`CORRECTIONS.md not found at ${CORRECTIONS_PATH} on branch ${TARGET_BRANCH}`);
 
   const current = Buffer.from(file.content, 'base64').toString('utf8');
   const entry = buildCorrectionsEntry(correction);
@@ -387,6 +394,8 @@ app.get('/api/status', (req, res) => {
     denied: state.corrections.filter(c => c.status === 'denied').length,
     anthropicConfigured: !!anthropic,
     githubConfigured: !!GITHUB_TOKEN,
+    targetBranch: TARGET_BRANCH,
+    correctionsPath: CORRECTIONS_PATH,
   });
 });
 
