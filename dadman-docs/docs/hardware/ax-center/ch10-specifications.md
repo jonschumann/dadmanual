@@ -16,11 +16,11 @@ sidebar_position: 11
 
 | Parameter | Value | Conditions / Notes |
 |---|---|---|
-| Thunderbolt 3 | 256 ch in / 256 ch out | At 48 kHz and 96 kHz |
-| Dante AoIP | 256 ch in / 256 ch out | At 48 kHz |
-| Dante AoIP | 128 ch in / 128 ch out | At 96 kHz |
-| MADI | 64 ch in / 64 ch out | At 48 kHz |
-| ADAT / SMUX | 16 ch in / 16 ch out | |
+| Thunderbolt 3 | 256 In/Out | At 48 kHz and 96 kHz |
+| Dante AoIP | 256 In/Out | At 48 kHz |
+| Dante AoIP | 128 In/Out | At 96 kHz |
+| MADI | 64 In/Out | At 48 kHz |
+| ADAT / SMUX | 16 In/Out | |
 | S/PDIF | 2 ch input | Via ADAT connector |
 | DADlink (via SFP) | Up to 256×256 ch | At 48 kHz |
 | Via expansion cards | Additional I/O | 2 expansion slots |
